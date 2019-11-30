@@ -6,20 +6,20 @@ title: About
 
 ## Education
 
-#### PhD in Behavior, Ecology, Evolution, and Systematics (BEES)
+##### PhD in Behavior, Ecology, Evolution, and Systematics (BEES)
 Fall 2019, University of Maryland College Park, College Park, MD
 
 - Dissertation: Investigating the Distribution of CRISPR Adaptive Immune Systems Among Prokaryotes
 - Advisers: Philip L.F. Johnson & William F. Fagan
 - Graduate Certificate in Computation and Mathematics for Biological Networks
 
-#### B.A. in Mathematics and Biology  
+##### B.A. in Mathematics and Biology  
 Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 - Thesis: Modeling Stochastic Traps The Evolution of Preference in a Temporally Heterogeneous Ecological Trap
 - Advisers: Bruce Robertson & Csilla Szabo
  
-### Summer Schools
+#### Summer Schools
 - Virus Hunting in the Cloud Codeathon, NCBI/UMIACS, College Park, MD, 2019
 - Microbial Diversity Course, Marine Biological Laboratory, Woods Hole, MA, 2018
 - The Search for Selection, NIMBioS, Knoxville, TN, 2018
@@ -40,7 +40,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
  
 5. Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *ISME J* 12(2), 585-597. (https://doi.org/10.1038/ismej.2017.194)
  
-### Outreach Publications
+#### Outreach Publications
 
 1. Weissman J. L., H.H. Yiu, P.L.F. Johnson. 2019. **What Bacteria Do When They Get Sick**. *Frontiers Young Minds*.
 
@@ -68,7 +68,7 @@ UK, February 2019
 
 ## Teaching
 
-### Guest Lecturer 
+#### Guest Lecturer 
 University of Maryland College Park
 
 - BIOL709F: Statistics and Modeling for Biologists, *The Bootstrap*, Spring 2018
@@ -76,6 +76,35 @@ University of Maryland College Park
 - BSCI405: Population and Evolutionary Genetics, *Horizontal Gene Transfer*, Spring 2017
 
 
-### Teaching Assistant
+#### Teaching Assistant
 - Calculus for the Life Sciences Department of Biology, University of Maryland College Park, Fall 2015
 - Bridge to Enter Advanced Mathematics (BEAM), The Art of Problem Solving Foundation, Cambridge, MA, Summer 2012 and 2015
+
+## Mentoring 
+
+
+#### Workshop Organizer
+- *Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*, University of Maryland College Park, Spring 2019
+
+#### Undergraduates Mentored 
+University of Maryland College Park
+
+- Rohan Laljani (Fall 2017 - Summer 2019; co-author on paper \#2)
+- Vinay Veluvolu (Summer 2018 - Summer 2019; poster at UMD-CP Biosciences Research Day)
+- Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project \& poster presentation)
+- Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
+- Nicholas Penn (Spring 2017 - Summer 2017)
+
+## Service
+
+#### BEES Student Taskforce (BEESst)
+University of Maryland College Park
+- Secretary-Treasurer, Fall 2018-Spring 2019
+- Co-President, Fall 2017-Spring 2018
+
+#### Graduate Mentor
+Biological Sciences Graduate Program, University of Maryland College Park, Fall 2016, 2017
+
+#### Reviewer
+- ISME J
+- PNAS
