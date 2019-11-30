@@ -1,5 +1,5 @@
 name: Jake L. Weissman, PhD
-logo: /img/crisprpt1_frown.png
+logo: /img/infection.gif
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-minimal
