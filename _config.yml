@@ -1,4 +1,5 @@
-name: Jake L. Weissman, PhD
+title: Jake L. Weissman
+subtitle: The Battle Between Microbes and Their Viruses
 logo: /img/infection.gif
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
