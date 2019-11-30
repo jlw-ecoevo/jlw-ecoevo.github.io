@@ -1,3 +1,4 @@
 name: Jake L. Weissman, PhD
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+remote_theme: "mmistakes/minimal-mistakes@4.17.2"
