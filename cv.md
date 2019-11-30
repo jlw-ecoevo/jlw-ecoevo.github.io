@@ -2,6 +2,8 @@
 layout: default
 title: About
 ---
-# CV
+# Jake L. Weissman, PhD
 
+## Education
 
+## Publications
