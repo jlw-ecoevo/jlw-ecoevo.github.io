@@ -41,3 +41,10 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+---
+---
+
+header {
+  background-image: url('{{ site.baseurl }}/img/crisprpt1_frown.png');
+}
