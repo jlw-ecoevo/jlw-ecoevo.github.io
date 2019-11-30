@@ -1,7 +1,4 @@
 name: Jake L. Weissman, PhD
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-background-image: /img/crisprpt1_frown.png
-remote_theme: "mmistakes/minimal-mistakes@4.17.2"
-
 theme: jekyll-theme-minimal
