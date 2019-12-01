@@ -2,6 +2,7 @@
 layout: default
 title: About
 ---
+**Hey! Does this all seem a bit technical? Check out our article in [Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2019.00102) for an explanation of CRISPR immunity that should be accessible to all ages**
 
 ### Research: An Ongoing Battle Between Microbes and Their Viruses
 
