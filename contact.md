@@ -4,7 +4,7 @@ title: About
 ---
 ### Contact Me
 
-![Me](/img/jlw.jpeg)
+![Me](/img/jlw2.jpg)
 
 **Email:** jw4336@terpmail.umd.edu
 
