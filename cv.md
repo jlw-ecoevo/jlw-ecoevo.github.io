@@ -20,10 +20,9 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - Advisers: Bruce Robertson & Csilla Szabo
  
 #### Summer Schools
-- Virus Hunting in the Cloud Codeathon, NCBI/UMIACS, College Park, MD, 2019
-- Microbial Diversity Course, Marine Biological Laboratory, Woods Hole, MA, 2018
-- The Search for Selection, NIMBioS, Knoxville, TN, 2018
-- Complex Systems Summer School, Santa Fe Institute, Santa Fe, NM, 2017
+- **Microbial Diversity Course**, Marine Biological Laboratory, Woods Hole, MA, 2018
+- **The Search for Selection**, NIMBioS, Knoxville, TN, 2018
+- **Complex Systems Summer School**, Santa Fe Institute, Santa Fe, NM, 2017
  
 ## External Funding
 - Simons Postdoctoral Fellowship in Marine Microbial Ecology (Simons Foundation, 2019)
