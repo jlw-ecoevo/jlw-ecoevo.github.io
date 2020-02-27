@@ -6,7 +6,7 @@ title: About
 
 ![Me](/img/jlw2.jpg)
 
-**Email:** jw4336@terpmail.umd.edu
+**Email:** jakeweis@usc.edu
 
 **Twitter:** @jlw_ecoevo
 
