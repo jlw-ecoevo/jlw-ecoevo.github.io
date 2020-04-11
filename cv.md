@@ -49,15 +49,15 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 ## Fellowships and Awards
 - Biology Travel Award (UMD-CP, 2019 and 2016)
-- COMBINE Network Science Fellowship (UMD/NSF DGE-1632976, 2018)
-- Devra Kleiman Memorial Scholarship (UMD, 2018)
-- GAANN Mathematical Biology Fellowship (UMD/U.S. Department of Education, 2015)
-- The Flagship Fellowship (UMD, 2015)
-- The Dean's Fellowship (UMD, 2015)
+- [COMBINE Network Science Fellowship](http://www.combine.umd.edu/) (UMD/NSF DGE-1632976, 2018)
+- [Devra Kleiman Memorial Scholarship](https://giving.umd.edu/giving/Fund.php?name=dr-devra-kleiman-memorial-graduate-endowment) (UMD, 2018)
+- [GAANN Mathematical Biology Fellowship](https://www2.ed.gov/programs/gaann/index.html) (UMD/U.S. Department of Education, 2015)
+- [The Flagship Fellowship](https://gradschool.umd.edu/funding/student-fellowships-awards/flagship-fellowship) (UMD, 2015)
+- [The Dean's Fellowship](https://gradschool.umd.edu/funding/student-fellowships-awards/university-deans-and-merit-program) (UMD, 2015)
 - The Harry J. Carman Scholarship (Bard College, 2014)
 - The John Bard Scholarship (Division of Science, Math and Computing, Bard College, 2013)
 - George I. Alden Scholar (George I. Alden Trust, 2012)%for the 2012-2013 academic year 
-- The Excellence and Equal Cost Scholarship (Bard College, 2011) 
+- [The Excellence and Equal Cost Scholarship](https://www.bard.edu/financialaid/programs/) (Bard College, 2011) 
 - The Bishop Scholarship (The Bishop Scholarship Foundation, 2011)
 
 ## Invited Talks
