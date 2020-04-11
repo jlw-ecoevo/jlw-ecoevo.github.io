@@ -66,8 +66,8 @@ UK, February 2019
 2. Clemson University, Clemson, SC, December 2018
 
 ## Workshops
-- Virus Hunting in the Cloud Codeathon, NCBI/UMIACS, College Park, MD, 2019
-- Quantitative Laws II Workshop, Lake Como School of Advanced Studies, Italy, 2016  
+- [Virus Hunting in the Cloud Codeathon](https://ncbiinsights.ncbi.nlm.nih.gov/2019/09/26/virus-hunting-in-the-cloud-codeathon-v2/), NCBI/UMIACS, College Park, MD, 2019
+- [Quantitative Laws II Workshop, Lake Como School of Advanced Studies](https://qlsb.lakecomoschool.org/files/2016/06/program7.pdf), Italy, 2016  
 
 ## Teaching
 
@@ -80,14 +80,14 @@ University of Maryland College Park
 
 
 #### Teaching Assistant
-- Calculus for the Life Sciences Department of Biology, University of Maryland College Park, Fall 2015
-- Bridge to Enter Advanced Mathematics (BEAM), The Art of Problem Solving Foundation, Cambridge, MA, Summer 2012 and 2015
+- [Calculus for the Life Sciences](https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/360-math-130-calculus-for-life-science-i.html), Department of Biology, University of Maryland College Park, Fall 2015
+- [Bridge to Enter Advanced Mathematics (BEAM)](https://www.beammath.org/), The Art of Problem Solving Foundation, Cambridge, MA, Summer 2012 and 2015
 
 ## Mentoring 
 
 
 #### Workshop Organizer
-- *Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*, University of Maryland College Park, Spring 2019
+- [*Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*](http://www.combine.umd.edu/peer-to-peer-tutorials/undergradmentoring/), University of Maryland College Park, Spring 2019
 
 #### Undergraduates Mentored 
 University of Maryland College Park
@@ -100,10 +100,10 @@ University of Maryland College Park
 
 ## Service
 
-#### BEES Student Taskforce (BEESst)
+#### [BEES Student Taskforce (BEESst)](https://www.bisi.umd.edu/beesst)
 University of Maryland College Park
-- Secretary-Treasurer, Fall 2018-Spring 2019
 - Co-President, Fall 2017-Spring 2018
+- Secretary-Treasurer, Fall 2018-Spring 2019
 
 #### Graduate Mentor
 Biological Sciences Graduate Program, University of Maryland College Park, Fall 2016, 2017
