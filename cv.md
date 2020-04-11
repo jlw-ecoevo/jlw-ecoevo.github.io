@@ -6,12 +6,12 @@ title: About
 
 ## Education
 
-##### PhD in Behavior, Ecology, Evolution, and Systematics (BEES)
+##### PhD in [Behavior, Ecology, Evolution, and Systematics (BEES)](https://www.bisi.umd.edu/bees-1)
 Fall 2019, University of Maryland College Park, College Park, MD
 
-- Dissertation: Investigating the Distribution of CRISPR Adaptive Immune Systems Among Prokaryotes
-- Advisers: Philip L.F. Johnson & William F. Fagan
-- Graduate Certificate in Computation and Mathematics for Biological Networks
+- Dissertation: [Investigating the Distribution of CRISPR Adaptive Immune Systems Among Prokaryotes](https://drum.lib.umd.edu/handle/1903/25415)
+- Advisers: [Philip L.F. Johnson](http://science.umd.edu/biology/plfj/) & [William F. Fagan](http://science.umd.edu/biology/faganlab/)
+- Graduate Certificate in [Computation and Mathematics for Biological Networks](http://www.combine.umd.edu/)
 
 ##### B.A. in Mathematics and Biology  
 Spring 2015, Bard College, Annandale-on-Hudson, NY
@@ -20,12 +20,12 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - Advisers: Bruce Robertson & Csilla Szabo
  
 #### Summer Schools
-- **Microbial Diversity Course**, Marine Biological Laboratory, Woods Hole, MA, 2018
-- **The Search for Selection**, NIMBioS, Knoxville, TN, 2018
-- **Complex Systems Summer School**, Santa Fe Institute, Santa Fe, NM, 2017
+- [**Microbial Diversity Course**](https://www.mbl.edu/microbialdiversity/research-projects/), Marine Biological Laboratory, Woods Hole, MA, 2018
+- [**The Search for Selection**](http://www.nimbios.org/tutorials/selection), NIMBioS, Knoxville, TN, 2018
+- [**Complex Systems Summer School**](https://wiki.santafe.edu/index.php/Complex_Systems_Summer_School_2017_(CSSS)), Santa Fe Institute, Santa Fe, NM, 2017
  
 ## External Funding
-- Simons Postdoctoral Fellowship in Marine Microbial Ecology (Simons Foundation, 2019)
+- [Simons Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
 
 ## Publications
 
