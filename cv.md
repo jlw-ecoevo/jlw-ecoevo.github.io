@@ -29,6 +29,8 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 ## Publications
 
+1. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self during CRISPR Immunization**. *Trends in Microbiology*](https://doi.org/10.1016/j.tim.2020.02.005)
+
 1. [Weissman J.L. & P.L.F. Johnson. 2020. **Network-Based Prediction of Novel CRISPR-Associated Genes in Metagenomes**. *mSystems J* 5(1), e00752-19.](https://doi.org/10.1128/mSystems.00752-19).
  
 2. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2019. **Linking high GC content to the repair of double strand breaks in prokaryotic genomes**. *PLOS Genetics* 15(11), e1008493.](https://doi.org/10.1371/journal.pgen.1008493).
