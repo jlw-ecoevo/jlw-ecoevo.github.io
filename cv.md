@@ -23,13 +23,15 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - [**Microbial Diversity Course**](https://www.mbl.edu/microbialdiversity/research-projects/), Marine Biological Laboratory, Woods Hole, MA, 2018
 - [**The Search for Selection**](http://www.nimbios.org/tutorials/selection), NIMBioS, Knoxville, TN, 2018
 - [**Complex Systems Summer School**](https://wiki.santafe.edu/index.php/Complex_Systems_Summer_School_2017_(CSSS)), Santa Fe Institute, Santa Fe, NM, 2017
- 
-## External Funding
-- [Simons Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
 
+## Positions
+- Postdoctoral Fellow, University of Southern California, 2020 - Present
+    - Adviser: [Jed Fuhrman](https://dornsife.usc.edu/labs/fuhrmanlab/)
+    - Funding: [Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
+ 
 ## Publications
 
-1. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self during CRISPR Immunization**. *Trends in Microbiology*](https://doi.org/10.1016/j.tim.2020.02.005)
+1. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self during CRISPR Immunization**. *Trends in Microbiology* 28(7), 543-553](https://doi.org/10.1016/j.tim.2020.02.005)
 
 2. [Weissman J.L. & P.L.F. Johnson. 2020. **Network-Based Prediction of Novel CRISPR-Associated Genes in Metagenomes**. *mSystems J* 5(1), e00752-19.](https://doi.org/10.1128/mSystems.00752-19).
  
@@ -70,6 +72,11 @@ UK, February 2019
 - [Quantitative Laws II Workshop, Lake Como School of Advanced Studies](https://qlsb.lakecomoschool.org/files/2016/06/program7.pdf), Italy, 2016  
 
 ## Teaching
+
+#### Instructor
+[Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/), Spring/Summer 2020
+- Co-developed and taught Network Science and Population Genetics online coursework dur-
+ing the COVID-19 lockdown
 
 #### Guest Lecturer 
 University of Maryland College Park
