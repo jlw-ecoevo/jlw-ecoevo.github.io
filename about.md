@@ -27,7 +27,7 @@ evolution of antiviral defense strategies.
 
 *As of March 2020 I'm a [Simons Foundation Postdoctoral Fellow in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) in the [Fuhrman Lab](https://dornsife.usc.edu/labs/fuhrmanlab) at USC.*
 
-Previously, I defended my PhD in [Behavior, Ecology, Evolution, and Systematics  (BEES) at the University of Maryland College Park](https://www.bisi.umd.edu/bees-1) coadvised by [Philip LF Johnson](http://science.umd.edu/biology/plfj/) (population genetics) and [Bill Fagan](http://science.umd.edu/biology/faganlab/) (theoretical ecology). Right now I'm a [COMBINE network science fellow (NSF)](https://www.combine.umd.edu/), and I was previously a [GAANN fellow](https://www2.ed.gov/programs/gaann/index.html) in mathematical biology (US Dept. Ed.).
+Previously, I defended my PhD in [Behavior, Ecology, Evolution, and Systematics  (BEES) at the University of Maryland College Park](https://www.bisi.umd.edu/bees-1) coadvised by [Philip LF Johnson](http://science.umd.edu/biology/plfj/) (population genetics) and [Bill Fagan](http://science.umd.edu/biology/faganlab/) (theoretical ecology). I was a [COMBINE network science fellow (NSF)](https://www.combine.umd.edu/), and before that a [GAANN fellow](https://www2.ed.gov/programs/gaann/index.html) in mathematical biology (US Dept. Ed.).
 
 I received a BA in mathematics and biology from [Bard College](https://www.bard.edu/) in 2015 with a [senior thesis](https://digitalcommons.bard.edu/senproj_s2015/39/) advised by [Bruce Robertson](https://www.bard.edu/faculty/details/?id=3226) (biology) and [Csilla Szabo](https://www.skidmore.edu/mathematics/faculty/szabo.php) (mathematics). 
 

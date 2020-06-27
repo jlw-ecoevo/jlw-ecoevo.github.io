@@ -58,7 +58,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - [The Dean's Fellowship](https://gradschool.umd.edu/funding/student-fellowships-awards/university-deans-and-merit-program) (UMD, 2015)
 - The Harry J. Carman Scholarship (Bard College, 2014)
 - The John Bard Scholarship (Division of Science, Math and Computing, Bard College, 2013)
-- George I. Alden Scholar (George I. Alden Trust, 2012)%for the 2012-2013 academic year 
+- George I. Alden Scholar (George I. Alden Trust, 2012)
 - [The Excellence and Equal Cost Scholarship](https://www.bard.edu/financialaid/programs/) (Bard College, 2011) 
 - The Bishop Scholarship (The Bishop Scholarship Foundation, 2011)
 
@@ -99,9 +99,9 @@ University of Maryland College Park
 #### Undergraduates Mentored 
 University of Maryland College Park
 
-- Rohan Laljani (Fall 2017 - Summer 2019; co-author on paper \#2)
-- Vinay Veluvolu (Summer 2018 - Summer 2019; poster at UMD-CP Biosciences Research Day)
-- Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project \& poster presentation)
+- Rohan Laljani (Fall 2017 - Summer 2019; co-author on Weissman et al. 2019, *ISME J*)
+- Vinay Veluvolu (Summer 2018 - Summer 2019; poster at UMD Biosciences Research Day)
+- Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project & poster presentation)
 - Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
 - Nicholas Penn (Spring 2017 - Summer 2017)
 
