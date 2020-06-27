@@ -75,8 +75,7 @@ UK, February 2019
 
 #### Instructor
 [Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/), Spring/Summer 2020
-- Co-developed and taught Network Science and Population Genetics online coursework dur-
-ing the COVID-19 lockdown
+- Co-developed and taught Network Science and Population Genetics online coursework during the COVID-19 lockdown
 
 #### Guest Lecturer 
 University of Maryland College Park
