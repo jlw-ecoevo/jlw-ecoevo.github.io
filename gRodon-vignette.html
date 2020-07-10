@@ -123,34 +123,34 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)</code></pre></div>
 <p>And now we are ready to predict the growth rate of <em>S. pyogenes</em> M1.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed)
-<span class="co">#&gt; Warning in filterSeq(genes, highly_expressed): There were 32 genes either with</span>
-<span class="co">#&gt; lengths not multiples of 3 or not above length threshold (default 100bp), these</span>
-<span class="co">#&gt; genes have been ignored</span>
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 146 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
 <span class="co">#&gt; $CUBHE</span>
-<span class="co">#&gt; [1] 0.8970622</span>
+<span class="co">#&gt; [1] 0.9148924</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $ConsistencyHE</span>
-<span class="co">#&gt; [1] 0.5117027</span>
+<span class="co">#&gt; [1] 0.5062119</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $CPB</span>
-<span class="co">#&gt; [1] -0.3870115</span>
+<span class="co">#&gt; [1] -0.3886505</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $FilteredSequences</span>
-<span class="co">#&gt; [1] 32</span>
+<span class="co">#&gt; [1] 146</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $d</span>
-<span class="co">#&gt; [1] 0.3382878</span>
+<span class="co">#&gt; [1] 0.2987448</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $LowerCI</span>
-<span class="co">#&gt; [1] 0.2690099</span>
+<span class="co">#&gt; [1] 0.2349466</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
-<span class="co">#&gt; [1] 0.4286843</span></code></pre></div>
+<span class="co">#&gt; [1] 0.3830901</span></code></pre></div>
 <p>The warning at the top is letting you know that there were a number of genes in your fasta that either weren’t a length multiple of three, or were under the length threshold of 100bp where estimates of bias will be unreliable. Don’t worry about this unless the number of filtered genes is very high compared to the total number of genes in your file. We expect some genes to typically get filtered.</p>
 <p>The output contains several (hopefully) useful quantities:</p>
 <ul>
 <li><code>$CUBHE</code> is the codon usage bias of the highly expressed genes relative to the genomic background</li>
-<li><code>#ConsistencyHE</code> is the codon usage bias of the highly expressed genes relative to the all highly expressed genes</li>
+<li><code>$ConsistencyHE</code> is the codon usage bias of the highly expressed genes relative to the all highly expressed genes</li>
 <li><code>$CPB</code> is the genome-wide codon pair bias</li>
 <li><code>$FilteredSequences</code> is the number of sequences filtered due to length</li>
 <li><code>$d</code> is the estimated doubling time from <code>gRodon</code>. This is, presumably, what you came here for</li>
@@ -166,59 +166,115 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 </li>
 <li>Predicting the growth rate of a psychrophile or thermophile</li>
 </ul>
-<div id="partial-and-metagenome-modes" class="section level3">
-<h3>Partial and Metagenome Modes</h3>
+<div id="partial-mode" class="section level3">
+<h3>Partial Mode</h3>
 <p>What if you don’t have a nice, complete genome … can you still use <code>gRodon</code>? Yes, you can, though you may want to use either “partial” or “metagenome” mode.</p>
 <p>When your genome is incomplete, you may have insufficient data to accurately estimate the codon pair bias (since there are many possible codon pairs). In this case you can set <code>gRodon</code> to “partial” mode, which excludes pair-bias from the prediction. This is probably a good choice when working with incomplete SAGs and MAGs. The expected decrease in accuracy is quite small (see original <code>gRodon</code> paper).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">mode=</span><span class="st">&quot;partial&quot;</span>)
-<span class="co">#&gt; Warning in filterSeq(genes, highly_expressed): There were 32 genes either with</span>
-<span class="co">#&gt; lengths not multiples of 3 or not above length threshold (default 100bp), these</span>
-<span class="co">#&gt; genes have been ignored</span>
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 146 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
 <span class="co">#&gt; $CUBHE</span>
-<span class="co">#&gt; [1] 0.8970622</span>
+<span class="co">#&gt; [1] 0.9148924</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $ConsistencyHE</span>
-<span class="co">#&gt; [1] 0.5117027</span>
+<span class="co">#&gt; [1] 0.5062119</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $CPB</span>
-<span class="co">#&gt; [1] -0.3870115</span>
+<span class="co">#&gt; [1] -0.3886505</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $FilteredSequences</span>
-<span class="co">#&gt; [1] 32</span>
+<span class="co">#&gt; [1] 146</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $d</span>
-<span class="co">#&gt; [1] 0.406641</span>
+<span class="co">#&gt; [1] 0.3631482</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $LowerCI</span>
-<span class="co">#&gt; [1] 0.320009</span>
+<span class="co">#&gt; [1] 0.2840725</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
-<span class="co">#&gt; [1] 0.5210859</span></code></pre></div>
-<p>For bulk estimation from metagenomes (see <a href="https://doi.org/10.1371/journal.pgen.1000808">Viera-Silva et al.</a> for discussion), our consistency statistic is not appropriate, since different organisms may prefer different codons (even when they have similar bias values). It also doesn’t make much sense to calculate the pair-bias in this scenario. Thus the model for predicting the mean growth rate of a metagenomic sample excludes consistency and pair-bias. Importantly, metagenome mode is expected to be less accurate than the default mode, so only use this mode if you must (i.e., you have a metagenomic sample).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">mode=</span><span class="st">&quot;metagenome&quot;</span>)
-<span class="co">#&gt; Warning in filterSeq(genes, highly_expressed): There were 32 genes either with</span>
-<span class="co">#&gt; lengths not multiples of 3 or not above length threshold (default 100bp), these</span>
-<span class="co">#&gt; genes have been ignored</span>
+<span class="co">#&gt; [1] 0.4683562</span></code></pre></div>
+</div>
+<div id="metagenome-mode" class="section level3">
+<h3>Metagenome Mode</h3>
+<p>For bulk estimation from metagenomes, our consistency statistic is not appropriate, since different organisms may prefer different codons (even when they have similar bias values). It also doesn’t make much sense to calculate the pair-bias in this scenario. Thus the model for predicting the mean growth rate of a metagenomic sample excludes consistency and pair-bias. Importantly, metagenome mode is expected to be less accurate than the default mode, so only use this mode if you must (i.e., you have a metagenomic sample).</p>
+<p>Let’s try this on one of the samples from <a href="https://doi.org/10.7554/eLife.49816">Okie et al.</a>, as discussed in the <code>gRodon</code> manuscript:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_metagenome &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
+  <span class="st">'ERR2143764_fastp_prokka_scaffolds.ffn.gz'</span>,
+  <span class="dt">package =</span> <span class="st">'gRodon'</span>)
+genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(path_to_metagenome)
+highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)
+<span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">mode =</span> <span class="st">&quot;metagenome&quot;</span>)
+<span class="co">#&gt; Warning in predictGrowth(genes, highly_expressed, mode = &quot;metagenome&quot;): Provide</span>
+<span class="co">#&gt; depth_of_coverage for your ORFs for a more realistic average community growth</span>
+<span class="co">#&gt; rate</span>
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 8290 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
 <span class="co">#&gt; $CUBHE</span>
-<span class="co">#&gt; [1] 0.8970622</span>
+<span class="co">#&gt; [1] 0.7435671</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $ConsistencyHE</span>
-<span class="co">#&gt; [1] 0.5117027</span>
+<span class="co">#&gt; [1] 0.6749404</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $CPB</span>
-<span class="co">#&gt; [1] -0.3870115</span>
+<span class="co">#&gt; [1] -0.2902042</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $FilteredSequences</span>
-<span class="co">#&gt; [1] 32</span>
+<span class="co">#&gt; [1] 8290</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $d</span>
-<span class="co">#&gt; [1] 0.5013052</span>
+<span class="co">#&gt; [1] 1.568009</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $LowerCI</span>
-<span class="co">#&gt; [1] 0.377649</span>
+<span class="co">#&gt; [1] 1.321773</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
-<span class="co">#&gt; [1] 0.6733638</span></code></pre></div>
+<span class="co">#&gt; [1] 1.868001</span></code></pre></div>
+<p>You may also want to incorporate a correction for the relative abundance of different organisms in this calculation (e.g., weighted metagenome mode) by specifying the <code>depth_of_coverage</code> option. This should lead to more realistic estimates of the community-wide growth rate. To use this correction provide <code>depth_of_coverage</code> as a vector of mean depths of coverage for each gene. It does not matter if these coverages are normalized since we only care about relative coverage.</p>
+<p>First let’s take a look at our read depths:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_coverage &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
+  <span class="st">'ERR2143764_fastp_map2ffn_counts.tsv'</span>,
+  <span class="dt">package =</span> <span class="st">'gRodon'</span>)
+read_depths &lt;-<span class="st"> </span><span class="kw">read.delim</span>(path_to_coverage,
+                            <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
+depths &lt;-<span class="st"> </span>read_depths<span class="op">$</span>meandepth
+<span class="co">#Make sure in the correct order</span>
+<span class="kw">names</span>(depths) &lt;-<span class="st"> </span>read_depths<span class="op">$</span>X.rname
+depth_of_coverage &lt;-<span class="st"> </span>depths[<span class="kw">gsub</span>(<span class="st">&quot; .*&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="kw">names</span>(genes))]
+<span class="kw">head</span>(depth_of_coverage)
+<span class="co">#&gt; PNFGHFNJ_00001 PNFGHFNJ_00002 PNFGHFNJ_00003 PNFGHFNJ_00004 PNFGHFNJ_00005 </span>
+<span class="co">#&gt;        19.3492        35.1459        32.5432        28.4502        27.3811 </span>
+<span class="co">#&gt; PNFGHFNJ_00006 </span>
+<span class="co">#&gt;        29.4147</span></code></pre></div>
+<p>And now let’s run weighted metagenome mode:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, 
+              highly_expressed, 
+              <span class="dt">mode =</span> <span class="st">&quot;metagenome&quot;</span>, 
+              <span class="dt">depth_of_coverage =</span> depth_of_coverage)
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 8290 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
+<span class="co">#&gt; $CUBHE</span>
+<span class="co">#&gt; [1] 0.6999671</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $ConsistencyHE</span>
+<span class="co">#&gt; [1] NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $CPB</span>
+<span class="co">#&gt; [1] NA</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $FilteredSequences</span>
+<span class="co">#&gt; [1] 8290</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $d</span>
+<span class="co">#&gt; [1] 2.16715</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $LowerCI</span>
+<span class="co">#&gt; [1] 1.847755</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $UpperCI</span>
+<span class="co">#&gt; [1] 2.55112</span></code></pre></div>
 </div>
 <div id="slow-growers" class="section level3">
 <h3>Slow Growers</h3>
@@ -230,71 +286,71 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(path_to_genome)
 highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)
 <span class="kw">predictGrowth</span>(genes, highly_expressed)
-<span class="co">#&gt; Warning in filterSeq(genes, highly_expressed): There were 409 genes either with</span>
-<span class="co">#&gt; lengths not multiples of 3 or not above length threshold (default 100bp), these</span>
-<span class="co">#&gt; genes have been ignored</span>
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 780 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
 <span class="co">#&gt; Warning in predictGrowth(genes, highly_expressed): Estimated doubling time</span>
 <span class="co">#&gt; &gt;5 hours. CUB signal saturates at approx. 5 hrs... gRodon may underestimate</span>
 <span class="co">#&gt; doubling times above this range. Consider simply reporting as '&gt;5hrs'. (In other</span>
 <span class="co">#&gt; words, this microbe definitely grows slowly, but we can't tell you quite how</span>
 <span class="co">#&gt; slowly).</span>
 <span class="co">#&gt; $CUBHE</span>
-<span class="co">#&gt; [1] 0.6052228</span>
+<span class="co">#&gt; [1] 0.5980514</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $ConsistencyHE</span>
-<span class="co">#&gt; [1] 0.5816346</span>
+<span class="co">#&gt; [1] 0.5630458</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $CPB</span>
-<span class="co">#&gt; [1] -0.3334126</span>
+<span class="co">#&gt; [1] -0.3347875</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $FilteredSequences</span>
-<span class="co">#&gt; [1] 409</span>
+<span class="co">#&gt; [1] 780</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $d</span>
-<span class="co">#&gt; [1] 27.10237</span>
+<span class="co">#&gt; [1] 19.21814</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $LowerCI</span>
-<span class="co">#&gt; [1] 17.30429</span>
+<span class="co">#&gt; [1] 13.00419</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
-<span class="co">#&gt; [1] 43.75888</span></code></pre></div>
+<span class="co">#&gt; [1] 29.05757</span></code></pre></div>
 <p>The example above is for a <em>Mycobacterium leprae</em> genome. This organism has a doubling time around 240 hours. So we are off by an order of magnitude, but still well within the “slow grower” range.</p>
 </div>
 <div id="psychrophiles-and-thermophiles" class="section level3">
 <h3>Psychrophiles and Thermophiles</h3>
 <p><a href="https://doi.org/10.1371/journal.pgen.1000808">Viera-Silva et al.</a> showed that codon-usage based growth estimators are sensitive to growth temperature. Thermophiles and psychrophiles showed consistently higher/lower growth rates respectively. We included a temperature correstion factor in <code>gRodon</code> to account for this. We caution that this correction is based on only 31 extremophile species, and that <code>gRodon</code> has primarily been validated on mesophilic organisms.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">temperature =</span> <span class="dv">33</span>)
-<span class="co">#&gt; Warning in filterSeq(genes, highly_expressed): There were 409 genes either with</span>
-<span class="co">#&gt; lengths not multiples of 3 or not above length threshold (default 100bp), these</span>
-<span class="co">#&gt; genes have been ignored</span>
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 780 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
 <span class="co">#&gt; Warning in predictGrowth(genes, highly_expressed, temperature = 33): Estimated</span>
 <span class="co">#&gt; doubling time &gt;5 hours. CUB signal saturates at approx. 5 hrs... gRodon may</span>
 <span class="co">#&gt; underestimate doubling times above this range. Consider simply reporting as</span>
 <span class="co">#&gt; '&gt;5hrs'. (In other words, this microbe definitely grows slowly, but we can't</span>
 <span class="co">#&gt; tell you quite how slowly).</span>
 <span class="co">#&gt; $CUBHE</span>
-<span class="co">#&gt; [1] 0.6052228</span>
+<span class="co">#&gt; [1] 0.5980514</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $ConsistencyHE</span>
-<span class="co">#&gt; [1] 0.5816346</span>
+<span class="co">#&gt; [1] 0.5630458</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $CPB</span>
-<span class="co">#&gt; [1] -0.3334126</span>
+<span class="co">#&gt; [1] -0.3347875</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $FilteredSequences</span>
-<span class="co">#&gt; [1] 409</span>
+<span class="co">#&gt; [1] 780</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $OGT</span>
 <span class="co">#&gt; [1] 33</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $d</span>
-<span class="co">#&gt; [1] 26.49119</span>
+<span class="co">#&gt; [1] 18.26009</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $LowerCI</span>
-<span class="co">#&gt; [1] 16.90438</span>
+<span class="co">#&gt; [1] 12.66798</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
-<span class="co">#&gt; [1] 42.80006</span></code></pre></div>
+<span class="co">#&gt; [1] 26.85091</span></code></pre></div>
 </div>
 </div>
 
