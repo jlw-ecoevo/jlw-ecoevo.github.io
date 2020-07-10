@@ -100,7 +100,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The <code>gRodon</code> package is quite simple, with only a single function currently available to users: <code>predictGrowth()</code>. We provide a simple, easy to use interface that allows any user with a genome in-hand to predict maximal growth rate. Note that we will use “maximal growth rate”, “minimal doubling time”, and “growth rate” interchangeably below when talking about the output from <code>gRodon</code>.</p>
 <p>The <code>gRodon</code> approach is largely based on an earlier program, <code>growthpred</code>, developed by <a href="https://doi.org/10.1371/journal.pgen.1000808">Viera-Silva et al.</a>. <code>gRodon</code> is intended to be:<br />
 1. More user-friendly (especially for R users)<br />
-2. More accurate (due to the incorporation of additional measures of codon usage)</p>
+2. More accurate (due to the incorporation of additional measures of codon usage)<br />
+3. More accurate on mixed-organism samples (i.e., metagenomes; due to a correction factor for the relative abundance of different organisms)</p>
 <div id="before-you-begin" class="section level2">
 <h2>Before You Begin</h2>
 <p>There are two things that <code>gRodon</code> does <em>not</em> do that you <em>must</em> do ahead of time yourself in order to predict growth rate:<br />
