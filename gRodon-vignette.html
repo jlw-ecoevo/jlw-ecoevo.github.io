@@ -96,19 +96,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
-<p>The <code>gRodon</code> package allows you to predict the maximal growth rate of a prokaryotic organism from genomic data. For details of how this is done please see the original paper. Briefly, gRodon exploits codon usage statistics to detect optimization of highly-expressed genes, an indicator of rapid growth. We will provide some guidance about when these predictions are appropriate below.</p>
-<p>The <code>gRodon</code> package is quite simple, with only a single function currently available to users: <code>predictGrowth()</code>. We provide a simple, easy to use interface that allows any user with a genome in-hand to predict maximal growth rate. Note that we will use “maximal growth rate”, “minimal doubling time”, and “growth rate” interchangeably below when talking about the output from <code>gRodon</code>.</p>
-<p>The <code>gRodon</code> approach is largely based on an earlier program, <code>growthpred</code>, developed by <a href="https://doi.org/10.1371/journal.pgen.1000808">Viera-Silva et al.</a>. <code>gRodon</code> is intended to be:<br />
-1. More user-friendly (especially for R users)<br />
+<p>The <code>gRodon</code> package allows you to predict the maximal growth rate of a prokaryotic organism from genomic data. For details of how this is done please see the original paper. Briefly, gRodon exploits codon usage statistics to detect optimization of highly-expressed genes, an indicator of selection for rapid growth. We will provide some guidance about when these predictions are appropriate below.</p>
+<p>The <code>gRodon</code> package is quite simple, with only a single function currently available to users: <code>predictGrowth()</code>. We provide a simple, easy to use interface that allows any user with a genome in-hand to predict maximal growth rate.</p>
+<p>The <code>gRodon</code> approach is largely based on an earlier program, <code>growthpred</code>, developed by <a href="https://doi.org/10.1371/journal.pgen.1000808">Vieira-Silva et al.</a>. <code>gRodon</code> is intended to be:<br />
+1. User-friendly (especially for R users)<br />
 2. More accurate (due to the incorporation of additional measures of codon usage)<br />
 3. More accurate on mixed-organism samples (i.e., metagenomes; due to a correction factor for the relative abundance of different organisms)</p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>The easiest way to install gRodon is with <a href="https://github.com/r-lib/devtools">devtools</a>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;jlw-ecoevo/gRodon&quot;</span>)</code></pre></div>
+<p><code>gRodon</code> has a number of dependencies - including the <code>Biostrings</code> and <code>coRdon</code> packages which are bioconductor packages and cannot be installed via CRAN. To install them run the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))
+    <span class="kw">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)
+
+BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;Biostrings&quot;</span>)
+BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&quot;coRdon&quot;</span>)</code></pre></div>
+</div>
 <div id="before-you-begin" class="section level2">
 <h2>Before You Begin</h2>
 <p>There are two things that <code>gRodon</code> does <em>not</em> do that you <em>must</em> do ahead of time yourself in order to predict growth rate:<br />
 1. You must identify coding sequences in your genome<br />
 (e.g., using <a href="https://github.com/hyattpd/Prodigal">prodigal</a>)<br />
 2. You must annotate a set of highly-expressed genes, typically ribosomal proteins</p>
-<p>It is helpful if (in frame) coding sequences are stored in a fasta file for easy loading. Additionally, you will need to have a logical vector describing which genes are part of your highly expressed set. This should become a bit clearer with the example below.</p>
+<p>It is helpful if (in frame) coding sequences are stored in a fasta file for easy loading. Additionally, you will need to have a logical vector describing which genes are part of your highly expressed set (this should become a bit clearer with the examples below).</p>
+<div id="a-tiny-detour-annotating-your-genome" class="section level5">
+<h5>A Tiny Detour: Annotating Your Genome</h5>
+<p><strong>Disclaimer:</strong> I make no claim that this is the best, most efficient, or most graceful way to get annotated coding sequences from your assembly, but it will get the job done. If you have strong opinions about how this should be done shoot me an email and I will be happy to link to your rant/tutorial. If you already have annotated coding sequences please skip this section. If you have unannotated CDS (e.g., from <a href="https://github.com/hyattpd/Prodigal">prodigal</a>), you might consider simply BLASTing your output for highly expressed genes (e.g., using the blastdb included in <a href="http://ftp.pasteur.fr/pub/gensoft/projects/growthpred/">growthpred</a>).</p>
+<p>Given an un-annotated genome or metagenomic assembly, an easy way to find and annotate coding sequence is using the program <a href="https://github.com/tseemann/prokka">prokka</a>. For example, if I have a set of assembled contigs, I could run (on the command line):</p>
+<pre><code>prokka contig.fasta --prefix my_genome</code></pre>
+<p>This will give several output files. You are interested the untranslated coding sequences (CDS), which can be found in the <code>*.ffn</code> file along with other non-coding transcripts (e.g., rRNA, tRNA). To get the names of just your CDS you can pull them out of the <code>*.gff</code> output:</p>
+<pre><code>sed -n '/##FASTA/q;p' my_genome/my_genome.gff | awk '$3==&quot;CDS&quot;' | awk '{print $9'} | awk 'gsub(&quot;;.*&quot;,&quot;&quot;)' | awk 'gsub(&quot;ID=&quot;,&quot;&quot;)' &gt; CDS_names.txt</code></pre>
+<p>The above command first trims the sequence data off the end of the <code>*.gff</code> file, then looks for rows describing CDS and pulls out their IDs, finally it outputs these IDs to a file called <code>CDS_names.txt</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load your *.ffn file into R</span>
+genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(<span class="st">&quot;my_genome/my_genome.ffn&quot;</span>)
+
+<span class="co"># Subset your sequences to those that code for proteins</span>
+CDS_IDs &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="st">&quot;CDS_names.txt&quot;</span>)
+gene_IDs &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; .*&quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">names</span>(genes)) <span class="co">#Just look at first part of name before the space</span>
+genes &lt;-<span class="st"> </span>genes[gene_IDs <span class="op">%in%</span><span class="st"> </span>CDS_IDs]
+
+<span class="co">#Search for genes annotated as ribosomal proteins</span>
+highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)</code></pre></div>
+<p>You are now ready to run gRodon.</p>
+</div>
 </div>
 <div id="a-minimal-example" class="section level2">
 <h2>A Minimal Example</h2>
@@ -122,7 +153,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(path_to_genome)</code></pre></div>
 <p>We also need a set of highly expressed genes. In general, the ribosomal proteins are a good set of genes to use for this purpose. Since these proteins should already be annotated in our example file (try running <code>names(genes)</code> to see the annotations from NCBI) we can use <code>grep()</code> to search for them (specifically, <code>grepl()</code> to return a logical vector).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)</code></pre></div>
-<p>And now we are ready to predict the growth rate of <em>S. pyogenes</em> M1.</p>
+<p>And now we are ready to predict the maximal growth rate of <em>S. pyogenes</em> M1.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed)
 <span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
 <span class="co">#&gt; There were 146 genes either with lengths not multiples of 3 or not above length</span>
@@ -147,14 +178,14 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
 <span class="co">#&gt; [1] 0.3830901</span></code></pre></div>
-<p>The warning at the top is letting you know that there were a number of genes in your fasta that either weren’t a length multiple of three, or were under the length threshold of 100bp where estimates of bias will be unreliable. Don’t worry about this unless the number of filtered genes is very high compared to the total number of genes in your file. We expect some genes to typically get filtered.</p>
+<p>The warning at the top is letting you know that there were a number of genes in your fasta that either weren’t a length multiple of three, or were under the length threshold of 80 codons (240 bp) where estimates of bias will be unreliable. Don’t worry about this unless the number of filtered genes is very high compared to the total number of genes in your file. We expect some genes to typically get filtered.</p>
 <p>The output contains several (hopefully) useful quantities:</p>
 <ul>
-<li><code>$CUBHE</code> is the codon usage bias of the highly expressed genes relative to the genomic background</li>
-<li><code>$ConsistencyHE</code> is the codon usage bias of the highly expressed genes relative to the all highly expressed genes</li>
+<li><code>$CUBHE</code> is the mean of the codon usage bias of each highly expressed gene relative to all other genes</li>
+<li><code>$ConsistencyHE</code> is the mean of the codon usage bias of each highly expressed gene relative to all other highly expressed genes</li>
 <li><code>$CPB</code> is the genome-wide codon pair bias</li>
 <li><code>$FilteredSequences</code> is the number of sequences filtered due to length</li>
-<li><code>$d</code> is the estimated doubling time from <code>gRodon</code>. This is, presumably, what you came here for</li>
+<li><code>$d</code> is the estimated minimal doubling time from <code>gRodon</code> in hours. This is, presumably, what you came here for.</li>
 <li><code>$LowerCI</code> and <code>$UpperCI</code> are the 95% confidence intervals for <code>d</code></li>
 </ul>
 <p>For the most part, that’s all you need to know. There are a few specific use cases we discuss below that require a slightly more thoughful application of <code>gRodon</code>. These are:</p>
@@ -170,7 +201,7 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 <div id="partial-mode" class="section level3">
 <h3>Partial Mode</h3>
 <p>What if you don’t have a nice, complete genome … can you still use <code>gRodon</code>? Yes, you can, though you may want to use either “partial” or “metagenome” mode.</p>
-<p>When your genome is incomplete, you may have insufficient data to accurately estimate the codon pair bias (since there are many possible codon pairs). In this case you can set <code>gRodon</code> to “partial” mode, which excludes pair-bias from the prediction. This is probably a good choice when working with incomplete SAGs and MAGs. The expected decrease in accuracy is quite small (see original <code>gRodon</code> paper).</p>
+<p>When your genome is incomplete, you may have insufficient data to accurately estimate the codon pair bias (since there are many possible codon pairs). In this case you can set <code>gRodon</code> to “partial” mode, which excludes pair-bias from the prediction. This is probably a good choice when working with incomplete SAGs and MAGs. The expected decrease in accuracy is quite small (see <code>gRodon</code> paper).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">mode=</span><span class="st">&quot;partial&quot;</span>)
 <span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
 <span class="co">#&gt; There were 146 genes either with lengths not multiples of 3 or not above length</span>
@@ -198,7 +229,7 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 </div>
 <div id="metagenome-mode" class="section level3">
 <h3>Metagenome Mode</h3>
-<p>For bulk estimation from metagenomes, our consistency statistic is not appropriate, since different organisms may prefer different codons (even when they have similar bias values). It also doesn’t make much sense to calculate the pair-bias in this scenario. Thus the model for predicting the mean growth rate of a metagenomic sample excludes consistency and pair-bias. Importantly, metagenome mode is expected to be less accurate than the default mode, so only use this mode if you must (i.e., you have a metagenomic sample).</p>
+<p>For bulk estimation of the average community-wide maximal growth rate from metagenomes, our consistency statistic is not appropriate, since different organisms may prefer different codons (even when they have similar bias values). It also doesn’t make much sense to calculate the pair-bias in this scenario. Thus the model for predicting the average maximal growth rate of a metagenomic sample excludes consistency and pair-bias. Importantly, metagenome mode is expected to be less accurate than the default mode, so only use this mode if you must (i.e., you have a metagenomic sample).</p>
 <p>Let’s try this on one of the samples from <a href="https://doi.org/10.7554/eLife.49816">Okie et al.</a>, as discussed in the <code>gRodon</code> manuscript:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_metagenome &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
   <span class="st">'ERR2143764_fastp_prokka_scaffolds.ffn.gz'</span>,
@@ -232,7 +263,7 @@ highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<sp
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
 <span class="co">#&gt; [1] 1.868001</span></code></pre></div>
-<p>You may also want to incorporate a correction for the relative abundance of different organisms in this calculation (e.g., weighted metagenome mode) by specifying the <code>depth_of_coverage</code> option. This should lead to more realistic estimates of the community-wide growth rate. To use this correction provide <code>depth_of_coverage</code> as a vector of mean depths of coverage for each gene. It does not matter if these coverages are normalized since we only care about relative coverage.</p>
+<p>You may also want to incorporate a correction for the relative abundance of different organisms in this calculation (e.g., weighted metagenome mode) by specifying the <code>depth_of_coverage</code> option. This should lead to more realistic estimates of the average community-wide maximal growth rate. To use this correction provide <code>depth_of_coverage</code> as a vector of mean depths of coverage for each gene. It does not matter if these coverages are normalized since we only care about relative coverage.</p>
 <p>First let’s take a look at our read depths:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_coverage &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
   <span class="st">'ERR2143764_fastp_map2ffn_counts.tsv'</span>,
@@ -279,8 +310,8 @@ depth_of_coverage &lt;-<span class="st"> </span>depths[<span class="kw">gsub</sp
 </div>
 <div id="slow-growers" class="section level3">
 <h3>Slow Growers</h3>
-<p>All codon-usage based predictors of growth will underestimate doubling times when doubling times are very long. In other words, these predictors will often indicate that slow-growing microbes grow more quickly than they actually do. See the original paper for a more in-depth discusison, but this is because codon-usage bias tends to plateau at a lower-bound in slow-growers.</p>
-<p>What does this mean for you? Well, <code>gRodon</code> can reliably tell you if your microbe grows slowly, but it can’t tell you how slowly. In practice, doubling time predictions appear to be accurate up to 5 hours. If <code>gRodon</code> predicts a doubling time above 5 hours, you can confidently say your microbe grows slowly, but not quite how slowly (doubling times &gt;5hrs tend to be underestimates). In these cases <code>gRodon</code> will even warn you to be careful:</p>
+<p>All codon-usage based predictors of maximal growth will underestimate minimal doubling times when these doubling times are very long. In other words, these predictors will often indicate that slow-growing microbes are able to grow more quickly than they actually can. See the original paper for a more in-depth discusison, but this is because codon-usage bias tends to plateau at a lower-bound in slow-growers.</p>
+<p>What does this mean for you? Well, <code>gRodon</code> can reliably tell you if your microbe grows slowly, but it can’t tell you how slowly. In practice, minimal doubling time predictions appear to be accurate up to 5 hours. If <code>gRodon</code> predicts a doubling time above 5 hours, you can confidently say your microbe grows slowly, but not quite how slowly (minimal doubling times &gt;5hrs tend to be underestimates). In these cases <code>gRodon</code> will even warn you to be careful:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_genome &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
   <span class="st">'GCF_003253775.1_ASM325377v1_cds_from_genomic.fna.gz'</span>,
   <span class="dt">package =</span> <span class="st">'gRodon'</span>)
@@ -319,7 +350,7 @@ highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<sp
 </div>
 <div id="psychrophiles-and-thermophiles" class="section level3">
 <h3>Psychrophiles and Thermophiles</h3>
-<p><a href="https://doi.org/10.1371/journal.pgen.1000808">Viera-Silva et al.</a> showed that codon-usage based growth estimators are sensitive to growth temperature. Thermophiles and psychrophiles showed consistently higher/lower growth rates respectively. We included a temperature correstion factor in <code>gRodon</code> to account for this. We caution that this correction is based on only 31 extremophile species, and that <code>gRodon</code> has primarily been validated on mesophilic organisms.</p>
+<p><a href="https://doi.org/10.1371/journal.pgen.1000808">Vieira-Silva et al.</a> showed that codon-usage based maximal growth estimators are sensitive to growth temperature. Thermophiles and psychrophiles showed consistently higher/lower growth rates respectively. We included a temperature correstion factor in <code>gRodon</code> to account for this. We caution that this correction is based on only 31 extremophile species, and that <code>gRodon</code> has primarily been validated on mesophilic organisms.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">temperature =</span> <span class="dv">33</span>)
 <span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
 <span class="co">#&gt; There were 780 genes either with lengths not multiples of 3 or not above length</span>
@@ -352,6 +383,40 @@ highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<sp
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $UpperCI</span>
 <span class="co">#&gt; [1] 26.85091</span></code></pre></div>
+<p>If working with thermophiles or psychrophiles you might consider using <code>gRodon</code>’s alternative training set (below) which includes more extremophiles than the default training set.</p>
+</div>
+<div id="alternative-training-set-from-madin-et-al." class="section level3">
+<h3>Alternative Training Set from <a href="https://doi.org/10.1038/s41597-020-0497-4">Madin et al.</a></h3>
+<p>We also include a version of <code>gRodon</code> trained on an alternative set of minimal doubling time estimates from a trait database compiled by <a href="https://doi.org/10.1038/s41597-020-0497-4">Madin et al.</a>. While this is a larger training set than the set of minimal doubling times fron <a href="https://doi.org/10.1371/journal.pgen.1000808">Vieira-Silva et al.</a>, it is not hand-curated in the same way and is likely to be more error-prone. In any case, both training sets give very similar results. See the <code>gRodon</code> paper for an in-depth discussion.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_genome &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
+  <span class="st">'GCF_000349925.2_ASM34992v2_cds_from_genomic.fna.gz'</span>,
+  <span class="dt">package =</span> <span class="st">'gRodon'</span>)
+genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(path_to_genome)
+highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<span class="st">&quot;ribosomal protein&quot;</span>,<span class="kw">names</span>(genes),<span class="dt">ignore.case =</span> T)
+<span class="kw">predictGrowth</span>(genes, highly_expressed, <span class="dt">training_set =</span> <span class="st">&quot;madin&quot;</span>)
+<span class="co">#&gt; Warning in filterSeq(genes = genes, highly_expressed = highly_expressed, :</span>
+<span class="co">#&gt; There were 146 genes either with lengths not multiples of 3 or not above length</span>
+<span class="co">#&gt; threshold (default 240bp), these genes have been ignored</span>
+<span class="co">#&gt; $CUBHE</span>
+<span class="co">#&gt; [1] 0.9148924</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $ConsistencyHE</span>
+<span class="co">#&gt; [1] 0.5062119</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $CPB</span>
+<span class="co">#&gt; [1] -0.3886505</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $FilteredSequences</span>
+<span class="co">#&gt; [1] 146</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $d</span>
+<span class="co">#&gt; [1] 0.364274</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $LowerCI</span>
+<span class="co">#&gt; [1] 0.2976978</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $UpperCI</span>
+<span class="co">#&gt; [1] 0.4483901</span></code></pre></div>
 </div>
 </div>
 
