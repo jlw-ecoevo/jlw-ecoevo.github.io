@@ -118,11 +118,12 @@ BiocManager<span class="op">::</span><span class="kw">install</span>(<span class
 <p>There are two things that <code>gRodon</code> does <em>not</em> do that you <em>must</em> do ahead of time yourself in order to predict growth rate:<br />
 1. You must identify coding sequences in your genome<br />
 (e.g., using <a href="https://github.com/hyattpd/Prodigal">prodigal</a>)<br />
-2. You must annotate a set of highly-expressed genes, typically ribosomal proteins</p>
+2. You must annotate a set of highly-expressed genes, typically those coding for ribosomal proteins. We usually use genes coding for ribosomal proteins as our highly-expressed set since these are universal across microbes and almost always highly expressed (if you wanna grow you gotta make proteins), but if you have expression data for your organism you might be able to tailor an even better set of highly expressed genes.</p>
 <p>It is helpful if (in frame) coding sequences are stored in a fasta file for easy loading. Additionally, you will need to have a logical vector describing which genes are part of your highly expressed set (this should become a bit clearer with the examples below).</p>
-<div id="a-tiny-detour-annotating-your-genome" class="section level5">
-<h5>A Tiny Detour: Annotating Your Genome</h5>
-<p><strong>Disclaimer:</strong> I make no claim that this is the best, most efficient, or most graceful way to get annotated coding sequences from your assembly, but it will get the job done. If you have strong opinions about how this should be done shoot me an email and I will be happy to link to your rant/tutorial. If you already have annotated coding sequences please skip this section. If you have unannotated CDS (e.g., from <a href="https://github.com/hyattpd/Prodigal">prodigal</a>), you might consider simply BLASTing your output for highly expressed genes (e.g., using the blastdb included in <a href="http://ftp.pasteur.fr/pub/gensoft/projects/growthpred/">growthpred</a>).</p>
+<div id="a-tiny-detour-annotating-your-assembly" class="section level5">
+<h5>A Tiny Detour: Annotating Your Assembly</h5>
+<p>I’ll lead you through one way to get annotated coding sequence to input into gRodon here, but there are many (MANY) ways to do this. For example, check out this set of tutorials on <a href="https://github.com/biovcnet/biovcnet.github.io/wiki/TOPIC%3A-Functional-Annotation">functional annotation</a>.</p>
+<p><strong>Disclaimer:</strong> <em>I make no claim that this is the best, most efficient, or most graceful way to get annotated coding sequences from your assembly, but it will get the job done. If you have strong opinions about how this should be done shoot me an email and I will be happy to link to your rant/tutorial. If you already have annotated coding sequences please skip this section. If you have unannotated CDS (e.g., from <a href="https://github.com/hyattpd/Prodigal">prodigal</a>), you might consider simply BLASTing your output for highly expressed genes (e.g., using the blastdb of ribosomal proteins included in <a href="http://ftp.pasteur.fr/pub/gensoft/projects/growthpred/">growthpred</a>).</em></p>
 <p>Given an un-annotated genome or metagenomic assembly, an easy way to find and annotate coding sequence is using the program <a href="https://github.com/tseemann/prokka">prokka</a>. For example, if I have a set of assembled contigs, I could run (on the command line):</p>
 <pre><code>prokka contig.fasta --prefix my_genome</code></pre>
 <p>This will give several output files. You are interested the untranslated coding sequences (CDS), which can be found in the <code>*.ffn</code> file along with other non-coding transcripts (e.g., rRNA, tRNA). To get the names of just your CDS you can pull them out of the <code>*.gff</code> output:</p>
@@ -188,15 +189,16 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 <li><code>$d</code> is the estimated minimal doubling time from <code>gRodon</code> in hours. This is, presumably, what you came here for.</li>
 <li><code>$LowerCI</code> and <code>$UpperCI</code> are the 95% confidence intervals for <code>d</code></li>
 </ul>
+<p>For details on how each of these is calculated please see the <code>gRodon</code> paper. For most users the only outputs that will matter much to you are <code>$d</code>, <code>$LowerCI</code>, and <code>$UpperCI</code>, which are your estimated minimal doubling times and 95% CIs output by the gRodon model.</p>
 <p>For the most part, that’s all you need to know. There are a few specific use cases we discuss below that require a slightly more thoughful application of <code>gRodon</code>. These are:</p>
 <ul>
 <li>The use of partial genomic data (e.g., incomplete SAGs or MAGs)<br />
 </li>
 <li>The use of metagenomic data<br />
 </li>
-<li>Predicting growth rates when growth is very slow<br />
+<li>Predicting maximal growth rates when maximal growth is very slow<br />
 </li>
-<li>Predicting the growth rate of a psychrophile or thermophile</li>
+<li>Predicting the maximal growth rate of a psychrophile or thermophile</li>
 </ul>
 <div id="partial-mode" class="section level3">
 <h3>Partial Mode</h3>
