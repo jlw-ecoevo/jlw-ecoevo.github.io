@@ -181,7 +181,7 @@ cases we discuss below that require a slightly more thoughful application of
 `gRodon`. These are:
 
 *  The use of partial genomic data (e.g., incomplete SAGs or MAGs)  
-*  The use of metagenomic data  
+*  The use of metagenomic data  (**if using metagenomes you MUST use metagenome mode or risk getting some very strange results**)
 *  Predicting maximal growth rates when maximal growth is very slow  
 *  Predicting the maximal growth rate of a psychrophile or thermophile  
 

@@ -106,7 +106,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Installation</h2>
 <p>The easiest way to install gRodon is with <a href="https://github.com/r-lib/devtools">devtools</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;jlw-ecoevo/gRodon&quot;</span>)</code></pre></div>
-<p><code>gRodon</code> has a number of dependencies - including the <code>Biostrings</code> and <code>coRdon</code> packages which are bioconductor packages and cannot be installed via CRAN. To install them run the following:</p>
+<p><code>gRodon</code> has a couple dependencies - namely the <code>Biostrings</code> and <code>coRdon</code> packages which are bioconductor packages and cannot be installed via CRAN. To install them run the following:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))
     <span class="kw">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)
 
@@ -194,8 +194,7 @@ genes &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(pat
 <ul>
 <li>The use of partial genomic data (e.g., incomplete SAGs or MAGs)<br />
 </li>
-<li>The use of metagenomic data<br />
-</li>
+<li>The use of metagenomic data (<strong>if using metagenomes you MUST use metagenome mode or risk getting some very strange results</strong>)</li>
 <li>Predicting maximal growth rates when maximal growth is very slow<br />
 </li>
 <li>Predicting the maximal growth rate of a psychrophile or thermophile</li>
