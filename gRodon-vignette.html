@@ -389,7 +389,7 @@ highly_expressed &lt;-<span class="st"> </span><span class="kw">grepl</span>(<sp
 </div>
 <div id="alternative-training-set-from-madin-et-al." class="section level3">
 <h3>Alternative Training Set from <a href="https://doi.org/10.1038/s41597-020-0497-4">Madin et al.</a></h3>
-<p>We also include a version of <code>gRodon</code> trained on an alternative set of minimal doubling time estimates from a trait database compiled by <a href="https://doi.org/10.1038/s41597-020-0497-4">Madin et al.</a>. While this is a larger training set than the set of minimal doubling times fron <a href="https://doi.org/10.1371/journal.pgen.1000808">Vieira-Silva et al.</a>, it is not hand-curated in the same way and is likely to be more error-prone. In any case, both training sets give very similar results. See the <code>gRodon</code> paper for an in-depth discussion.</p>
+<p>We also include a version of <code>gRodon</code> trained on an alternative set of minimal doubling time estimates from a trait database compiled by <a href="https://doi.org/10.1038/s41597-020-0497-4">Madin et al.</a>. This is a larger training set than the set of minimal doubling times fron <a href="https://doi.org/10.1371/journal.pgen.1000808">Vieira-Silva et al.</a>, though both training sets give very similar results. See the <code>gRodon</code> paper for an in-depth discussion.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path_to_genome &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'extdata'</span>,
   <span class="st">'GCF_000349925.2_ASM34992v2_cds_from_genomic.fna.gz'</span>,
   <span class="dt">package =</span> <span class="st">'gRodon'</span>)
