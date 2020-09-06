@@ -98,13 +98,18 @@ University of Maryland College Park
 - [*Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*](http://www.combine.umd.edu/peer-to-peer-tutorials/undergradmentoring/), University of Maryland College Park, Spring 2019
 
 #### Undergraduates Mentored 
-University of Maryland College Park
+*University of Maryland College Park*
 
 - Rohan Laljani (Fall 2017 - Summer 2019; co-author on Weissman et al. 2019, *ISME J*)
 - Vinay Veluvolu (Summer 2018 - Summer 2019; poster at UMD Biosciences Research Day)
 - Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project & poster presentation)
 - Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
 - Nicholas Penn (Spring 2017 - Summer 2017)
+
+*University of Southern California*
+
+- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
 
 ## Service
 
