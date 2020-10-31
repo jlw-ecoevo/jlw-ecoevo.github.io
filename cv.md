@@ -35,19 +35,21 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 2. [Weissman J.L., S. Hou, J.A. Fuhrman. 2020. **Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns**. *bioRxiv*](https://doi.org/10.1101/2020.07.25.221176)
 
-3. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self During CRISPR Immunization**. *Trends in Microbiology* 28(7), 543-553](https://doi.org/10.1016/j.tim.2020.02.005)
+3. [Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. 2020. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
 
-4. [Weissman J.L. & P.L.F. Johnson. 2020. **Network-Based Prediction of Novel CRISPR-Associated Genes in Metagenomes**. *mSystems J* 5(1), e00752-19.](https://doi.org/10.1128/mSystems.00752-19).
- 
-5. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2019. **Linking high GC content to the repair of double strand breaks in prokaryotic genomes**. *PLOS Genetics* 15(11), e1008493.](https://doi.org/10.1371/journal.pgen.1008493).
- 
-6. [Weissman J.L., R. Laljani, W.F. Fagan, P.L.F. Johnson. 2019. **Visualization and prediction of CRISPR incidence in microbial trait-space to identify drivers of antiviral immune strategy**. *ISME J* 13(10), 2589-2602.](https://doi.org/10.1038/s41396-019-0411-2)
- 
-7. [Bewick S., E. Gurarie, J.L. Weissman, J. Beattie, C. Davati, R. Flint, P. Thielen, F. Breitwieser, D. Karig, W.F. Fagan. 2019. **Trait-Based Analysis of the Human Skin Microbiome**. *Microbiome* 7(1), 101.](https://doi.org/10.1186/s40168-019-0698-2)
+4. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self During CRISPR Immunization**. *Trends in Microbiology* 28(7), 543-553](https://doi.org/10.1016/j.tim.2020.02.005)
 
-8. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2018. **Selective maintenance of multiple CRISPR arrays across prokaryotes**. *The CRISPR Journal* 1(6), 405-413.](https://doi.org/10.1089/crispr.2018.0034) 
+5. [Weissman J.L. & P.L.F. Johnson. 2020. **Network-Based Prediction of Novel CRISPR-Associated Genes in Metagenomes**. *mSystems J* 5(1), e00752-19.](https://doi.org/10.1128/mSystems.00752-19).
  
-9. [Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *ISME J* 12(2), 585-597.](https://doi.org/10.1038/ismej.2017.194)
+6. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2019. **Linking high GC content to the repair of double strand breaks in prokaryotic genomes**. *PLOS Genetics* 15(11), e1008493.](https://doi.org/10.1371/journal.pgen.1008493).
+ 
+7. [Weissman J.L., R. Laljani, W.F. Fagan, P.L.F. Johnson. 2019. **Visualization and prediction of CRISPR incidence in microbial trait-space to identify drivers of antiviral immune strategy**. *ISME J* 13(10), 2589-2602.](https://doi.org/10.1038/s41396-019-0411-2)
+ 
+8. [Bewick S., E. Gurarie, J.L. Weissman, J. Beattie, C. Davati, R. Flint, P. Thielen, F. Breitwieser, D. Karig, W.F. Fagan. 2019. **Trait-Based Analysis of the Human Skin Microbiome**. *Microbiome* 7(1), 101.](https://doi.org/10.1186/s40168-019-0698-2)
+
+9. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2018. **Selective maintenance of multiple CRISPR arrays across prokaryotes**. *The CRISPR Journal* 1(6), 405-413.](https://doi.org/10.1089/crispr.2018.0034) 
+ 
+10. [Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *ISME J* 12(2), 585-597.](https://doi.org/10.1038/ismej.2017.194)
  
 #### Outreach Publications
 
