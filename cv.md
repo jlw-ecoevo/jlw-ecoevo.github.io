@@ -33,9 +33,9 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 1. [Weissman J.L., E.O. Alseth, S. Meaden, E.R. Westra, J.A. Fuhrman. 2020. **Immune Lag Is a Major Cost of Prokaryotic Adaptive Immunity During Viral Outbreaks**. *bioRxiv*](https://doi.org/10.1101/2020.09.30.321075)
 
-2. [Weissman J.L., S. Hou, J.A. Fuhrman. 2020. **Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns**. *bioRxiv*](https://doi.org/10.1101/2020.07.25.221176)
+2. [Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. 2020. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
 
-3. [Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. 2020. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
+3. [Weissman J.L., S. Hou, J.A. Fuhrman. 2021. **Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns**. *Proceedings of the National Academy of Sciences*](https://doi.org/10.1073/pnas.2016810118)
 
 4. [Marti-Carreras J., A.R. Gener, ..., J.L. Weissman, V. Zalunin, A. Efremov, B. Busby. 2020. **NCBI’s Virus Discovery Codeathon: Building "FIVE" -- The Federated Index of Viral Experiments API Index**. *Viruses*](https://doi.org/10.3390/v12121424)
 
@@ -45,13 +45,13 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
  
 7. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2019. **Linking high GC content to the repair of double strand breaks in prokaryotic genomes**. *PLOS Genetics* 15(11), e1008493.](https://doi.org/10.1371/journal.pgen.1008493).
  
-8. [Weissman J.L., R. Laljani, W.F. Fagan, P.L.F. Johnson. 2019. **Visualization and prediction of CRISPR incidence in microbial trait-space to identify drivers of antiviral immune strategy**. *ISME J* 13(10), 2589-2602.](https://doi.org/10.1038/s41396-019-0411-2)
+8. [Weissman J.L., R. Laljani, W.F. Fagan, P.L.F. Johnson. 2019. **Visualization and prediction of CRISPR incidence in microbial trait-space to identify drivers of antiviral immune strategy**. *The ISME Journal* 13(10), 2589-2602.](https://doi.org/10.1038/s41396-019-0411-2)
  
 9. [Bewick S., E. Gurarie, J.L. Weissman, J. Beattie, C. Davati, R. Flint, P. Thielen, F. Breitwieser, D. Karig, W.F. Fagan. 2019. **Trait-Based Analysis of the Human Skin Microbiome**. *Microbiome* 7(1), 101.](https://doi.org/10.1186/s40168-019-0698-2)
 
 10. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2018. **Selective maintenance of multiple CRISPR arrays across prokaryotes**. *The CRISPR Journal* 1(6), 405-413.](https://doi.org/10.1089/crispr.2018.0034) 
  
-11. [Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *ISME J* 12(2), 585-597.](https://doi.org/10.1038/ismej.2017.194)
+11. [Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *The ISME Journal* 12(2), 585-597.](https://doi.org/10.1038/ismej.2017.194)
  
 #### Outreach Publications
 
@@ -71,9 +71,11 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - The Bishop Scholarship (The Bishop Scholarship Foundation, 2011)
 
 ## Invited Talks
-1. Environment and Sustainability Institute, University of Exeter, Penryn
-UK, February 2019
-2. Clemson University, Clemson, SC, December 2018
+
+1. Computation and Mathematics for Biological Networks, UMD, MD, December 2020
+2. Department of Marine and Environmental Biology, USC, CA, September 2020
+3. Environment and Sustainability Institute, University of Exeter, Penryn, UK, February 2019
+4. Clemson University, Clemson, SC, December 2018
 
 ## Workshops
 - [Virus Hunting in the Cloud Codeathon](https://ncbiinsights.ncbi.nlm.nih.gov/2019/09/26/virus-hunting-in-the-cloud-codeathon-v2/), NCBI/UMIACS, College Park, MD, 2019
@@ -114,6 +116,7 @@ University of Maryland College Park
 
 *University of Southern California*
 
+- Edward-Robert Dimbo (Spring 2021; Genomics and Geobiology Undergraduate Research Experience, C-DEBI)
 - Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
 - Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
 
@@ -128,5 +131,36 @@ University of Maryland College Park
 Biological Sciences Graduate Program, University of Maryland College Park, Fall 2016, 2017
 
 #### Reviewer
-- ISME J
+- The ISME Journal
 - PNAS
+- Nature Communications
+- mSystems
+
+#### Conference Organizing Committee 
+Holistic Bioinformatics Approaches Used in Microbiome Research, Bioinformatics Virtual Coordination Network, Summer 2020-Summer 2021
+
+#### Organizer
+Statistics Reading Group, USC, Spring 2020-Present
+
+## Outreach
+
+#### Tutor & Mentor 
+Joint Educational Project, USC, Spring 2020
+
+#### Organizer
+Frontiers Young Minds Writing Group, USC, Winter-Spring 2020
+
+#### Mentor & Panel Reviewer
+Student Spaceflight Experiments Program (SSEP) 2016-2019
+
+#### Maryland Day Organizer
+Biological Sciences, UMD-CP, 2016-2018
+
+#### Project Leader,
+Bard Math Circle, Annandale-on-Hudson, NY, 2013-2015
+
+#### Public Talk
+GradTerps Exchange, University of Maryland, Spring 2019
+
+#### Public Talk
+Skype a Scientist, Summer 2020
