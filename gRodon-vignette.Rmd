@@ -94,7 +94,7 @@ This will give several output files. You are interested the untranslated coding 
 can be found in the `*.ffn` file along with other non-coding transcripts (e.g., rRNA, tRNA). To get the names
 of just your CDS you can pull them out of the `*.gff` output:
 ```
-sed -n '/##FASTA/q;p' my_genome/my_genome.gff | awk '$3=="CDS"' | awk '{print $9'} | awk 'gsub(";.*","")' | awk 'gsub("ID=","")' > CDS_names.txt
+sed -n '/##FASTA/q;p' my_genome/my_genome.gff | awk '$3=="CDS"' | awk '{print $9}' | awk 'gsub(";.*","")' | awk 'gsub("ID=","")' > CDS_names.txt
 ```
 The above command first trims the sequence data off the end of the `*.gff` file, then looks for
 rows describing CDS and pulls out their IDs, finally it outputs these IDs to 
@@ -188,7 +188,7 @@ cases we discuss below that require a slightly more thoughful application of
 
 ### Partial Mode
 
-What if you don't have a nice, complete genome ... can you still use `gRodon`? 
+What if you don't have a nice, complete genome (e.g., a SAG or MAG) ... can you still use `gRodon`? 
 Yes, you can, though you may want to use either "partial" or "metagenome" mode.
 
 When your genome is incomplete, you may have insufficient data to accurately
@@ -201,6 +201,12 @@ SAGs and MAGs. The expected decrease in accuracy is quite small (see
 ```{r PredP}
 predictGrowth(genes, highly_expressed, mode="partial")
 ```
+
+Anecdotally, some users have noted better results using "metagenome" mode (see below) than "partial" mode
+on MAGs. This may have to do with contaminated bins, which will cause misleading results
+with "partial" or "full" modes, but that "metagenome" mode should be fairly robust to.
+This is because the consistency statistic will not perform well on sequences from
+a mix of organisms (see below).
 
 ### Metagenome Mode
 
