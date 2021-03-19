@@ -39,12 +39,6 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="91519036"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 2. [Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. 2020. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
 
@@ -52,12 +46,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="93488911"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 ### Peer-Reviewed
 
@@ -67,12 +55,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="101714151"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 4. [Marti-Carreras J., A.R. Gener, ..., J.L. Weissman, V. Zalunin, A. Efremov, B. Busby. 2020. **NCBI’s Virus Discovery Codeathon: Building "FIVE" -- The Federated Index of Viral Experiments API Index**. *Viruses*](https://doi.org/10.3390/v12121424)
 
@@ -80,12 +62,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="95776831"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 5. [Weissman J.L., A. Stoltzfus, E.R. Westra, P.L.F. Johnson. 2020. **Avoidance of Self During CRISPR Immunization**. *Trends in Microbiology* 28(7), 543-553](https://doi.org/10.1016/j.tim.2020.02.005)
 
@@ -93,12 +69,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="79889458"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 6. [Weissman J.L. & P.L.F. Johnson. 2020. **Network-Based Prediction of Novel CRISPR-Associated Genes in Metagenomes**. *mSystems J* 5(1), e00752-19.](https://doi.org/10.1128/mSystems.00752-19).
 
@@ -106,12 +76,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="74026325"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
  
 7. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2019. **Linking high GC content to the repair of double strand breaks in prokaryotic genomes**. *PLOS Genetics* 15(11), e1008493.](https://doi.org/10.1371/journal.pgen.1008493).
 
@@ -119,12 +83,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="70015308"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 8. [Weissman J.L., R. Laljani, W.F. Fagan, P.L.F. Johnson. 2019. **Visualization and prediction of CRISPR incidence in microbial trait-space to identify drivers of antiviral immune strategy**. *The ISME Journal* 13(10), 2589-2602.](https://doi.org/10.1038/s41396-019-0411-2)
 
@@ -132,12 +90,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="62682613"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 9. [Bewick S., E. Gurarie, J.L. Weissman, J. Beattie, C. Davati, R. Flint, P. Thielen, F. Breitwieser, D. Karig, W.F. Fagan. 2019. **Trait-Based Analysis of the Human Skin Microbiome**. *Microbiome* 7(1), 101.](https://doi.org/10.1186/s40168-019-0698-2)
 
@@ -145,12 +97,6 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="63217324"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 10. [Weissman J.L., W.F. Fagan, P.L.F. Johnson. 2018. **Selective maintenance of multiple CRISPR arrays across prokaryotes**. *The CRISPR Journal* 1(6), 405-413.](https://doi.org/10.1089/crispr.2018.0034) 
 
@@ -158,25 +104,12 @@ document.querySelector('.altmetric-embed').addEventListener('altmetric:show', ()
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="52945898"></div>
 
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 11. [Weissman J.L., R. Holmes, R. Barrangou, S. Moineau, W.F. Fagan, B. Levin, P.L.F. Johnson. 2018. **Immune Loss as a Driver of Coexistence During Host-Phage Coevolution**. *The ISME Journal* 12(2), 585-597.](https://doi.org/10.1038/ismej.2017.194)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="31594971"></div>
-
-```{js, echo=FALSE}
-window.PagedConfig.auto = false;
-document.querySelector('.altmetric-embed').addEventListener('altmetric:show', () => {
-  window.PagedPolyfill.preview();
-});
-```
 
 #### Outreach Publications
 
