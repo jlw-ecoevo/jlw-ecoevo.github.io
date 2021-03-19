@@ -50,9 +50,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 ### Peer-Reviewed
 
 [Weissman J.L., S. Hou, J.A. Fuhrman. 2021. **Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns**. *Proceedings of the National Academy of Sciences*](https://doi.org/10.1073/pnas.2016810118)
-
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="101714151"></div>
 
 [Marti-Carreras J., A.R. Gener, ..., J.L. Weissman, V. Zalunin, A. Efremov, B. Busby. 2020. **NCBI’s Virus Discovery Codeathon: Building "FIVE" -- The Federated Index of Viral Experiments API Index**. *Viruses*](https://doi.org/10.3390/v12121424)
