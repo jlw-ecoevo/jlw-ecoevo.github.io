@@ -237,14 +237,6 @@ genes optimized in different ways, and gRodon will severely underestimate your m
 growth rate. If you are getting really long minimal doubling times check to make sure
 you are using metagenome mode.
 
-**For those predicting growth from environmental metagenomes, you should probably
-try including temperature metadata.** This is particularly true of environments
-that are much colder than the ambient or incubated lab conditions most training
-organisms were grown under (e.g., if you have deep ocean samples, arctic soils, 
-ice cubes from your freezer, etc.). The same is true if you are dealing with really
-hot environments (e.g., hot springs). See details about these options in the 
-"Psychrophiles and Thermophiles" section below.
-
 Let's try this on one of the samples from [Okie et al.](https://doi.org/10.7554/eLife.49816), as discussed in the
 `gRodon` manuscript:
 
@@ -286,6 +278,14 @@ predictGrowth(genes,
               mode = "metagenome", 
               depth_of_coverage = depth_of_coverage)
 ```
+
+**For those predicting growth from environmental metagenomes, you should probably
+try including temperature metadata.** This is particularly true of environments
+that are much colder than the ambient or incubated lab conditions most training
+organisms were grown under (e.g., if you have deep ocean samples, arctic soils, 
+ice cubes from your freezer, etc.). The same is true if you are dealing with really
+hot environments (e.g., hot springs). See details about these options in the 
+"Psychrophiles and Thermophiles" section below.
 
 ### Slow Growers
 
