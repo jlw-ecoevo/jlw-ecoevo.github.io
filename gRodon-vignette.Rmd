@@ -38,17 +38,25 @@ developed by [Vieira-Silva et al.](https://doi.org/10.1371/journal.pgen.1000808)
 The easiest way to install gRodon is with [devtools](https://github.com/r-lib/devtools):
 
 ```{r devtools, eval=FALSE}
+#install devtools if necessary
+if (!requireNamespace("devtools", quietly = TRUE))
+    install.packages("devtools")
+
+#install gRodon
 devtools::install_github("jlw-ecoevo/gRodon")
 ```
 
-`gRodon` has a few dependencies - namely the `Biostrings`, `coRdon`, and `matrixStats`
-packages which are bioconductor packages and cannot be installed via CRAN. 
+`gRodon` has a few dependencies - namely the `Biostrings` and `coRdon`
+packages which are bioconductor packages and cannot be installed via CRAN, and the
+`matrixStats` package which can be installed via CRAN.
 To install them run the following:
 
 ```{r dependencies, eval=FALSE }
+#install bioconductor if necessary
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
+#install dependencies
 BiocManager::install("Biostrings")
 BiocManager::install("coRdon")
 install.packages("matrixStats")
@@ -131,9 +139,12 @@ library(Biostrings)
 ```
 
 ```{r load}
+#This just creates a string with the path of the example genome from the gRodon package
 path_to_genome <- system.file('extdata',
   'GCF_000349925.2_ASM34992v2_cds_from_genomic.fna.gz',
   package = 'gRodon')
+
+#Load the genome into your R environment
 genes <- readDNAStringSet(path_to_genome)
 ```
 
@@ -268,6 +279,14 @@ predictGrowth(genes,
               depth_of_coverage = depth_of_coverage)
 ```
 
+**For those predicting growth from environmental metagenomes, you should probably
+try including temperature metadata.** This is particularly true of environments
+that are much colder than the ambient or incubated lab conditions most training
+organisms were grown under (e.g., if you have deep ocean samples, arctic soils, 
+ice cubes from your freezer, etc.). The same is true if you are dealing with really
+hot environments (e.g., hot springs). See details about these options in the 
+"Psychrophiles and Thermophiles" section below.
+
 ### Slow Growers
 
 All codon-usage based predictors of maximal growth will underestimate minimal doubling times
@@ -330,4 +349,3 @@ genes <- readDNAStringSet(path_to_genome)
 highly_expressed <- grepl("ribosomal protein",names(genes),ignore.case = T)
 predictGrowth(genes, highly_expressed, training_set = "madin")
 ```
-
