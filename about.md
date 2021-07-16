@@ -3,9 +3,9 @@ layout: default
 title: About
 ---
 
-### Research Themes 
+## Research Themes 
 
-#### An Ongoing Battle Between Microbes and Their Viruses
+### An Ongoing Battle Between Microbes and Their Viruses
 
 **Hey! Does this all seem a bit technical? Check out our article in [Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2019.00102) for an explanation of CRISPR immunity that should be accessible to all ages**
 
@@ -26,7 +26,7 @@ work is the application of tools from the fields of machine learning and complex
 more traditional approaches from population genetics and theoretical ecology, to understand the ecology and
 evolution of antiviral defense strategies.
 
-#### Trait-Based Analysis of Natural Microbial Communities
+### Trait-Based Analysis of Natural Microbial Communities
 
 To-date efforts to functionally annotate metagenomes have largely been concerned with reconstructing 
 the metabolic potential of communities. While microbial metabolism is incredibly diverse and
@@ -56,7 +56,7 @@ Moving forward, I hope to leverage large phenotypic datasets to build improved
 genomic predictors for a variety of microbial traits - ultimately building an unbiased picture of
 microbial form and function in natural environments.
 
-#### Background and Education
+### Background and Education
 
 **As of March 2020 I'm a [Simons Foundation Postdoctoral Fellow in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) in the [Fuhrman Lab](https://dornsife.usc.edu/labs/fuhrmanlab) at USC.**
 
