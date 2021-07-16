@@ -4,6 +4,12 @@ title: About
 ---
 # Jake L. Weissman, PhD
 
+## Positions
+- Postdoctoral Fellow, University of Southern California, 2020 - Present
+    - Adviser: [Jed Fuhrman](https://dornsife.usc.edu/labs/fuhrmanlab/)
+    - Funding: [Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
+ 
+
 ## Education
 
 ##### PhD in [Behavior, Ecology, Evolution, and Systematics (BEES)](https://www.bisi.umd.edu/bees-1)
@@ -24,11 +30,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - [**The Search for Selection**](http://www.nimbios.org/tutorials/selection), NIMBioS, Knoxville, TN, 2018
 - [**Complex Systems Summer School**](https://wiki.santafe.edu/index.php/Complex_Systems_Summer_School_2017_(CSSS)), Santa Fe Institute, Santa Fe, NM, 2017
 
-## Positions
-- Postdoctoral Fellow, University of Southern California, 2020 - Present
-    - Adviser: [Jed Fuhrman](https://dornsife.usc.edu/labs/fuhrmanlab/)
-    - Funding: [Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
- 
+
 ## [Publications](https://scholar.google.com/citations?user=IaAUSiQAAAAJ&hl=en)
 
 ### Preprints
