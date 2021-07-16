@@ -169,6 +169,13 @@ University of Maryland College Park
 - [*Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*](http://www.combine.umd.edu/peer-to-peer-tutorials/undergradmentoring/), University of Maryland College Park, Spring 2019
 
 #### Undergraduates Mentored 
+*University of Southern California*
+
+- James Rosas  (Summer 2021, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Edward-Robert Dimbo (Spring 2021 - Present; Genomics and Geobiology Undergraduate Research Experience, C-DEBI)
+- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+
 *University of Maryland College Park*
 
 - Rohan Laljani (Fall 2017 - Summer 2019; co-author on Weissman et al. 2019, *ISME J*)
@@ -176,13 +183,6 @@ University of Maryland College Park
 - Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project & poster presentation)
 - Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
 - Nicholas Penn (Spring 2017 - Summer 2017)
-
-*University of Southern California*
-
-- James Rosas  (Summer 2021, [National Summer Undergraduate Research Project](https://nsurp.org/))
-- Edward-Robert Dimbo (Spring 2021 - Present; Genomics and Geobiology Undergraduate Research Experience, C-DEBI)
-- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
-- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
 
 ## Service
 
@@ -195,7 +195,7 @@ Holistic Bioinformatics Approaches Used in Microbiome Research, Bioinformatics V
 #### Co-Organizer
 Pride Month Programming for MEB, USC, June 2021
 
-#### Lead Organizer
+#### Organizer
 MEB Statistics Reading Group, USC, Spring 2020 - Present
 
 #### Participant
