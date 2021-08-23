@@ -17,7 +17,9 @@ Fall 2019, University of Maryland College Park, College Park, MD
 
 - Dissertation: [Investigating the Distribution of CRISPR Adaptive Immune Systems Among Prokaryotes](https://drum.lib.umd.edu/handle/1903/25415)
 - Advisers: [Philip L.F. Johnson](http://science.umd.edu/biology/plfj/) & [William F. Fagan](http://science.umd.edu/biology/faganlab/)
-- Graduate Certificate in [Computation and Mathematics for Biological Networks](http://www.combine.umd.edu/)
+
+##### Graduate Certificate in [Computation and Mathematics for Biological Networks](http://www.combine.umd.edu/)
+Fall 2019, University of Maryland College Park, College Park, MD
 
 ##### B.A. in Mathematics and Biology  
 Spring 2015, Bard College, Annandale-on-Hudson, NY
