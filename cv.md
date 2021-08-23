@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-# Jake L. Weissman, PhD
+# JL Weissman, PhD
 
 ## Positions
 - Postdoctoral Fellow, University of Southern California, 2020 - Present
