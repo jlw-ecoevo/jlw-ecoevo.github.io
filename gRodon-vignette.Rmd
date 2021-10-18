@@ -43,7 +43,7 @@ if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
 
 #install gRodon
-devtools::install_github("jlw-ecoevo/gRodon")
+devtools::install_github("jlw-ecoevo/gRodon2")
 ```
 
 `gRodon` has a few dependencies - namely the `Biostrings` and `coRdon`
@@ -196,6 +196,7 @@ cases we discuss below that require a slightly more thoughful application of
 *  The use of metagenomic data  (**if using metagenomes you MUST use metagenome mode or risk getting some very strange results**)
 *  Predicting maximal growth rates when maximal growth is very slow  
 *  Predicting the maximal growth rate of a psychrophile or thermophile  
+*  Predicting the maximal growth rates of microbial eukaryotes (gRodon v2)
 
 ### Partial Mode
 
@@ -348,4 +349,28 @@ path_to_genome <- system.file('extdata',
 genes <- readDNAStringSet(path_to_genome)
 highly_expressed <- grepl("ribosomal protein",names(genes),ignore.case = T)
 predictGrowth(genes, highly_expressed, training_set = "madin")
+```
+
+
+### Eukaryote Mode
+
+The newest version of gRodon is capable of predicting growth rates for microbial
+eukaryotes. For euks, you should use "eukaryote" mode, but otherwise the syntax
+is the same. Beware that euk growth predictions are very sensitive to temperature,
+and an optimal growth temperature should always be provided for best results.
+
+For bulk community-wide predictions from eukaryotic genes obtained from a metagenome,
+the standard "eukaryote" mode will work (i.e., unlike for prokaroytes, the full euk model can be applied to metagenomes).
+
+```{r PredE}
+path_to_euk <- system.file('extdata',
+  'GCA_015146655.1_ASM1514665v1_genomic.cds.filtered.gz',
+  package = 'gRodon')
+path_to_ribo <- system.file('extdata',
+  'GCA_015146655.1_ASM1514665v1_genomic.riboprot',
+  package = 'gRodon')
+genes <- readDNAStringSet(path_to_euk)
+ribogenes <- readLines(path_to_ribo)
+highly_expressed <- names(genes) %in% ribogenes
+predictGrowth(genes, highly_expressed, mode = "eukaryote",temperature=37)
 ```
