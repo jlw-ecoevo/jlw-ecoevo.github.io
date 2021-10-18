@@ -2,7 +2,13 @@
 layout: default
 title: About
 ---
-# Jake L. Weissman, PhD
+# JL Weissman, PhD
+
+## Positions
+- Postdoctoral Fellow, University of Southern California, 2020 - Present
+    - Adviser: [Jed Fuhrman](https://dornsife.usc.edu/labs/fuhrmanlab/)
+    - Funding: [Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
+ 
 
 ## Education
 
@@ -11,7 +17,9 @@ Fall 2019, University of Maryland College Park, College Park, MD
 
 - Dissertation: [Investigating the Distribution of CRISPR Adaptive Immune Systems Among Prokaryotes](https://drum.lib.umd.edu/handle/1903/25415)
 - Advisers: [Philip L.F. Johnson](http://science.umd.edu/biology/plfj/) & [William F. Fagan](http://science.umd.edu/biology/faganlab/)
-- Graduate Certificate in [Computation and Mathematics for Biological Networks](http://www.combine.umd.edu/)
+
+##### Graduate Certificate in [Computation and Mathematics for Biological Networks](http://www.combine.umd.edu/)
+Fall 2019, University of Maryland College Park, College Park, MD
 
 ##### B.A. in Mathematics and Biology  
 Spring 2015, Bard College, Annandale-on-Hudson, NY
@@ -24,11 +32,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 - [**The Search for Selection**](http://www.nimbios.org/tutorials/selection), NIMBioS, Knoxville, TN, 2018
 - [**Complex Systems Summer School**](https://wiki.santafe.edu/index.php/Complex_Systems_Summer_School_2017_(CSSS)), Santa Fe Institute, Santa Fe, NM, 2017
 
-## Positions
-- Postdoctoral Fellow, University of Southern California, 2020 - Present
-    - Adviser: [Jed Fuhrman](https://dornsife.usc.edu/labs/fuhrmanlab/)
-    - Funding: [Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology](https://www.simonsfoundation.org/grant/simons-postdoctoral-fellowships-in-marine-microbial-ecology/?tab=awardees) (Simons Foundation, 2019)
- 
+
 ## [Publications](https://scholar.google.com/citations?user=IaAUSiQAAAAJ&hl=en)
 
 ### Preprints
@@ -55,6 +59,12 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="101714151"></div>
+
+[Weissman J.L., S. Dogra, K. Javadi, S. Bolten, R. Flint, C. Davati, J. Beattie, K. Dixit, T. Peesay, S. Awan, P. Thielen, F. Breitwieser, P.L.F. Johnson, D. Karig, W.F. Fagan, S. Bewick. 2021. **Exploring the functional composition of the human microbiome using a hand-curated microbial trait database**. *BMC Bioinformatics*](https://doi.org/10.1186/s12859-021-04216-2)
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="107246327"></div>
 
 [Marti-Carreras J., A.R. Gener, ..., J.L. Weissman, V. Zalunin, A. Efremov, B. Busby. 2020. **NCBI’s Virus Discovery Codeathon: Building "FIVE" -- The Federated Index of Viral Experiments API Index**. *Viruses*](https://doi.org/10.3390/v12121424)
 
@@ -125,10 +135,12 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 ## Invited Talks
 
-1. Computation and Mathematics for Biological Networks, UMD, MD, December 2020
-2. Department of Marine and Environmental Biology, USC, CA, September 2020
-3. Environment and Sustainability Institute, University of Exeter, Penryn, UK, February 2019
-4. Clemson University, Clemson, SC, December 2018
+1. Center for Advanced Biotechnology and Medicine, Rutgers University, NJ, May 2021
+2. Department of Biology, San Diego State University, CA, May 2021
+3. Computation and Mathematics for Biological Networks, UMD, MD, December 2020
+4. Department of Marine and Environmental Biology, USC, CA, September 2020
+5. Environment and Sustainability Institute, University of Exeter, Penryn, UK, February 2019
+6. Clemson University, Clemson, SC, December 2018
 
 ## Workshops
 - [Virus Hunting in the Cloud Codeathon](https://ncbiinsights.ncbi.nlm.nih.gov/2019/09/26/virus-hunting-in-the-cloud-codeathon-v2/), NCBI/UMIACS, College Park, MD, 2019
@@ -137,7 +149,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 ## Teaching
 
 #### Instructor
-[Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/), Spring/Summer 2020
+[Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/), Spring 2020 - Present
 - Co-developed and taught Network Science and Population Genetics online coursework during the COVID-19 lockdown
 
 #### Guest Lecturer 
@@ -159,6 +171,13 @@ University of Maryland College Park
 - [*Mentoring Undergraduate Researchers: A Practical Guide for Graduate Student Mentors*](http://www.combine.umd.edu/peer-to-peer-tutorials/undergradmentoring/), University of Maryland College Park, Spring 2019
 
 #### Undergraduates Mentored 
+*University of Southern California*
+
+- James Rosas  (Summer 2021, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Edward-Robert Dimbo (Spring 2021 - Present; Genomics and Geobiology Undergraduate Research Experience, C-DEBI)
+- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+
 *University of Maryland College Park*
 
 - Rohan Laljani (Fall 2017 - Summer 2019; co-author on Weissman et al. 2019, *ISME J*)
@@ -167,13 +186,22 @@ University of Maryland College Park
 - Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
 - Nicholas Penn (Spring 2017 - Summer 2017)
 
-*University of Southern California*
-
-- Edward-Robert Dimbo (Spring 2021; Genomics and Geobiology Undergraduate Research Experience, C-DEBI)
-- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
-- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
-
 ## Service
+
+#### DEI Committee & Subcommittee on Reporting
+Department of Marine and Environmental Biology (MEB), USC. May 2021 - Present
+
+#### Conference Organizing Committee
+Holistic Bioinformatics Approaches Used in Microbiome Research, Bioinformatics Virtual Coordination Network, Summer 2020 - Summer 2021
+
+#### Co-Organizer
+Pride Month Programming for MEB, USC, June 2021
+
+#### Organizer
+MEB Statistics Reading Group, USC, Spring 2020 - Present
+
+#### Participant
+Unlearning Racism in Geoscience (URGE), USC, Spring 2021
 
 #### [BEES Student Taskforce (BEESst)](https://www.bisi.umd.edu/beesst)
 University of Maryland College Park
@@ -188,14 +216,13 @@ Biological Sciences Graduate Program, University of Maryland College Park, Fall 
 - PNAS
 - Nature Communications
 - mSystems
-
-#### Conference Organizing Committee 
-Holistic Bioinformatics Approaches Used in Microbiome Research, Bioinformatics Virtual Coordination Network, Summer 2020-Summer 2021
-
-#### Organizer
-Statistics Reading Group, USC, Spring 2020-Present
+- Microbiome
+- PLoS Computational Biology
 
 ## Outreach
+
+#### Co-Organizer
+MEB Postdoc Outreach Project, USC, Winter 2020 - Present
 
 #### Tutor & Mentor 
 Joint Educational Project, USC, Spring 2020

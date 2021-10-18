@@ -4,8 +4,6 @@ title: About
 ---
 ### Contact Me
 
-![Me](/img/jlw2.jpg)
-
 **Email:** jakeweis@usc.edu
 
 **Twitter:** @jlw_ecoevo
