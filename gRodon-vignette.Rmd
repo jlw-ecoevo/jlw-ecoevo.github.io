@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 The `gRodon` package allows you to predict the maximal growth rate of
-a prokaryotic organism from genomic data. For details of how this
+a prokaryotic (or eukarotic, see v2 at bottom of vignette) organism from genomic data. For details of how this
 is done please see the original paper. Briefly, gRodon exploits codon usage
 statistics to detect optimization of highly-expressed genes, an indicator of
 selection for rapid growth. We will provide some guidance about when these predictions are 
