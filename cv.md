@@ -37,14 +37,19 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 ### Preprints
 
-[Weissman J.L., E.O. Alseth, S. Meaden, E.R. Westra, J.A. Fuhrman. 2020. **Immune Lag Is a Major Cost of Prokaryotic Adaptive Immunity During Viral Outbreaks**. *bioRxiv*](https://doi.org/10.1101/2020.09.30.321075)
+[Weissman J.L., E.R.O. Dimbo, A.I. Krinos, C. Neely, Y. Yag\"ues, D. Nolin, S. Hou, S. Laperriere, D.A. Caron, B. Tully, H. Alexander, J.A. Fuhrman. **Estimating the maximal growth rates of eukaryotic microbes from cultures and metagenomes via codon usage patterns.** *bioRxiv*](https://doi.org/10.1101/2021.10.15.464604)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="91519036"></div>
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115324337"></div>
 
+[Gleich S.J, J.A. Cram, J.L. Weissman, D.A. Caron. **NetGAM: Using generalized additive models to improve the predictive power of ecological network analyses constructed using time-series data.** *bioRxiv*](https://doi.org/10.1101/2021.10.22.465515)
 
-[Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. 2020. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115693409"></div>
+
+[Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
@@ -60,11 +65,23 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="101714151"></div>
 
+[Weissman J.L., E.O. Alseth, S. Meaden, E.R. Westra, J.A. Fuhrman. 2020. **Immune Lag Is a Major Cost of Prokaryotic Adaptive Immunity During Viral Outbreaks**. *Proceedings of the Royal Society B*](https://doi.org/10.1098/rspb.2021.1555)
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="91519036"></div>
+
 [Weissman J.L., S. Dogra, K. Javadi, S. Bolten, R. Flint, C. Davati, J. Beattie, K. Dixit, T. Peesay, S. Awan, P. Thielen, F. Breitwieser, P.L.F. Johnson, D. Karig, W.F. Fagan, S. Bewick. 2021. **Exploring the functional composition of the human microbiome using a hand-curated microbial trait database**. *BMC Bioinformatics*](https://doi.org/10.1186/s12859-021-04216-2)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="107246327"></div>
+
+[Tully B.J, J. Buongiorno, ..., L.E. Valentin-Alvarado, J.L. Weissman, BVCN Instructor Consortium. 2021. **The Bioinformatics Virtual Coordination Network: an open-source and interactive learning environment.** *Frontiers in Education*](https://doi.org/10.3389/feduc.2021.711618)
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115180092"></div>
 
 [Marti-Carreras J., A.R. Gener, ..., J.L. Weissman, V. Zalunin, A. Efremov, B. Busby. 2020. **NCBI’s Virus Discovery Codeathon: Building "FIVE" -- The Federated Index of Viral Experiments API Index**. *Viruses*](https://doi.org/10.3390/v12121424)
 
