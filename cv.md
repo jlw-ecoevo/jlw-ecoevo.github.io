@@ -65,7 +65,7 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="101714151"></div>
 
-[Weissman J.L., E.O. Alseth, S. Meaden, E.R. Westra, J.A. Fuhrman. 2020. **Immune Lag Is a Major Cost of Prokaryotic Adaptive Immunity During Viral Outbreaks**. *Proceedings of the Royal Society B*](https://doi.org/10.1098/rspb.2021.1555)
+[Weissman J.L., E.O. Alseth, S. Meaden, E.R. Westra, J.A. Fuhrman. 2021. **Immune Lag Is a Major Cost of Prokaryotic Adaptive Immunity During Viral Outbreaks**. *Proceedings of the Royal Society B*](https://doi.org/10.1098/rspb.2021.1555)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
