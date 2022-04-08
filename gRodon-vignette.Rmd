@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 The `gRodon` package allows you to predict the maximal growth rate of
-a prokaryotic (or eukarotic, see v2 at bottom of vignette) organism from genomic data. For details of how this
+a prokaryotic organism from genomic data. For details of how this
 is done please see the original paper. Briefly, gRodon exploits codon usage
 statistics to detect optimization of highly-expressed genes, an indicator of
 selection for rapid growth. We will provide some guidance about when these predictions are 
@@ -38,25 +38,17 @@ developed by [Vieira-Silva et al.](https://doi.org/10.1371/journal.pgen.1000808)
 The easiest way to install gRodon is with [devtools](https://github.com/r-lib/devtools):
 
 ```{r devtools, eval=FALSE}
-#install devtools if necessary
-if (!requireNamespace("devtools", quietly = TRUE))
-    install.packages("devtools")
-
-#install gRodon
 devtools::install_github("jlw-ecoevo/gRodon2")
 ```
 
-`gRodon` has a few dependencies - namely the `Biostrings` and `coRdon`
-packages which are bioconductor packages and cannot be installed via CRAN, and the
-`matrixStats` package which can be installed via CRAN.
+`gRodon` has a few dependencies - namely the `Biostrings`, `coRdon`, and `matrixStats`
+packages which are bioconductor packages and cannot be installed via CRAN. 
 To install them run the following:
 
 ```{r dependencies, eval=FALSE }
-#install bioconductor if necessary
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-#install dependencies
 BiocManager::install("Biostrings")
 BiocManager::install("coRdon")
 install.packages("matrixStats")
@@ -102,7 +94,7 @@ This will give several output files. You are interested the untranslated coding 
 can be found in the `*.ffn` file along with other non-coding transcripts (e.g., rRNA, tRNA). To get the names
 of just your CDS you can pull them out of the `*.gff` output:
 ```
-sed -n '/##FASTA/q;p' my_genome/my_genome.gff | awk '$3=="CDS"' | awk '{print $9}' | awk 'gsub(";.*","")' | awk 'gsub("ID=","")' > CDS_names.txt
+sed -n '/##FASTA/q;p' my_genome/my_genome.gff | awk '$3=="CDS"' | awk '{print $9'} | awk 'gsub(";.*","")' | awk 'gsub("ID=","")' > CDS_names.txt
 ```
 The above command first trims the sequence data off the end of the `*.gff` file, then looks for
 rows describing CDS and pulls out their IDs, finally it outputs these IDs to 
@@ -139,12 +131,9 @@ library(Biostrings)
 ```
 
 ```{r load}
-#This just creates a string with the path of the example genome from the gRodon package
 path_to_genome <- system.file('extdata',
   'GCF_000349925.2_ASM34992v2_cds_from_genomic.fna.gz',
   package = 'gRodon')
-
-#Load the genome into your R environment
 genes <- readDNAStringSet(path_to_genome)
 ```
 
@@ -193,14 +182,13 @@ cases we discuss below that require a slightly more thoughful application of
 `gRodon`. These are:
 
 *  The use of partial genomic data (e.g., incomplete SAGs or MAGs)  
-*  The use of metagenomic data  (**if using metagenomes you MUST use metagenome mode or risk getting some very strange results**)
+*  The use of metagenomic data  (**if using metagenomes you MUST use metagenome mode (v1 or v2) or risk getting some very strange results**)
 *  Predicting maximal growth rates when maximal growth is very slow  
 *  Predicting the maximal growth rate of a psychrophile or thermophile  
-*  Predicting the maximal growth rates of microbial eukaryotes (gRodon v2)
 
 ### Partial Mode
 
-What if you don't have a nice, complete genome (e.g., a SAG or MAG) ... can you still use `gRodon`? 
+What if you don't have a nice, complete genome ... can you still use `gRodon`? 
 Yes, you can, though you may want to use either "partial" or "metagenome" mode.
 
 When your genome is incomplete, you may have insufficient data to accurately
@@ -208,17 +196,12 @@ estimate the codon pair bias (since there are many possible codon pairs). In
 this case you can set `gRodon` to "partial" mode, which excludes pair-bias 
 from the prediction. This is probably a good choice when working with incomplete
 SAGs and MAGs. The expected decrease in accuracy is quite small (see 
-`gRodon` paper).
+`gRodon` paper). If you suspect your MAGs are contaminated, metagenome mode
+may be a better option.
 
 ```{r PredP}
 predictGrowth(genes, highly_expressed, mode="partial")
 ```
-
-Anecdotally, some users have noted better results using "metagenome" mode (see below) than "partial" mode
-on MAGs. This may have to do with contaminated bins, which will cause misleading results
-with "partial" or "full" modes, but that "metagenome" mode should be fairly robust to.
-This is because the consistency statistic will not perform well on sequences from
-a mix of organisms (see below).
 
 ### Metagenome Mode
 
@@ -238,6 +221,11 @@ genes optimized in different ways, and gRodon will severely underestimate your m
 growth rate. If you are getting really long minimal doubling times check to make sure
 you are using metagenome mode.
 
+**Metagenome mode is currently being updated. The metagenome_v1 mode is the one
+described in the original paper, but suffers from GC-bias (unlike gRodon's 
+full mode). We have implemented metagenome_v2 mode which corrects for this, with
+a preprint coming soon describing a number of benchmarking experiments.
+
 Let's try this on one of the samples from [Okie et al.](https://doi.org/10.7554/eLife.49816), as discussed in the
 `gRodon` manuscript:
 
@@ -247,7 +235,7 @@ path_to_metagenome <- system.file('extdata',
   package = 'gRodon')
 genes <- readDNAStringSet(path_to_metagenome)
 highly_expressed <- grepl("ribosomal protein",names(genes),ignore.case = T)
-predictGrowth(genes, highly_expressed, mode = "metagenome")
+predictGrowth(genes, highly_expressed, mode = "metagenome_v1")
 ```
 
 You may also want to incorporate a correction for the relative abundance of different
@@ -276,17 +264,9 @@ And now let's run weighted metagenome mode:
 ```{r weightedM}
 predictGrowth(genes, 
               highly_expressed, 
-              mode = "metagenome", 
+              mode = "metagenome_v1", 
               depth_of_coverage = depth_of_coverage)
 ```
-
-**For those predicting growth from environmental metagenomes, you should probably
-try including temperature metadata.** This is particularly true of environments
-that are much colder than the ambient or incubated lab conditions most training
-organisms were grown under (e.g., if you have deep ocean samples, arctic soils, 
-ice cubes from your freezer, etc.). The same is true if you are dealing with really
-hot environments (e.g., hot springs). See details about these options in the 
-"Psychrophiles and Thermophiles" section below.
 
 ### Slow Growers
 
@@ -351,26 +331,3 @@ highly_expressed <- grepl("ribosomal protein",names(genes),ignore.case = T)
 predictGrowth(genes, highly_expressed, training_set = "madin")
 ```
 
-
-### Eukaryote Mode
-
-The newest version of gRodon is capable of predicting growth rates for microbial
-eukaryotes. For euks, you should use "eukaryote" mode, but otherwise the syntax
-is the same. Beware that euk growth predictions are very sensitive to temperature,
-and an optimal growth temperature should always be provided for best results.
-
-For bulk community-wide predictions from eukaryotic genes obtained from a metagenome,
-the standard "eukaryote" mode will work (i.e., unlike for prokaroytes, the full euk model can be applied to metagenomes).
-
-```{r PredE}
-path_to_euk <- system.file('extdata',
-  'GCA_015146655.1_ASM1514665v1_genomic.cds.filtered.gz',
-  package = 'gRodon')
-path_to_ribo <- system.file('extdata',
-  'GCA_015146655.1_ASM1514665v1_genomic.riboprot',
-  package = 'gRodon')
-genes <- readDNAStringSet(path_to_euk)
-ribogenes <- readLines(path_to_ribo)
-highly_expressed <- names(genes) %in% ribogenes
-predictGrowth(genes, highly_expressed, mode = "eukaryote",temperature=37)
-```
