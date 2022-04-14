@@ -37,17 +37,19 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 
 ### Preprints
 
+[Weissman J.L., M. Peras, T.P. Barnum, J.A. Fuhrman. **Benchmarking community-wide estimates of growth potential from metagenomes using codon usage statistics.** *bioRxiv*](https://doi.org/10.1101/2022.04.12.488109)
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="126561459"></div>
+
+
 [Weissman J.L., E.R.O. Dimbo, A.I. Krinos, C. Neely, Y. Yag\"ues, D. Nolin, S. Hou, S. Laperriere, D.A. Caron, B. Tully, H. Alexander, J.A. Fuhrman. **Estimating the maximal growth rates of eukaryotic microbes from cultures and metagenomes via codon usage patterns.** *bioRxiv*](https://doi.org/10.1101/2021.10.15.464604)
 
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115324337"></div>
 
-[Gleich S.J, J.A. Cram, J.L. Weissman, D.A. Caron. **NetGAM: Using generalized additive models to improve the predictive power of ecological network analyses constructed using time-series data.** *bioRxiv*](https://doi.org/10.1101/2021.10.22.465515)
-
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115693409"></div>
 
 [Ignacio-Espinoza C., S. Laperriere, Y.C. Yeh, J.L. Weissman, S. Hou, A. Long, J.A. Fuhrman. **Ribosome-linked mRNA-rRNA chimeras reveal active novel virus-host associations**. *bioRxiv*](https://doi.org/10.1101/2020.10.30.332502)
 
@@ -58,6 +60,12 @@ Spring 2015, Bard College, Annandale-on-Hudson, NY
 <br/><br/>
 
 ### Peer-Reviewed
+
+[Gleich S.J, J.A. Cram, J.L. Weissman, D.A. Caron. **NetGAM: Using generalized additive models to improve the predictive power of ecological network analyses constructed using time-series data.** *ISME Communications*](https://doi.org/10.1038/s43705-022-00106-7)
+
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="115693409"></div>
 
 [Weissman J.L., S. Hou, J.A. Fuhrman. 2021. **Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns**. *Proceedings of the National Academy of Sciences*](https://doi.org/10.1073/pnas.2016810118)
 
