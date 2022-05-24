@@ -50,7 +50,7 @@ with most environmentally-derived genomes on average having much slower predicte
 growth rates than cultured isolates, illustrating that the current picture of microbial diversity is
 not only incomplete, but also highly skewed. I
 have implemented my growth-rate estimator in a user-friendly R package called [gRodon](https://github.com/jlw-
-ecoevo/gRodon). 
+ecoevo/gRodon2). 
 
 Moving forward, I hope to leverage large phenotypic datasets to build improved
 genomic predictors for a variety of microbial traits - ultimately building an unbiased picture of
