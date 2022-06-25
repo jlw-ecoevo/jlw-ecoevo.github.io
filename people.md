@@ -22,20 +22,20 @@ title: People
 
 **Bio:** 
 
-## Postdocs
+# Postdocs
 
 Recruiting 1+ postdoc(s) to start Summer 2023
 
-## Masters Students
+# Masters Students
 
 Recruiting one (fully funded) masters student in [computational and data sciences](https://www.chapman.edu/scst/graduate/ms-computational-science.aspx)
 to start Fall 2023
 
-## Undergraduate Researchers
+# Undergraduate Researchers
 
 Recruiting after I start in January 2023 (especially for summer 2023)
 
-## Past Mentees
+# Past Mentees
 
 *University of Southern California*
 
