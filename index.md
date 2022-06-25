@@ -3,9 +3,11 @@ layout: default
 title: About
 ---
 
-The **G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (GAMUT) Lab** at **[Chapman University](https://www.chapman.edu/scst/undergraduate/bs-biological-sciences.aspx)**, led by **Dr. JL Weissman** (starting 2023), develops new tools to infer complex microbial traits from environmentally-derived DNA and applies these tools to large datasets in order to assess the distribution of these traits across species and environments. In doing so, we hope to answer questions about (1) what microbes are doing/can do in different habitats, (2) which microbes in a habitat perform particular functions, (3) how certain traits may lead to a fitness benefit/detriment in a particular environmental context, and (4) how complex traits evolve across the tree of life.
+Welcome to the **G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (GAMUT) Lab** at **[Chapman University](https://www.chapman.edu/scst/undergraduate/bs-biological-sciences.aspx)**, led by **Dr. JL Weissman** (starting 2023).
 
-In order to accomplish these goals, in addition to developing **novel bioinformatics approaches** and **predictive models** to analyze genomic and metagenomic data, we develop **dynamical models** to construct precise hypothesis about trait evolution and collaborate with experimentalists and field biologists to test these hypotheses.
+We develop new tools to infer complex microbial traits from environmentally-derived DNA and applies these tools to large datasets in order to assess the distribution of these traits across species and environments. In doing so, we hope to answer questions about (1) what microbes are doing/can do in different habitats, (2) which microbes in a habitat perform particular functions, (3) how certain traits may lead to a fitness benefit/detriment in a particular environmental context, and (4) how complex traits evolve across the tree of life.
+
+In order to accomplish these goals, in addition to developing **novel bioinformatics approaches** and **predictive models** to analyze genomic and metagenomic data, we develop **dynamical models** to construct precise hypotheses about trait evolution and collaborate with experimentalists and field biologists to test these hypotheses.
 
 We are always looking for new traits to play with (we are interested in the whole GAMUT of microbial lifestyles, ha ha), but in the past, two traits in particular have grabbed our attention:
 
@@ -22,8 +24,8 @@ traits like maximal growth rate in natural communities.
 
 ![Maximum Growth Rate](/img/fym_growth_doublingtime.png)
 
-[For example, we built a novel genomic
-estimator of maximal growth rate based on codon usage statistics that outperforms previous methods](https://doi.org/10.1073/pnas.2016810118). 
+For example, we built a novel [genomic
+estimator of maximal growth rate](https://doi.org/10.1073/pnas.2016810118) based on codon usage statistics that outperforms previous methods. 
 
 ![gRodon](/img/growth.jpg)
 
