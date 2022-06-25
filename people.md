@@ -10,11 +10,11 @@ title: People
 
 *Assistant Professor of Computational Biology*
 
-<img align="left" src="/img/headshot1.jpg" width="200px" style="padding-right: 15px">
+<img align="left" src="/img/headshot1c.png" width="200px" style="padding-right: 15px">
 
 **Email:** jakeweis@usc.edu
 
-**Twitter:** [@jlw-ecoevo](https://twitter.com/jlw-ecoevo)
+**Twitter:** [@jlw_ecoevo](https://twitter.com/jlw_ecoevo)
 
 **[Google Scholar](https://scholar.google.com/citations?user=IaAUSiQAAAAJ&hl=en)**
 
