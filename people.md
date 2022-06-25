@@ -20,7 +20,7 @@ title: People
 
 **[CV](https://jlw-ecoevo.github.io/CV_JLW.pdf)**
 
-**Bio:** Dr. JL Weissman (they/she) is a computational biologist studying how microbes survive and thrive across diverse environments. They develop new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment ("metagenomes"). She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses, in particular the many antiviral defense strategies that bacteria and archaea encode on their genomes.
+**Bio:** Dr. JL Weissman (they/she) is a computational biologist studying how microbes survive and thrive across diverse environments. They develop new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”). She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses, in particular the many antiviral defense strategies that bacteria and archaea encode on their genomes.
 
 # Postdocs
 
