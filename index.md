@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-Welcome to the **G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (GAMUT) Lab** at **[Chapman University](https://www.chapman.edu/scst/undergraduate/bs-biological-sciences.aspx)**, led by **Dr. JL Weissman** (starting 2023).
+Welcome to the **Microbial G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (GAMUT) Lab** at **[Chapman University](https://www.chapman.edu/scst/undergraduate/bs-biological-sciences.aspx)**, led by **Dr. JL Weissman** (starting 2023).
 
 We develop new tools to infer complex microbial traits from environmentally-derived DNA and apply these tools to large datasets in order to assess the distribution of traits across species and environments. In doing so, we hope to answer questions about (1) what microbes are doing/can do in different habitats, (2) which microbes in a habitat perform particular functions, (3) how certain traits may lead to a fitness benefit/detriment in a particular environmental context, and (4) how complex traits evolve across the tree of life.
 
