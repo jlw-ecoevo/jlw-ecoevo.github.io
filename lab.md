@@ -4,12 +4,13 @@ title: Lab Stuff
 ---
 
 
-## Lab Documents
+## Lab Documents (everyone should read)
 
  - [JL's Mentorship Philosophy](https://docs.google.com/document/d/1MAXUp3EJr9XC6Fx3wbeG9JnN1WY9xXp9zsypBiVfggE/edit?usp=sharing)
  - [The Microbial GAMUT Lab Code of Conduct](https://docs.google.com/document/d/1oIl3KVoj9SlTqPgjJTTRfD2SPOwJJRakJYxFUQ9nIgQ/edit?usp=sharing)
  - [GAMUT Lab Template Statement of Mutual Expectations](https://docs.google.com/document/d/1Ln3QLHA_XG0hPbP7AUwEF1SwtBIA_tnpbp5B4Gko_jo/edit?usp=sharing)
  - [Template Individual Development Plans from NIGMS](https://nigms.nih.gov/training/strategicplanimplementationblueprint/Pages/IndividualDevelopmentPlans.aspx)
+ - [A nice guide on preparing for meetings with your advisor:](http://www.avasthilab.org/2017/03/14/what-to-bring-to-a-meeting-with-your-advisor/) *"Often, people think of meetings as a time when they update their PI on what they’ve been doing to show they’ve been working/working hard.... this is not the purpose of the meeting. The purpose of the meeting is to discuss data and exchange information so that your project can progress more smoothly. "*
  
 ## Outreach
 
@@ -19,3 +20,5 @@ title: Lab Stuff
 ## Useful Links
 
  - [The Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/)
+
+ 
