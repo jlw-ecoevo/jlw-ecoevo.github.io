@@ -15,7 +15,7 @@ As 2023 approaches, I will post actual adds for the postdoc and masters position
 please feel free to reach out to me before then if you would like to discuss projects
 and mentorship style and fit. 
 
-Please also read over my mentorship philosophy and our lab code of conduct <**both in development, will post soon**>
+Please also read over my mentorship philosophy and our lab code of conduct on the [Lab Stuff](https://jlw-ecoevo.github.io/lab.html) page
 to determine whether this lab might be a good fit for you.
 
 ## Postdocs
