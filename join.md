@@ -4,14 +4,14 @@ title: Join Us
 ---
 
 The lab opens in January 2023 and I will be recruiting students and postdocs after that. 
-In particular I currently have funding for:
+I currently have funding for:
 
- - One postdoc to start summer 2023
+ - One postdoc to start summer 2023 (but also see teaching postdoc opportuinity below)
  - One (fully funded) masters student in [computational and data sciences](https://www.chapman.edu/scst/graduate/ms-computational-science.aspx)
 to start Fall 2023
  - Undergraduates to work over the summer, and potentially during the semester
  
-As 2023 approaches, I will post actual adds for the postdoc and masters positions, but
+As 2023 approaches, I will post actual ads for the postdoc and masters positions, but
 please feel free to reach out to me before then if you would like to discuss projects
 and mentorship style and fit. 
 
