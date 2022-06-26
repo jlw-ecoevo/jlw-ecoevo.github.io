@@ -26,7 +26,7 @@ Chapman is an R2 institution with a very research active biology faculty, but (c
 
 If you are particularly excited about teaching in addition to research and mentorship, Chapman has a very cool **teaching postdoc fellowship program through their [Grand Challenges Initiative](https://www.chapman.edu/about/our-home/keck-center/gci/index.aspx)** where postdocs lead first and second year students through a research-project focused class. These are **three year positions with a 30%/70% teaching/research split**. I would be very happy to mentor fellows through this program, and I encourage you to reach out if this is something you are interested in.
 
-I am also always more than happy to work with potential postdocs in developing fellowship applications relevant to our lab. One good resource for finding fellowships is: 
+I am also always more than happy to work with potential postdocs in developing fellowship applications relevant to our lab. [This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships.
 
 ## Masters Students
 
