@@ -31,7 +31,9 @@ I am also always more than happy to work with potential postdocs in developing f
 ## Masters Students
 
 I will be recruiting one funded (tuition and stipend) masters student in [computational and data sciences](https://www.chapman.edu/scst/graduate/ms-computational-science.aspx)
-to start Fall 2023. I will post a more official ad in the coming months. 
+to start Fall 2023. I will post a more official ad in the coming months. Keep in mind that
+this program has a number of prerequisites in math and compsci (e.g., differential equations, data structures), though
+one or two missing prereqs can likely be made up once you join.
 
 I can additionally advise the theses of other students from the same program, though I will not be able to provide funding to these students at this time (this may change in the future depending on my success in getting grants).
 
