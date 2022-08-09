@@ -41,7 +41,7 @@ Recruiting after I start in January 2023 (especially for summer 2023)
 
 - Edward-Robert Dimbo (Spring 2021 - Present; [Genomics and Geobiology Undergraduate Research Experience](https://www.darkenergybiosphere.org/education-diversity/for-undergraduates/ggure/), Senior Thesis, Postbac; coauthor on Weissman et al. 2022, bioRxiv and Dimbo et al. *in prep*)
 - James Rosas  (Summer 2021, [National Summer Undergraduate Research Project](https://nsurp.org/))
-- Yuniba Yag\"ues (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/), coauthor on Weissman et al. 2022, bioRxiv)
+- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/), coauthor on Weissman et al. 2022, bioRxiv)
 - Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
 
 *University of Maryland College Park*
