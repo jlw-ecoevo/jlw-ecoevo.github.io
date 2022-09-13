@@ -6,7 +6,7 @@ title: Join Us
 The lab opens in January 2023 and I will be recruiting students and postdocs after that. 
 I currently have funding for:
 
- - One postdoc 3-year to start summer 2023 (this is a research-only postdoc but also see teaching postdoc opportuinity below)
+ - One postdoc for a 3-year position to start summer 2023 (this is a research-only postdoc but also see teaching postdoc opportuinity below)
  - Undergraduates to work over the summer, and potentially during the semester
 
 I am also excited to recruit additional postdocs through Chapman's teaching postdoc fellowship program through their [Grand Challenges Initiative](https://www.chapman.edu/about/our-home/keck-center/gci/index.aspx) (three year positions with a 30%/70% teaching/research split). The application for this should open up towards the end of the year.
