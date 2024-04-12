@@ -17,9 +17,9 @@ I will be recruiting **one postdoc to start Fall 2024 for a position currently f
 
 While this postdoc position currently has funding in place for two years, I would be more than happy to work with you to locate fellowships and develop proposals to extend your time in the lab. Prior to coming to SBU, I was the Director of Proposal Development at the City College of New York, where part of my job was training early career scientists how to submit successful grant and fellowship proposals. I see such training as an important part of your postdoctoral journey; grant-writing skills are essential within academia, and are also very transferable to non-academic career paths. In case it isn't clear - I am very supportive of trainees following the path of their choosing, whether that takes them to industry, government, non-profit, higher ed admin, or academia in its many forms. I'll work with you to build the skills and experience you need to be successful on that path.
 
-I have a join appointment with the Institute for Advanced Computational Science (IACS) at SBU, which has its [own postdoc fellowship](https://www.stonybrook.edu/commcms/iacs/opportunities/fellowships/Postdoctoral-Fellowships). Applications are usually due in the fall. Please reach out if you are interested in applying!
+I have a joint appointment with the Institute for Advanced Computational Science (IACS) at SBU, which has its [own postdoc fellowship](https://www.stonybrook.edu/commcms/iacs/opportunities/fellowships/Postdoctoral-Fellowships). Applications are usually due in the fall. Please reach out if you are interested in applying!
 
-I am also always more than happy to work with potential postdocs in developing fellowship applications relevant to our lab. [This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal.
+I am also always more than happy to work with prospective postdocs in developing fellowship applications relevant to our lab. [This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal.
 
 
 ## PhD Students
@@ -28,7 +28,7 @@ I am looking to recruit at least one PhD student for the Fall 2024 application c
 
 If you are interested in working with me, I strongly recommend that you reach out to me to discuss applying in late summer/early fall. In general, this is an expectation of nearly all PhD mentors in Ecology & Evolution, though it often goes unstated. At the very least, you should reach out before the December application deadline so we can chat about whether my mentorship style is a good fit for you and whether your research interests are a good fit for the lab. I am open to taking students from a range of academic backgrounds. You don't need to be a math whiz to join our group, but you should be excited about using computational approaches to solve biological problems. 
 
-I know it can be a little intimidating to cold-email a prospective PhD mentor. Please don't let that stop you from reaching out! Here's some things that would be great if you could include in that email (a few lines each is fine, I don't need an essay):
+I know it can be a little intimidating to cold-email a prospective PhD mentor. Please don't let that stop you from reaching out! I really do want to hear from you. Here are some things that would be great if you could include in that email (a few lines each is fine, I don't need an essay):
 
  - Some introduction to who you are and what you are studying or have studied in the past
  - Why you are interested in pursuing a PhD, and more specifically a PhD in my group?
