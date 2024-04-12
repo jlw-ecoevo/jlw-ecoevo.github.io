@@ -24,15 +24,15 @@ title: People
 
 # Postdoctoral Researchers
 
-We are recruiting! See the join us page for details.
+We are recruiting! See the [join us](/join.html) page for details.
 
 # Graduate Students
 
-We are recruiting! See the join us page for details.
+We are recruiting! See the [join us](/join.html) page for details.
 
 # Undergraduates
 
-I am always happy to discuss potential undergraduate research projects. See the join us page for details.
+I am always happy to discuss potential undergraduate research projects. See the [join us](/join.html) page for details.
 
 # Past Mentees
 
