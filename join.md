@@ -3,7 +3,7 @@ layout: default
 title: Join Us
 ---
 
-The lab opens in Fall 2024 and I will be recruiting a postdoc and a PhD student(s).
+The lab opens in Fall 2024 and I will be recruiting a postdoc and a PhD student(s). If you have any questions, please reach out directly to JL (<jw4336@terpmail.umd.edu>; SBU email to come soon).
  
 As fall approaches, I will post actual ads for the postdoc position, but
 please feel free to reach out to me before then if you would like to discuss projects, mentorship style, and fit. 
@@ -44,5 +44,5 @@ This might seem like a lot of questions. I'm mostly making you answer them for y
 
 Did you think some of the stuff on this website was interesting? Consider joining the lab! We are a computational biology lab but **no experience in computational biology or coding is required** to join the lab. If you are enthusiastic about learning about these topics, we can train you. I firmly believe anyone can be a great computational biologist. Most of the students I have worked with in the past started out with absolutely zero coding experience, but quickly learned with hands-on training and a cool question in front of them. I am happy to have biologists, environmental scientists, computer scientists, and mathematicians join the lab (and even people from totally different fields if computational biology has caught your eye).
 
-All summer students who work with me will be paid (I will not take unpaid volunteers). Unfortunately, this may limit available positions. Depending on the summer I may have funding to pay one or more students to work with me. Otherwise, I encourage you to apply for summer research programs available at SBU.   
+All summer students who work with me will be paid (I will not take unpaid volunteers). Unfortunately, this may limit available positions. Depending on the summer I may have funding to pay one or more students to work with me. Otherwise, I encourage you to apply for [summer research programs available at SBU](https://www.stonybrook.edu/commcms/ureca/summer/index.php).   
 

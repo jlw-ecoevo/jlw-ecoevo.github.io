@@ -12,9 +12,9 @@ title: People
 
 <img align="left" src="/img/headshot1c.png" width="200px" style="padding-right: 15px">
 
-**Email:** jakeweis@usc.edu
+**Email:** <jw4336@terpmail.umd.edu>
 
-**Twitter:** [@jlw_ecoevo](https://twitter.com/jlw_ecoevo)
+**Bluesky:** [@jlw-ecoevo.bsky.social](https://bsky.app/profile/jlw-ecoevo.bsky.social)
 
 **[Google Scholar](https://scholar.google.com/citations?user=IaAUSiQAAAAJ&hl=en)**
 
