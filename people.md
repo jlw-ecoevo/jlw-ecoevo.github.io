@@ -8,7 +8,7 @@ title: People
 
 ## JL Weissman (they/she)
 
-*Assistant Professor of Computational Biology*
+*Assistant Professor, Department of Ecology & Evolution and the Institute for Advanced Computational Science (IACS)*
 
 <img align="left" src="/img/headshot1c.png" width="200px" style="padding-right: 15px">
 
@@ -22,20 +22,23 @@ title: People
 
 **Bio:** Dr. JL Weissman (they/she) is a computational biologist studying how microbes survive and thrive across diverse environments. They develop new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”). She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses, in particular the many antiviral defense strategies that bacteria and archaea encode on their genomes.
 
-# Postdocs
+# Postdoctoral Researchers
 
-Recruiting 1+ postdoc(s) to start Summer 2023
+We are recruiting! See the join us page for details.
 
-# Masters Students
+# Graduate Students
 
-Recruiting one (fully funded) masters student in [computational and data sciences](https://www.chapman.edu/scst/graduate/ms-computational-science.aspx)
-to start Fall 2023
+We are recruiting! See the join us page for details.
 
-# Undergraduate Researchers
+# Undergraduates
 
-Recruiting after I start in January 2023 (especially for summer 2023)
+I am always happy to discuss potential undergraduate research projects. See the join us page for details.
 
 # Past Mentees
+
+*Chapman University*
+
+- Athenna Gonzalez (Spring 2023)
 
 *University of Southern California*
 
