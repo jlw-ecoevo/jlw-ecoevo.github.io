@@ -3,9 +3,6 @@ layout: default
 title: About
 ---
 
-
-
-
 **The Microbial G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (GAMUT) Lab is opening Fall 2024 at Stony Brook University and will be recruiting at all levels. See our "people" page for details!**. 
 
 **This page is currently under development and will be updated soon.**
