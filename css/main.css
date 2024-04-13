@@ -41,4 +41,9 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
+.page__content {
+  text-align: justify;
+}
+.sidebar__left {
+  text-align: left;
+}
