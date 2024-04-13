@@ -20,7 +20,9 @@ title: People
 
 **[CV](https://jlw-ecoevo.github.io/CV_JLW.pdf)**
 
-**Bio:** Dr. JL Weissman (they/she) is a computational biologist studying how microbes survive and thrive across diverse environments. They develop new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”). She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses, in particular the many antiviral defense strategies that bacteria and archaea encode on their genomes.
+**Bio:** Jackie Lee “JL” Weissman (they/she) is an Assistant Professor at Stony Brook University starting Fall 2024. Her research examines how microbes survive and thrive across diverse environments. She develops new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”), aiming to improve the representation of microbially-mediated biogeochemical cycles in global climate models. She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses. She believes all students, with supportive training and mentorship, can become highly-capable computational biologists, and loves to show students how a little coding can go a long way.
+
+Previously, she served as the inaugural Director for Proposal Development at the City College of New York, where she managed large, interdisciplinary efforts to bring center-level funding to the college and trained early-career researchers in grantmaking. She maintains research affiliations in biology at CCNY and the University of Southern California and has taught at The Cooper Union School of Art. Before returning to New York, she was faculty at Chapman University, where she ran a computational biology research lab, taught, and developed initiatives to improve mentorship at the college level. 
 
 # Postdoctoral Researchers
 
