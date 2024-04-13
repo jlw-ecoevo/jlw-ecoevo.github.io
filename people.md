@@ -12,7 +12,7 @@ title: People
 
 <img align="left" src="/img/headshot1c.png" width="200px" style="padding-right: 15px">
 
-**Email:** <jw4336@terpmail.umd.edu>
+**Email:** <jackie.weissman@stonybrook.edu>
 
 **Bluesky:** [@jlw-ecoevo.bsky.social](https://bsky.app/profile/jlw-ecoevo.bsky.social)
 

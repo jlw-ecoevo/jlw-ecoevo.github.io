@@ -3,7 +3,7 @@ layout: default
 title: Join Us
 ---
 
-The lab opens in Fall 2024 and I will be recruiting a postdoc and a PhD student(s). If you have any questions, please reach out directly to JL (<jw4336@terpmail.umd.edu>; SBU email to come soon).
+The lab opens in Fall 2024 and I will be recruiting a postdoc and a PhD student(s). If you have any questions, please reach out directly to JL (<jackie.weissman@stonybrook.edu>).
  
 As fall approaches, I will post actual ads for the postdoc position, but
 please feel free to reach out to me before then if you would like to discuss projects, mentorship style, and fit. 
