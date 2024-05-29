@@ -5,8 +5,7 @@ title: Join Us
 
 The lab opens in Fall 2024 and I will be recruiting a postdoc and a PhD student(s). If you have any questions, please reach out directly to JL (<jackie.weissman@stonybrook.edu>).
  
-As fall approaches, I will post actual ads for the postdoc position, but
-please feel free to reach out to me before then if you would like to discuss projects, mentorship style, and fit. 
+Please email me directly if interested in a postdoc. I am happy to discuss how you might fit into the lab, active projects, etc.
 
 Please also read over my mentorship philosophy and our lab code of conduct on the [Lab Stuff](https://jlw-ecoevo.github.io/lab.html) page
 to determine whether this lab might be a good fit for you.
