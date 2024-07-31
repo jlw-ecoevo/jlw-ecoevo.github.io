@@ -1,6 +1,6 @@
 ---
 title: "Predicting maximal growth rates with `gRodon`"
-output: pdf_document
+output: html_document
 vignette: >
   %\VignetteIndexEntry{gRodon-vignette}
   %\VignetteEngine{knitr::rmarkdown}
