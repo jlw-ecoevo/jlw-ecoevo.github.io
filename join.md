@@ -31,7 +31,7 @@ I know it can be a little intimidating to cold-email a prospective PhD mentor. P
  - How do you feel about working in a 100% computational lab? Do you have any exposure to computational biology? What skills might you need to spend some time building in the first year or two of your PhD?
  - What are your career plans post-PhD? (again, I expect these will change over time, so don't worry too much about this one)
 
-This might seem like a lot of questions. I'm mostly making you answer them for your own benefit. If you don't have answers ready for each of them, I suggest you take some time to think each one over carefully. Plus, you will have a head-start for writing your personal statement for the application by the time you are done!
+Hopefully, by the time you are done answering these questions you will have a head-start for writing your personal statement for the PhD application!
 
 
 ## Undergraduate Students
