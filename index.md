@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-# The Microbial G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (mGAMUT) Lab
+### The Microbial G*enomes* A*nd* M*etagenomes* *to* U*nravel* T*raits* (mGAMUT) Lab
 
 --------------------------------------------------------------------------------
 
