@@ -1,6 +1,6 @@
-title: The Microbial GAMUT Lab
-subtitle: Genomes And Metagenomes to Unravel Traits
-logo: /img/infection.gif
+title: The Microbial Genomes And Metagenomes to Unravel Traits Lab
+subtitle: 
+logo: /img/mgamut_clear.png
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-minimal
