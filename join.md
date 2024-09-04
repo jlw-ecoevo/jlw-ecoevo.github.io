@@ -7,13 +7,16 @@ The lab opens in Fall 2024 and I will be recruiting a postdoc and PhD students. 
  
 ## Postdocs
 
-**I am currently recruiting one postdoc for a position currently funded for two years (to start late Fall 2024 or January 2025)**. I will post a more official ad in the coming months, but this is a pretty flexible position in terms of projects because you will be funded directly off my startup (not beholden to the aims of any specific grant). I have lots of ideas for projects I think would be fun to collaborate on (many part of ongoing collaborations with researchers outside the lab), but I am also happy to hear your ideas if there are projects you are excited to bring to the group.
+**I am currently recruiting one postdoc for a position currently funded for two years (to start late Fall 2024 or January 2025)**. Please see the full [job ad here](https://microbialgamut.com/mGAMUT_Lab_postdoc_ad.pdf). You may apply for the position directly on the [Stony Brook website](https://stonybrooku.taleo.net/careersection/2/jobdetail.ftl?job=2402855&tz).
+
+
+This is a pretty flexible position in terms of projects because you will be funded directly off my startup (not beholden to the aims of any specific grant). I have lots of ideas for projects I think would be fun to collaborate on (many part of ongoing collaborations with researchers outside the lab), but I am also happy to hear your ideas if there are projects you are excited to bring to the group.
 
 While this postdoc position currently has funding in place for two years, I would be more than happy to work with you to locate fellowships and develop proposals to extend your time in the lab. Prior to coming to SBU, I was the Director of Proposal Development at the City College of New York, where part of my job was training early career scientists how to submit successful grant and fellowship proposals. I see such training as an important part of your postdoctoral journey; grant-writing skills are essential within academia, and are also very transferable to non-academic career paths. In case it isn't clear - I am very supportive of trainees following the path of their choosing, whether that takes them to industry, government, non-profit, higher ed admin, or academia in its many forms. I'll work with you to build the skills and experience you need to be successful on that path.
 
 I have a joint appointment with the Institute for Advanced Computational Science (IACS) at SBU, which has its [own postdoc fellowship](https://www.stonybrook.edu/commcms/iacs/opportunities/fellowships/Postdoctoral-Fellowships). Applications are usually due in the fall. Please reach out if you are interested in applying!
 
-I am also always more than happy to work with prospective postdocs in developing fellowship applications relevant to our lab. [This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal.
+I am also always more than happy to work with prospective postdocs in developing fellowship applications relevant to our lab. [This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal. In particular, I'd be very happy to work with someone to put together a proposal to the NSF PRFB or the Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology.
 
 
 ## PhD Students
