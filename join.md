@@ -7,7 +7,7 @@ The lab opens in Fall 2024 and I will be recruiting a postdoc and PhD students. 
  
 ## Postdocs
 
-**I am currently recruiting one postdoc for a position currently funded for two years (to start late Fall 2024 or January 2025)**. Please see the full [job ad here](https://microbialgamut.com/mGAMUT_Lab_postdoc_ad.pdf). You may apply for the position directly on the [Stony Brook website](https://stonybrooku.taleo.net/careersection/2/jobdetail.ftl?job=2402855&tz).
+**I am currently recruiting one postdoc for a position currently funded for two years (to start late Fall 2024 or January 2025)**. Please see the full [job ad here](https://microbialgamut.com/mGAMUT_postdoc_ad_v2.pdf). You may apply for the position directly on the [Stony Brook website](https://stonybrooku.taleo.net/careersection/2/jobdetail.ftl?job=2402855&tz).
 
 
 This is a pretty flexible position in terms of projects because you will be funded directly off my startup (not beholden to the aims of any specific grant). I have lots of ideas for projects I think would be fun to collaborate on (many part of ongoing collaborations with researchers outside the lab), but I am also happy to hear your ideas if there are projects you are excited to bring to the group.
