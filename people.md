@@ -34,7 +34,11 @@ We are recruiting! See the [join us](/join.html) page for details.
 
 # Undergraduates
 
-I am always happy to discuss potential undergraduate research projects. See the [join us](/join.html) page for details.
+## Jesse Natarajan
+
+<img align="left" src="/img/jesse.png" width="200px" style="padding-right: 15px">
+
+**Bio:** Jesse is a Computer Science major and Biology/Chemistry minor at Stony Brook University. In the lab, she is interested in using and developing computational methods to study genomic data, specifically predicting microbial growth rates using short genomic sequences.
 
 # Past Mentees
 
