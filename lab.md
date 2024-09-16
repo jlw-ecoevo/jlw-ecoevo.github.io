@@ -22,4 +22,4 @@ title: Lab Stuff
 
  - [The Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/)
 
- 
+ <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b4a515ef-2748-4a6f-936a-c5a0e2b1a0ff" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
