@@ -12,6 +12,12 @@ title: Lab Stuff
  - [Individual Development Plans for Undergraduates](https://undergrad.ucf.edu/whatsnext/faculty-staff/resources/individual-development-plans-idps-for-undergraduate-students/)
  - [A nice guide on preparing for meetings with your advisor:](http://www.avasthilab.org/2017/03/14/what-to-bring-to-a-meeting-with-your-advisor/) *"Often, people think of meetings as a time when they update their PI on what they’ve been doing to show they’ve been working/working hard.... this is not the purpose of the meeting. The purpose of the meeting is to discuss data and exchange information so that your project can progress more smoothly. "*
  
+## Policy & Advocacy in Institutions of Highter Education
+
+We are committed as a lab to improving working conditions within academic institutions for individuals coming from historically marginalized groups in science. JL previous worked to build research development infrastructure at CCNY to support their diverse student, staff, and faculty populations. They also collaborate actively with Advancing Queer and Trans Equity in Science (AQTES), an international working group of queer and trans scientists advocating for specific policy changes at academic institutions, specifically through the development of comprehensive best-practices, including:
+ - [Inclusive practices for running conferences](https://doi.org/10.1128/msystems.00433-23)
+ - [Inclusive practices for running faculty searches](https://doi.org/10.1371/journal.pbio.3002919)
+ 
 ## Community Engagement
 
  - [Partnership with GenSpace and the Billion Oyster Project](https://experiment.com/projects/predicting-the-impact-of-billion-oysters-on-microbially-driven-biogeochemical-cycling-in-new-york-city-waterways)

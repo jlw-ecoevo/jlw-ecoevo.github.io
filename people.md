@@ -34,7 +34,7 @@ We are recruiting! See the [join us](/join.html) page for details.
 
 # Undergraduates
 
-## Jesse Natarajan
+## Jesse Natarajan (she/her)
 
 <img align="left" src="/img/jesse.png" width="200px" style="padding-right: 15px">
 
