@@ -26,7 +26,19 @@ Previously, JL served as the inaugural Director for Proposal Development at the 
 
 # Postdoctoral Researchers
 
-We are recruiting! See the [join us](/join.html) page for details.
+## Alexandra Walling (they/them)
+
+<img align="left" src="/img/walling.png" width="200px" style="padding-right: 15px">
+
+**Email:** <alexandra.walling@stonybrook.edu>
+
+**[CV](https://jlw-ecoevo.github.io/cv_academia_walling-jan-2025.pdf)**
+
+**Bio:** Alexandra (they/them) earned their B.S. in Biology at California State University, Monterey Bay before joining the American Museum of Natural History first as a Helen Fellow and then as a PhD student through the Richard Gilder Graduate School. Their research at AMNH has included comparative questions in prokaryotic and viral evolution. Their PhD work used comparative genomic and phylogenetic techniques to untangle how horizontal gene transfer and secondary loss shaped the evolution of photosynthesis in Erythrobacteraceae, a family of Alphaproteobacteria which show a scattered distribution of a gene cluster encoding photosynthesis. Alexandra's first postdoc at the University of Rhode Island was spent focusing on the problem of how we can filter large genomic datasets to increase signal and reduce noise by developing tools to predict which genomic loci have the most utility for downstream phylogenetic analysis. They used extensive simulations and compared machine learning models for phylogenetic utility determination. 
+
+Alexandra is broadly interested in using a wide range of computational tools to answer questions related to microbial evolution and ecology, particularly how horizontal gene transfer among populations of bacteria may drive bacterial evolution in response to biogeochemical cycling. Alexandra also enjoys teaching and mentoring undergraduate and graduate students just starting out in evolutionary and computational biology. When not working, Alexandra enjoys exploring the great outdoors with their former laboratory beagle, Darwin.
+
+
 
 # Graduate Students
 
