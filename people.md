@@ -18,6 +18,9 @@ title: People
 
 **[CV](https://jlw-ecoevo.github.io/CV_JLW.pdf)**
 
+&nbsp;
+&nbsp;
+
 <details>
 
 <summary>Jackie Lee “JL” Weissman (they/she) is an Assistant Professor at Stony Brook University in the Department of Ecology and Evolution and at the Institute for Advanced Computational Science.</summary> 
@@ -27,6 +30,9 @@ Her research examines how microbes survive and thrive across diverse environment
 Previously, JL served as the inaugural Director for Proposal Development at the City College of New York, where they managed large, interdisciplinary efforts to bring center-level funding to the college and trained early-career researchers in grantmaking. They maintain research affiliations in biology at CCNY and the University of Southern California and have taught at The Cooper Union School of Art. Before returning to New York, they were faculty at Chapman University, where they ran a computational biology research lab, taught, and developed initiatives to improve mentorship at the college level. 
 
 </details>
+
+&nbsp;
+&nbsp;
 
 # Postdoctoral Researchers
 
@@ -38,6 +44,11 @@ Previously, JL served as the inaugural Director for Proposal Development at the 
 
 **[CV](https://jlw-ecoevo.github.io/cv_academia_walling-jan-2025.pdf)**
 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
 <details>
 
 <summary>Alexandra (they/them) is a postdoctoral researcher in the mGAMUT lab.</summary> 
@@ -47,6 +58,9 @@ They earned their B.S. in Biology at California State University, Monterey Bay b
 Alexandra is broadly interested in using a wide range of computational tools to answer questions related to microbial evolution and ecology, particularly how horizontal gene transfer among populations of bacteria may drive bacterial evolution in response to biogeochemical cycling. Alexandra also enjoys teaching and mentoring undergraduate and graduate students just starting out in evolutionary and computational biology. When not working, Alexandra enjoys exploring the great outdoors with their former laboratory beagle, Darwin.
 
 </details>
+
+&nbsp;
+&nbsp;
 
 # Graduate Students
 
