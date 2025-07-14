@@ -32,6 +32,11 @@ Previously, JL served as the inaugural Director for Proposal Development at the 
 
 </details>
 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
 # Postdoctoral Researchers
 
 ## Alexandra Walling (they/them)
@@ -53,6 +58,11 @@ They earned their B.S. in Biology at California State University, Monterey Bay b
 Alexandra is broadly interested in using a wide range of computational tools to answer questions related to microbial evolution and ecology, particularly how horizontal gene transfer among populations of bacteria may drive bacterial evolution in response to biogeochemical cycling. Alexandra also enjoys teaching and mentoring undergraduate and graduate students just starting out in evolutionary and computational biology. When not working, Alexandra enjoys exploring the great outdoors with their former laboratory beagle, Darwin.
 
 </details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 # Graduate Students
 
