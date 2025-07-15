@@ -47,7 +47,9 @@ Previously, JL served as the inaugural Director for Proposal Development at the 
 
 **[CV](https://jlw-ecoevo.github.io/cv_academia_walling-jan-2025.pdf)**
 
-**Bio:** Alexandra (they/them) is a postdoctoral researcher in the mGAMUT ab.
+**Bio:** Alexandra (they/them) is a postdoctoral researcher in the mGAMUT lab. Their research currently focuses on analyzing the distribution of different forms of anoxygenic photosynthesis across diverse habitats.
+
+&nbsp;
 
 <details>
 
