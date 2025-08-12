@@ -123,7 +123,7 @@ Lyra received their B.S. in Biology at Binghamton University before joining the 
 &nbsp;
 &nbsp;
 &nbsp;
-
+&nbsp;
 
 
 # Undergraduates
