@@ -20,13 +20,13 @@ title: People
 
 **[CV](https://jlw-ecoevo.github.io/CV_JLW.pdf)**
 
-**Bio:**  Jackie Lee “JL” Weissman (they/she) is an Assistant Professor at Stony Brook University in the Department of Ecology and Evolution and at the Institute for Advanced Computational Science.
+**Bio:**  Jackie Lee “JL” Weissman (they/she) is an Assistant Professor at Stony Brook University in the Department of Ecology and Evolution and at the Institute for Advanced Computational Science. Her research examines how microbes survive and thrive across diverse environments. 
 
 <details>
 
 <summary>Click for more info</summary>
 
-Her research examines how microbes survive and thrive across diverse environments. She develops new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”), aiming to improve the representation of microbially-mediated biogeochemical cycles in global climate models. She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses. She believes all students, with supportive training and mentorship, can become highly-capable computational biologists, and loves to show students how a little coding can go a long way.
+JL develops new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”), aiming to improve the representation of microbially-mediated biogeochemical cycles in global climate models. She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses. She believes all students, with supportive training and mentorship, can become highly-capable computational biologists, and loves to show students how a little coding can go a long way.
 
 Previously, JL served as the inaugural Director for Proposal Development at the City College of New York, where they managed large, interdisciplinary efforts to bring center-level funding to the college and trained early-career researchers in grantmaking. They maintain research affiliations in biology at CCNY and the University of Southern California and have taught at The Cooper Union School of Art. Before returning to New York, they were faculty at Chapman University, where they ran a computational biology research lab, taught, and developed initiatives to improve mentorship at the college level. 
 
@@ -68,7 +68,63 @@ Alexandra is broadly interested in using a wide range of computational tools to 
 
 # Graduate Students
 
-See the [join us](/join.html) page for details.
+## M. Salim Dason
+
+<img align="left" src="/img/salim.png" width="200px" style="padding-right: 15px">
+
+**Email:** <mohammedsalim.dason@stonybrook.edu>
+
+**Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests include metagenomics,
+microbial community assembly, computational modeling, and microbial metabolism.
+
+&nbsp;
+
+<details>
+
+<summary>Click for more info</summary>
+
+Salim earned his bachelor’s degree in Life Sciences with a focus on microbial biotechnology
+in Morocco, then completed a master’s in Medical Biotechnologies in Italy. His thesis
+focused on identifying clade-specific microbial markers in shotgun metagenomic data
+from transgenic Alzheimer’s disease mouse models to profile and better understand
+shifts in gut microbiome composition linked to neurodegeneration.
+
+After graduating, Salim worked as a bioinformatics research fellow on a project to develop a
+computational pipeline for the de novo reconstruction and functional annotation of
+metagenome-assembled genomes from gut microbiome data, with a particular focus on
+previously uncharacterized bacteria. 
+
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+## Lyra Lu
+
+<img align="left" src="/img/lyra.png" width="200px" style="padding-right: 15px">
+
+**Email:** <lyra.lu@stonybrook.edu>
+
+**Bio:** Lyra is a PhD Student in Ecology & Evolution. She is interested in using comparative genomics and mathematical models on microbial systems.
+
+&nbsp;
+
+<details>
+
+<summary>Click for more info</summary>
+
+Lyra received their B.S. in Biology at Binghamton University before joining the mGamut Lab.
+
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
 
 # Undergraduates
 
