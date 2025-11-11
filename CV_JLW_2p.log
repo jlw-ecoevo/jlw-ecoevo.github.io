@@ -1,0 +1,160 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  21 JUN 2024 12:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**CV_JLW_2p.tex
+(./CV_JLW_2p.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+(./res.cls
+Document Style `res' <26 Sep 89>.
+Document Class: res 2000/05/19 v1.4b Resume class
+(c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(c:/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+No auxiliary output files.
+
+\tabular@text=\toks17
+\tabular@head=\toks18
+\tabular@tail=\toks19
+\@ta=\toks20
+\undefined@token=\toks21
+\sectionwidth=\dimen141
+\sectionskip=\skip50
+\resumewidth=\dimen142
+\@columnwidth=\dimen143
+\c@numberofcolumns=\count196
+) (c:/texlive/2024/texmf-dist/tex/latex/psnfss/newcent.sty
+Package: newcent 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(c:/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks22
+\labelindent=\skip51
+\enit@outerparindent=\dimen144
+\enit@toks=\toks23
+\enit@inbox=\box51
+\enit@count@id=\count197
+\enitdp@description=\count198
+)
+(c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip52
+\f@nch@O@elh=\skip53
+\f@nch@O@erh=\skip54
+\f@nch@O@olh=\skip55
+\f@nch@O@orh=\skip56
+\f@nch@O@elf=\skip57
+\f@nch@O@erf=\skip58
+\f@nch@O@olf=\skip59
+\f@nch@O@orf=\skip60
+)
+LaTeX Font Info:    Trying to load font information for OT1+pnc on input line 2
+5.
+
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pnc.fd
+File: ot1pnc.fd 2001/06/04 font definitions for OT1/pnc.
+)
+(c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count199
+\l__pdf_internal_box=\box52
+)
+No file CV_JLW_2p.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 35.
+LaTeX Font Info:    Trying to load font information for TS1+pnc on input line 4
+5.
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pnc.fd
+File: ts1pnc.fd 2001/06/04 font definitions for TS1/pnc.
+)
+Overfull \hbox (0.89357pt too wide) in paragraph at lines 71--73
+[]\OT1/pnc/b/n/9 Graduate Cer-tifi-cate, Com-pu-ta-tion and Math-e-mat-ics for 
+Bi-o-log-i-cal Net-works \OT1/pnc/m/n/9 (COM-
+ []
+
+
+Overfull \hbox (6.4785pt too wide) in paragraph at lines 91--92
+\OT1/pnc/m/n/9 Frese, R. Gre-gor, S.L. Ishaq, J. John-ston, S.B. Mat-suda. \OT1
+/pnc/b/n/9 Run-ning a queer-and trans-inclusive
+ []
+
+
+Overfull \hbox (2.70245pt too wide) in paragraph at lines 93--94
+[]\OT1/pnc/m/n/9 Merchant S., $[]$, E. MacLach-lan. \OT1/pnc/b/n/9 A CUNY Broad
+er Im-pacts Frame-work: Build-
+ []
+
+[1
+
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/
+texmf-dist/fonts/enc/dvips/base/8r.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+[2]
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1159 strings out of 474104
+ 19541 string characters out of 5747497
+ 1938496 words of memory out of 5000000
+ 23579 multiletter control sequences out of 15000+600000
+ 567898 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 49i,11n,55p,383b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/f
+onts/type1/urw/ncntrsbk/uncb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/
+ncntrsbk/uncr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8
+a.pfb>
+Output written on CV_JLW_2p.pdf (2 pages, 84957 bytes).
+PDF statistics:
+ 42 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

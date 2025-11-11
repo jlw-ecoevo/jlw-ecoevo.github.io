@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  11 NOV 2025 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  25 APR 2025 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CV_JLW.tex
-(./CV_JLW.tex
+**CV_JLW_PEW.tex
+(./CV_JLW_PEW.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (./res.cls
@@ -217,7 +217,7 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count277
 \l__pdf_internal_box=\box52
 )
-No file CV_JLW.aux.
+No file CV_JLW_PEW.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
@@ -284,57 +284,43 @@ r/m/n/9 100$\OT1/pnc/m/n/9 ),
 [1
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/
-texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (15.27766pt too wide) in paragraph at lines 99--100
-[]\OT1/pnc/m/n/9 Natarajan J. & $[]$. \OT1/pnc/b/n/9 Assembly-Free Short-Read M
-etage-nomic Max-i-mum Growth
- []
-
-
-Overfull \hbox (5.64177pt too wide) in paragraph at lines 122--123
-[]\OT1/pnc/m/n/9 Kong S., ... C.K. Lard-ner, $[]$. 2025. \OT1/pnc/b/n/9 Metagen
-omes and Metagenome-Assembled
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+texmf-dist/fonts/enc/dvips/base/8r.enc}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-[3]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-89.
- (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+74.
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Overfull \hbox (0.1311pt too wide) in paragraph at lines 233--234
+) [3]
+Overfull \hbox (0.1311pt too wide) in paragraph at lines 218--219
 []\OT1/pnc/b/n/9 Instructor, \OT1/pnc/m/n/9 Qlife Quan-ti-ta-tive Bi-ol-ogy Win
 -ter School: Quan-ti-ta-tive Vi-ral Dy-nam-ics Across Scales,
  []
 
-[4]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 293.
- [5] [6]
-Overfull \hbox (6.50356pt too wide) in paragraph at lines 501--503
+(Font)              <8> on input line 264.
+[4] [5] [6]
+Overfull \hbox (6.50356pt too wide) in paragraph at lines 457--459
 []\OT1/pnc/b/n/9 Predicting max-i-mal mi-cro-bial growth rates from genomes and
  metagenomes for prokary-
  []
 
-[7] [8]
+[7]
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8305 strings out of 474104
- 128370 string characters out of 5747497
+ 8299 strings out of 474104
+ 128365 string characters out of 5747497
  1943496 words of memory out of 5000000
  30540 multiletter control sequences out of 15000+600000
  572576 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,561b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,565b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/f
@@ -343,10 +329,10 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1
 cb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb><c:/t
 exlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb><c:/texlive/2024/tex
 mf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on CV_JLW.pdf (8 pages, 139239 bytes).
+Output written on CV_JLW_PEW.pdf (7 pages, 136919 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
