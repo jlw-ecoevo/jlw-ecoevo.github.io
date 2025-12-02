@@ -3,7 +3,6 @@ layout: default
 title: People
 ---
 
-
 # Principal Investigator
 
 ## JL Weissman (they/she)
@@ -163,3 +162,14 @@ See the [join us](/join.html) page for details.
 - Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project & poster presentation)
 - Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
 - Nicholas Penn (Spring 2017 - Summer 2017)
+
+# Lab Photos
+
+<img align="center" src="/img/lab.png" width="500px">
+The lab visits the Brooklyn Museum (Fall 2025)
+
+&nbsp;
+&nbsp;
+
+<img align="center" src="/img/lab2.png" width="500px">
+Lab get together with D'Andrea Lab (Fall 2025)

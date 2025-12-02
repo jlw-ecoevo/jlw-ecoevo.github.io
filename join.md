@@ -16,8 +16,6 @@ If you are interested in joining the lab, I would be more than happy to work wit
 
 ## PhD Students
 
-**Applications have now closed for the Ecology & Evolution PhD Fall 2024 admissions cycle. If you are interested in applying for the next cycle (applications due Fall 2025) please reach out to me in late summer or early fall to discuss your application.**
-
 I primarily recruit through the [Ecology & Evolution program](https://www.stonybrook.edu/commcms/ecoevo/_program/index.php), though could potentially arrange to take students from other programs at SBU (I am currently also affiliated with the [Genetics](https://www.stonybrook.edu/commcms/gradgenetics/) PhD program). 
 
 A basic expectation when applying for a position in my group as a PhD student is that you have done computational research before and have a clear idea of why you want to pursue a PhD in my group specifically. I ask that students have some prior experience in computational research (broadly defined) because a PhD is a massive investment of your time and effort, and it is important that you know going in that the kind of work we do is a good fit for you. I am open to taking students from a range of academic backgrounds as long as you have a strong justification for why our lab is a good fit for your research interests.
@@ -41,5 +39,5 @@ Are you a Stony Brook undergraduate student? Did you think some of the stuff on 
 
 All summer students who work with me will be paid (I will not take unpaid volunteers). Unfortunately, this may limit available positions. Depending on the summer I may have funding to pay one or more students to work with me. Otherwise, I encourage you to apply for [summer research programs available at SBU](https://www.stonybrook.edu/commcms/ureca/summer/index.php).
 
-While the lab is being set up in Fall 2024, we are not taking undergraduate researchers during the semester unless they are working on thesis/senior projects. Check back in the winter or spring for potential spring/summer openings.
+Please note that our lab typically only takes a few undergraduate researchers at a time so that we can provide high-quality mentorship. This means capacity may be limited in any one semester, but feel free to check back in over time!
 
