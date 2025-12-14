@@ -129,7 +129,10 @@ Lyra received their B.S. in Biology at Binghamton University before joining the 
 
 # Undergraduates
 
-See the [join us](/join.html) page for details.
+### Naqiya Moore
+
+**Bio:** Naqiya is an undergraduate Applied Mathematics and Statistics major at Stony Brook University. 
+She is interested in using statistical models to analyze viruses and genomics
 
 # Past Mentees
 
