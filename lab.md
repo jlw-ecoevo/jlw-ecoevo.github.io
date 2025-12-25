@@ -6,7 +6,7 @@ title: Lab Stuff
 
 ## Lab Documents
 
- - [The Microbial GAMUT Lab Code of Conduct](https://docs.google.com/document/d/1oIl3KVoj9SlTqPgjJTTRfD2SPOwJJRakJYxFUQ9nIgQ/edit?usp=sharing)
+ - [The Microbial GAMUT Lab Code of Conduct](https://docs.google.com/document/d/18w3G5UrvaFVajzzXcuybNSZJG1g_q7di_fX5QtwkMzw/edit?usp=sharing)
  - [GAMUT Lab Template Statement of Mutual Expectations](https://docs.google.com/document/d/1KzNH9ldKduXIFh8vRivfNt7q17vbpKUJVsgDI042UtY/edit?usp=sharing)
  - [Interactive Individual Development Plan Worksheet from AAAS](https://nigms.nih.gov/training/strategicplanimplementationblueprint/Pages/IndividualDevelopmentPlans.aspx)
  - [Template Individual Development Plans from NIGMS](https://nigms.nih.gov/training/strategicplanimplementationblueprint/Pages/IndividualDevelopmentPlans.aspx)
