@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  25 JAN 2026 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  29 JAN 2026 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CV_JLW_2p.tex
-(./CV_JLW_2p.tex
+**CV_JLW_annotated_publications.tex
+(./CV_JLW_annotated_publications.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (./res.cls
@@ -217,7 +217,7 @@ File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count277
 \l__pdf_internal_box=\box52
 )
-No file CV_JLW_2p.aux.
+No file CV_JLW_annotated_publications.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
@@ -245,21 +245,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 36.
 LaTeX Font Info:    Trying to load font information for TS1+pnc on input line 4
-2.
+8.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pnc.fd
 File: ts1pnc.fd 2001/06/04 font definitions for TS1/pnc.
 )
-Overfull \hbox (0.89357pt too wide) in paragraph at lines 60--62
-[]\OT1/pnc/b/n/9 Graduate Cer-tifi-cate, Com-pu-ta-tion and Math-e-mat-ics for 
-Bi-o-log-i-cal Net-works \OT1/pnc/m/n/9 (COM-
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 7
-1.
-(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Overfull \hbox (5.64177pt too wide) in paragraph at lines 78--79
+Overfull \hbox (5.64177pt too wide) in paragraph at lines 57--58
 []\OT1/pnc/m/n/9 Kong S., ... C.K. Lard-ner, $[]$. 2025. \OT1/pnc/b/n/9 Metagen
 omes and Metagenome-Assembled
  []
@@ -268,53 +258,34 @@ omes and Metagenome-Assembled
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/
 texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (15.27766pt too wide) in paragraph at lines 128--129
+Overfull \hbox (15.27766pt too wide) in paragraph at lines 125--126
 []\OT1/pnc/m/n/9 Natarajan J. & $[]$. \OT1/pnc/b/n/9 Assembly-Free Short-Read M
 etage-nomic Max-i-mum Growth
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-
-Overfull \hbox (4.96309pt too wide) in paragraph at lines 140--141
-[]\OT1/pnc/b/n/9 Simons Foun-da-tion Post-doc-toral Fel-low-ship in Ma-rine Mi-
-cro-bial Ecol-ogy \OT1/pnc/m/n/9 ($\OT1/cmr/m/n/9 $246\OML/cmm/m/it/9 ; \OT1/cm
-r/m/n/9 100$\OT1/pnc/m/n/9 ), 
- []
-
-[2]
+[2] [3] [4]
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8241 strings out of 474104
- 127915 string characters out of 5747497
- 1949496 words of memory out of 5000000
- 30529 multiletter control sequences out of 15000+600000
- 567904 words of font info for 56 fonts, out of 8000000 for 9000
+ 8220 strings out of 474104
+ 127669 string characters out of 5747497
+ 1948496 words of memory out of 5000000
+ 30497 multiletter control sequences out of 15000+600000
+ 567389 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,532b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,552b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1
-/urw/courier/ucrb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/un
-cb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb><c:/te
-xlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on CV_JLW_2p.pdf (2 pages, 107042 bytes).
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/t
+exmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb><c:/texlive/2024/texmf-dist/fonts
+/type1/urw/ncntrsbk/uncr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncnt
+rsbk/uncri8a.pfb>
+Output written on CV_JLW_annotated_publications.pdf (4 pages, 86274 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 41 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
