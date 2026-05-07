@@ -3119,26 +3119,60 @@ vertical-align: -.125em;
 </header>
 
 
-<p>This tutorial assumes you already have the <code>gRodon</code> package (version 2.6.0 or higher) installed (see [here](<a href="https://github.com/jlw-ecoevo/gRodon2" class="uri">https://github.com/jlw-ecoevo/gRodon2</a>) for installation instructions). We will also use <code>ggplot</code> and <code>ggfotify</code> for visualization and <code>mclust</code> for clustering.</p>
+<p>This tutorial assumes you already have the <code>gRodon</code> package (version 2.6.0 or higher) installed (see [here](<a href="https://github.com/jlw-ecoevo/gRodon2" class="uri">https://github.com/jlw-ecoevo/gRodon2</a>) for installation instructions). We will also use <code>Biostrings</code> for handling genomic data, <code>ggplot</code> and <code>ggfotify</code> for visualization, and <code>mclust</code> for clustering.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gRodon)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggfortify)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mclust, <span class="at">quietly =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Package &#39;mclust&#39; version 6.1.1
-Type &#39;citation(&quot;mclust&quot;)&#39; for citing this R package in publications.</code></pre>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mclust)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Biostrings) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>The approach to genomically measuring copiotrophy discussed here is more thoroughly outlined in <a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a> and <a href="https://doi.org/10.1126/science.ado5323">Zakem et al. 2025</a>. Briefly, we combine three quantities that are easy to compute for a genome: (1) the codon usage bias of the ribosomal proteins (computed as dCUB using gRodon’s <code>predictGrowth()</code> function), (2) the number of annotated carbohydrate active enzymes (annotated using <a href="https://github.com/bcb-unl/run_dbcan">dbcan</a>), and (3) the number of protein coding genes. A large body of work suggests that these three axes of variation should broadly be associated with specialization for sporadic resource-abundance, especially codon usage bias, and our own work has shown that these three traits can be combined into an axis of variation that predicts microbial responses to permafrost thaw (<a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a>) and the biogeography of marine heterotrophs (<a href="https://doi.org/10.1126/science.ado5323">Zakem et al. 2025</a>).</p>
+<section id="preparing-input-data" class="level1">
+<h1>Preparing Input Data</h1>
+<p>To use gRodon’s two IoC functions you will need to already have these three datapoints in hand for a genome or set of genomes:</p>
+<ul>
+<li><p>You can obtain dCUB from the output of gRodon’s <code>predictGrowth()</code> function, which has its own tutorial you can find <a href="https://www.microbialgamut.com/gRodon-vignette">here</a>. If you are doing prediction on MAGs, or genomes you suspect might have some contamination, we recommend using metagenome mode for prediction. Here is an example of how to use this function on a genome included with the gRodon package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in example genome (Streptococcus pyogenes M1, downloaded from RefSeq)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># included with gRodon</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>path_to_genome <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">&#39;extdata&#39;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;GCF_000349925.2_ASM34992v2_cds_from_genomic.fna.gz&#39;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">&#39;gRodon&#39;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>genes <span class="ot">&lt;-</span> <span class="fu">readDNAStringSet</span>(path_to_genome)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Search pre-existing annotations for ribosomal proteins, which we</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># will use as our set of highly expressed genes</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>highly_expressed <span class="ot">&lt;-</span> <span class="fu">grepl</span>(<span class="st">&quot;^(?!.*(methyl|hydroxy)).*0S ribosomal protein&quot;</span>,<span class="fu">names</span>(genes),<span class="at">ignore.case =</span> <span class="cn">TRUE</span>, <span class="at">perl =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the gRodon growth prediction pipeline</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>growth_prediction <span class="ot">&lt;-</span> <span class="fu">predictGrowth</span>(genes, highly_expressed)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull out dCUB</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>growth_prediction<span class="sc">$</span>dCUB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.6353508</code></pre>
 </div>
-<p>The approach to genomically measuring copiotrophy discussed here is more thoroughly outlined in <a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a> and <a href="https://doi.org/10.1126/science.ado5323">Zakem et al. 2025</a>. Briefly, we combine three quantities that are easy to compute for a genome: (1) the codon usage bias of the ribosomal proteins (computed as dCUB using gRodon’s <code>predictGrowth()</code> function), (2) the number of annotated carbohydrate active enzymes (annotated using <a href="https://github.com/bcb-unl/run_dbcan">dbcan</a>), and (3) the number of protein coding genes. A large body of work suggests that these three axes of variation should broadly be associated with specialization for sporadic resource-abundance, especially codon usage bias, and our own work has shown that these three traits can be combined into an axis of variation that predicts microbial responses to permafrost thaw (<a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a>) and the biogeography of marine heterotrophs (<a href="https://doi.org/10.1126/science.ado5323">Zakem et al. 2025</a>). To use gRodon’s two IoC functions you will need to already have these three datapoints in hand for a genome or set of genomes.</p>
+</div></li>
+<li><p>If you are using the <a href="https://bioconductor.org/packages/release/bioc/html/Biostrings.html">Biostrings</a> package in R (which is what we use in the gRodon <code>predictGrowth()</code> example above), you can simply call length on your DNAStringSet object to get your genome length.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Genome length in number of genes</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(genes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1734</code></pre>
+</div>
+</div></li>
+<li><p>For CAZyme prediction, we recommend using dbCAN. Specifically, the <a href="https://github.com/linnabrown/run_dbcan">run_dbcan</a> tool lets you get CAZyme predictions from a genome using the command line. Otherwise, you can use the <a href="https://pro.unl.edu/dbCAN2/index.php">dbCAN3 webserver</a> which does not require use of the command line.</p></li>
+</ul>
+</section>
 <section id="fitting-an-index-of-copiotrophy-and-estimating-ioc-values-for-new-genomes" class="level1">
 <h1>Fitting an Index of Copiotrophy and Estimating IoC Values for New Genomes</h1>
 <p>For today, we will use a dataset of 102 metagenome-assembled genomes (MAGs) derived from a permafrost thaw experiment (<a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a>) that are included in the gRodon package. We will hold out three genomes and use the rest to fit our index of copiotrophy (IoC).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">system.file</span>(<span class="st">&#39;extdata&#39;</span>,</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;mags_df.rda&#39;</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">&#39;gRodon&#39;</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mags)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">system.file</span>(<span class="st">&#39;extdata&#39;</span>,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;mags_df.rda&#39;</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">&#39;gRodon&#39;</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mags)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Name         dCUB nCAZy nGenes
 1 11p_S11_bin.11 -0.061077866    41   1073
@@ -3148,18 +3182,18 @@ Type &#39;citation(&quot;mclust&quot;)&#39; for citing this R package in publica
 5 11p_S11_bin.24  0.004909033    11    445
 6 11p_S11_bin.30 -0.039718414    40   1713</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mags_held_out <span class="ot">&lt;-</span> mags[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mags_train <span class="ot">&lt;-</span> mags[<span class="dv">4</span><span class="sc">:</span><span class="fu">nrow</span>(mags),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mags_held_out <span class="ot">&lt;-</span> mags[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,] <span class="co"># we set aside the first three MAGs for prediction</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mags_train <span class="ot">&lt;-</span> mags[<span class="dv">4</span><span class="sc">:</span><span class="fu">nrow</span>(mags),] <span class="co">#we use the remaining MAGs for training</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s look at what our three measures of growth strategy look like for this data (note that more negative values of dCUB correspond to higher bias):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mags,<span class="fu">aes</span>(<span class="at">x=</span><span class="sc">-</span>dCUB,<span class="at">y=</span>nCAZy,<span class="at">size=</span>nGenes)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">75</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">size=</span><span class="st">&quot;Number of</span><span class="sc">\n</span><span class="st">Genes&quot;</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of CAZymes&quot;</span>) <span class="sc">+</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Codon Usage Bias (-dCUB)&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mags,<span class="fu">aes</span>(<span class="at">x=</span><span class="sc">-</span>dCUB,<span class="at">y=</span>nCAZy,<span class="at">size=</span>nGenes)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha=</span>.<span class="dv">75</span>) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">size=</span><span class="st">&quot;Number of</span><span class="sc">\n</span><span class="st">Genes&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of CAZymes&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Codon Usage Bias (-dCUB)&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3168,14 +3202,14 @@ Type &#39;citation(&quot;mclust&quot;)&#39; for citing this R package in publica
 </div>
 </div>
 </div>
-<p>We can create an index of copiotrophy for this set of genomes using the <code>fitIoC()</code> function. In other words, we will create a single index that captures the variation in these three genomic traits across this set of genomes and ranges from 1 to positive infinity (or in this case, about 10). Importantly, we always create an index with respect to a specific set of genomes, usually sampled to be representative of the range in a particular system we are interested in (e.g., across a gradient of permafrost thaw, across a depth gradient in the pacific). To date, we have avoided trying to create a “master” index applicable across all microbes because most scientific questions are interested in the range of variation in a trait within a specific environmental context. In this way we avoid comparing apples to oranges (or soil microbes to marine microbes).</p>
+<p>We can create an index of copiotrophy for this set of genomes using the <code>fitIoC()</code> function. In other words, we will create a single index that captures the variation in these three genomic traits across this set of genomes and ranges from 1 to positive infinity (or in this case, about 10). Importantly, we should always create an index with respect to a specific set of genomes, usually sampled to be representative of the range in a particular system we are interested in (e.g., across a gradient of permafrost thaw, across a depth gradient in the pacific). To date, we have avoided trying to create a “master” index applicable across all microbes because most scientific questions are interested in the range of variation in a trait within a specific environmental context. In this way we avoid comparing apples to oranges (or, soil microbes to marine microbes). <a href="https://doi.org/10.1101/2025.09.01.673550">We have found</a> that when we attempt to combine dissimilar datasets into a single metric, the index behaves poorly.</p>
 <p>The <code>fitIoC()</code> function returns a list with two entries. The input to <code>fitIoC()</code> can take a few different forms (see helpfile with <code>?fitIoC()</code>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>IoC <span class="ot">&lt;-</span> <span class="fu">fitIoC</span>(mags_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>IoC <span class="ot">&lt;-</span> <span class="fu">fitIoC</span>(mags_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The first entry is just a list of IoC values for all genomes in the dataframe</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>IoC<span class="sc">$</span>IoC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>IoC<span class="sc">$</span>IoC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 2.100309 1.267135 2.425849 1.899993 1.274985 1.316930 2.066081 2.301826
  [9] 1.067247 2.179564 1.094351 2.518870 1.766781 2.041328 1.495739 2.676753
@@ -3194,7 +3228,7 @@ Type &#39;citation(&quot;mclust&quot;)&#39; for citing this R package in publica
 </div>
 <p>The second entry is a prcomp PCA object that can be used to place new genomes onto this index using the <code>predictIoC()</code> function. Your IoC values are just the first component of this PCA (with a correction factor so that higher IoC values always imply more copiotrophic and lower IoC values always imply more oligotrophic). We don’t have specific recommendations for when the percent variance explained by this axis is too low for IoC to be a useful indicator for a dataset, but we have found good results with 50% or greater variance explained.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(IoC<span class="sc">$</span>model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(IoC<span class="sc">$</span>model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Importance of components:
                           PC1    PC2    PC3
@@ -3202,14 +3236,7 @@ Standard deviation     1.2713 0.9911 0.6336
 Proportion of Variance 0.5388 0.3274 0.1338
 Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(IoC<span class="sc">$</span>model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: `aes_string()` was deprecated in ggplot2 3.0.0.
-ℹ Please use tidy evaluation idioms with `aes()`.
-ℹ See also `vignette(&quot;ggplot2-in-packages&quot;)` for more information.
-ℹ The deprecated feature was likely used in the ggfortify package.
-  Please report the issue at &lt;https://github.com/sinhrks/ggfortify/issues&gt;.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(IoC<span class="sc">$</span>model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3220,7 +3247,7 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
 <p>Once we have an IoC fitted, we can generate values for new genomes along this index using the <code>predictIoC()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span>IoC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span>IoC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.848724 1.717140 1.922849</code></pre>
 </div>
@@ -3230,23 +3257,23 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 <h1>Using Pre-Fitted Indices of Copiotrophy from Alaskan Permafrost, Marine, Soil, and Human Gut Datasets</h1>
 <p>We have also included pre-fitted IoC from a permafrost thaw experiment (<a href="https://doi.org/10.1101/2025.09.01.673550">Weissman et al. 2025</a>), the P16 Pacific Ocean transect (<a href="https://doi.org/10.1126/science.ado5323">Zakem et al. 2025</a>), the human microbiome (<a href="https://doi.org/10.1016/j.cell.2019.01.001">Pasolli et al. 2019</a>), diverse soil microbes (<a href="https://doi.org/10.1038/s41467-023-43000-z">Ma et al. 2023</a>), and a balanced combination of soil/marine/human microbes in a single index. We anticipate these will be useful to users hoping to project their own genomes onto these indices. The permafrost dataset captures microbial diversity pre-thaw and immediately post-thaw for a range of Alaskan permafrost types and may be useful for those studying trajectories of the thaw process or other soil datasets. The P16 transect captures heterotrophic diversity along a broad range of open ocean environments (a N-S transect from 60N to 60S with depth profiles to 60 meters) and may be useful for a variety of marine habitats. We have not studied the human microbiome as intensively, but it is strongly correlated with the permafrost and marine IoC’s (indicating some agreement in the major axes of growth variation across environments). The soil IoC, which covers a wide range of soil habitats, is not strongly correlated with the other indices except for the “all_habitat” index, and we suspect that by incorporating too diverse a set of environments these indices will have limited practical use. In general, we recommend fitting new IoC’s in a habitat-sepcific manner that captures the variation one is interested in studying. <em>If you would like your IoC to be implemented in gRodon for others to use, please reach out to JL Weissman &lt;jackie.weissman@stonybrook.edu&gt; who will be happy to add your IoC and a link to the relevant paper.</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;permafrost&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;permafrost&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.651158 2.184963 1.507101</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;pacific&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;pacific&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.681830 1.695430 1.861266</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;human&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;human&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.500974 2.390334 1.396580</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;soil&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;soil&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.762635 3.553840 2.748666</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;all_habitat&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predictIoC</span>(mags_held_out,<span class="at">model=</span><span class="st">&quot;all_habitat&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8.220195 7.364912 6.980824</code></pre>
 </div>
@@ -3257,8 +3284,8 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 <p>Given a set of IoC values, we often wish to cluster organisms into growth strategies (e.g., as “copiotrophs” or “oligotrophs”). While IoC offers a continuous index along which genomes vary, we do often see evidence of clustering along this axis that corresponds to microbial responses to environmental change or biogeography. There are many ways to cluster values, here we will use a Gaussian mixture model as one example that has worked well in our hands for this application.</p>
 <p>First, let’s fit our IoC for the complete set of MAG data and pull out just the estimated values:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>mag_ioc <span class="ot">&lt;-</span> <span class="fu">fitIoC</span>(mags)<span class="sc">$</span>IoC</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(mag_ioc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>mag_ioc <span class="ot">&lt;-</span> <span class="fu">fitIoC</span>(mags)<span class="sc">$</span>IoC</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(mag_ioc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3269,16 +3296,16 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
 <p>We next apply a Gaussian mixture model to the log-transformed data to detect clusters using the <code>mclust</code> package:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#fit Gaussian mixture model</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>mC <span class="ot">&lt;-</span> <span class="fu">Mclust</span>(mag_ioc,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">verbose=</span>F)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Check means and variances of fitted Gaussians</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#fit Gaussian mixture model</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>mC <span class="ot">&lt;-</span> <span class="fu">Mclust</span>(mag_ioc,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">verbose=</span>F)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Check means and variances of fitted Gaussians</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       1        2 
 1.818831 3.609664 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>mC<span class="sc">$</span>parameters<span class="sc">$</span>variance<span class="sc">$</span>sigmasq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>mC<span class="sc">$</span>parameters<span class="sc">$</span>variance<span class="sc">$</span>sigmasq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1598052 1.3935729</code></pre>
 </div>
@@ -3286,45 +3313,45 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 <p>It looks like <code>Mclust()</code> detected two Gaussians.</p>
 <p>We first clean up this output a little to get it into a convenient format for plotting:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#We create weightings for our two Gaussians for visualization</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co">#based on the total probability of our MAGs being in each Gaussian</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="fu">colSums</span>(mC<span class="sc">$</span>z)<span class="sc">/</span><span class="fu">sum</span>(mC<span class="sc">$</span>z))</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">#a grid of values to evaluate our Guassians over for plotting</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>x_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.1</span>,<span class="dv">10</span>,<span class="fl">0.01</span>)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">#dataframe for plotting densities</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>cluster_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span>x_seq,</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>                    <span class="at">gaussian_1=</span><span class="fu">dnorm</span>(x_seq,</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>                              <span class="at">mean=</span>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean[<span class="dv">1</span>],</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>                              <span class="at">sd=</span><span class="fu">sqrt</span>(mC<span class="sc">$</span>p<span class="sc">$</span>variance<span class="sc">$</span>sigmasq[<span class="dv">1</span>]))<span class="sc">*</span>p[<span class="dv">1</span>],</span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>                    <span class="at">gaussian_2=</span><span class="fu">dnorm</span>(x_seq,</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>                              <span class="at">mean=</span>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean[<span class="dv">2</span>],</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>                              <span class="at">sd=</span><span class="fu">sqrt</span>(mC<span class="sc">$</span>p<span class="sc">$</span>variance<span class="sc">$</span>sigmasq[<span class="dv">2</span>]))<span class="sc">*</span>p[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#We create weightings for our two Gaussians for visualization</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co">#based on the total probability of our MAGs being in each Gaussian</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="fu">colSums</span>(mC<span class="sc">$</span>z)<span class="sc">/</span><span class="fu">sum</span>(mC<span class="sc">$</span>z))</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co">#a grid of values to evaluate our Guassians over for plotting</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>x_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.1</span>,<span class="dv">10</span>,<span class="fl">0.01</span>)</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co">#dataframe for plotting densities</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>cluster_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span>x_seq,</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>                    <span class="at">gaussian_1=</span><span class="fu">dnorm</span>(x_seq,</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>                              <span class="at">mean=</span>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean[<span class="dv">1</span>],</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>                              <span class="at">sd=</span><span class="fu">sqrt</span>(mC<span class="sc">$</span>p<span class="sc">$</span>variance<span class="sc">$</span>sigmasq[<span class="dv">1</span>]))<span class="sc">*</span>p[<span class="dv">1</span>],</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>                    <span class="at">gaussian_2=</span><span class="fu">dnorm</span>(x_seq,</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>                              <span class="at">mean=</span>mC<span class="sc">$</span>parameters<span class="sc">$</span>mean[<span class="dv">2</span>],</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>                              <span class="at">sd=</span><span class="fu">sqrt</span>(mC<span class="sc">$</span>p<span class="sc">$</span>variance<span class="sc">$</span>sigmasq[<span class="dv">2</span>]))<span class="sc">*</span>p[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And now we can plot our fitted Gaussians against the empirical distribution of the IoC data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">data=</span><span class="fu">data.frame</span>(<span class="at">IoC=</span>mag_ioc),</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>IoC),</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">lwd=</span><span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">data=</span>cluster_df,</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>x, </span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y=</span>gaussian_1, </span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span><span class="st">&quot;Cluster 1&quot;</span>),</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.75</span>, </span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">data=</span>cluster_df,</span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>x, </span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y=</span>gaussian_2, </span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span><span class="st">&quot;Cluster 2&quot;</span>), </span>
-<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.75</span>, </span>
-<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Index of Copiotrophy&quot;</span>)  <span class="sc">+</span> </span>
-<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Density&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">data=</span><span class="fu">data.frame</span>(<span class="at">IoC=</span>mag_ioc),</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>IoC),</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">lwd=</span><span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">data=</span>cluster_df,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>x, </span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y=</span>gaussian_1, </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span><span class="st">&quot;Cluster 1&quot;</span>),</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.75</span>, </span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">data=</span>cluster_df,</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>x, </span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y=</span>gaussian_2, </span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill=</span><span class="st">&quot;Cluster 2&quot;</span>), </span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.75</span>, </span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Index of Copiotrophy&quot;</span>)  <span class="sc">+</span> </span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Density&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3335,14 +3362,14 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
 <p>Great, we have clusters! We can pull out the classification of each datapoint in our cluster directly from <code>Mclust()</code> if we want:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>ioc_classifications <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">IoC=</span>mC<span class="sc">$</span>data,</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">cluster=</span>mC<span class="sc">$</span>classification,</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">uncertainty=</span>mC<span class="sc">$</span>uncertainty)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>cluster,<span class="at">color=</span><span class="fu">factor</span>(cluster)))  <span class="sc">+</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)],<span class="at">lty=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>ioc_classifications <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">IoC=</span>mC<span class="sc">$</span>data,</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">cluster=</span>mC<span class="sc">$</span>classification,</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">uncertainty=</span>mC<span class="sc">$</span>uncertainty)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>cluster,<span class="at">color=</span><span class="fu">factor</span>(cluster)))  <span class="sc">+</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)],<span class="at">lty=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3353,11 +3380,11 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
 <p>Based on the classifications above, there is a clear cutoff around an IoC of about 2.8 for this set of genomes that could be used as a cutoff between oligotrophy and copiotrophy for this dataset. That being said, it will generally be true that for datapoints close to the cutoff our classification uncertainty will be high:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>uncertainty,<span class="at">color=</span><span class="fu">factor</span>(cluster)))  <span class="sc">+</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)],<span class="at">lty=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>uncertainty,<span class="at">color=</span><span class="fu">factor</span>(cluster)))  <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;#7570B3&quot;</span>,<span class="st">&quot;#1B9E77&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)],<span class="at">lty=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3368,25 +3395,25 @@ Cumulative Proportion  0.5388 0.8662 1.0000</code></pre>
 </div>
 <p>One solution, and the one we prefer, is to define cutoffs for oligotrophy and copiotrophy independently where classification uncertainty drops below some threshold (say, 0.25), thus leaving the classification of some points uncertain:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Defining cutoffs</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>c_l <span class="ot">&lt;-</span> <span class="fu">max</span>(mC<span class="sc">$</span>data[mC<span class="sc">$</span>uncertainty<span class="sc">&lt;</span><span class="fl">0.25</span> <span class="sc">&amp;</span> mC<span class="sc">$</span>data<span class="sc">&lt;</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)]])</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>c_h <span class="ot">&lt;-</span> <span class="fu">min</span>(mC<span class="sc">$</span>data[mC<span class="sc">$</span>uncertainty<span class="sc">&lt;</span><span class="fl">0.25</span> <span class="sc">&amp;</span> mC<span class="sc">$</span>data<span class="sc">&gt;</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)]])</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Classifications for plotting</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster <span class="ot">&lt;-</span> <span class="st">&quot;Undefined&quot;</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster[ioc_classifications<span class="sc">$</span>IoC<span class="sc">&lt;</span>c_l] <span class="ot">&lt;-</span> <span class="st">&quot;Oligotroph&quot;</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster[ioc_classifications<span class="sc">$</span>IoC<span class="sc">&gt;</span>c_h] <span class="ot">&lt;-</span> <span class="st">&quot;Copiotroph&quot;</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster <span class="ot">&lt;-</span> <span class="fu">factor</span>(ioc_classifications<span class="sc">$</span>GrowthCluster,</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;Oligotroph&quot;</span>,</span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;Undefined&quot;</span>,</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;Copiotroph&quot;</span>))</span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>uncertainty,<span class="at">color=</span><span class="fu">factor</span>(GrowthCluster)))  <span class="sc">+</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>,<span class="at">direction=</span><span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="fu">c</span>(c_l,c_h),<span class="at">lty=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color=</span><span class="st">&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Defining cutoffs</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>c_l <span class="ot">&lt;-</span> <span class="fu">max</span>(mC<span class="sc">$</span>data[mC<span class="sc">$</span>uncertainty<span class="sc">&lt;</span><span class="fl">0.25</span> <span class="sc">&amp;</span> mC<span class="sc">$</span>data<span class="sc">&lt;</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)]])</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>c_h <span class="ot">&lt;-</span> <span class="fu">min</span>(mC<span class="sc">$</span>data[mC<span class="sc">$</span>uncertainty<span class="sc">&lt;</span><span class="fl">0.25</span> <span class="sc">&amp;</span> mC<span class="sc">$</span>data<span class="sc">&gt;</span>mC<span class="sc">$</span>data[<span class="fu">which.max</span>(mC<span class="sc">$</span>uncertainty)]])</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Classifications for plotting</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster <span class="ot">&lt;-</span> <span class="st">&quot;Undefined&quot;</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster[ioc_classifications<span class="sc">$</span>IoC<span class="sc">&lt;</span>c_l] <span class="ot">&lt;-</span> <span class="st">&quot;Oligotroph&quot;</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster[ioc_classifications<span class="sc">$</span>IoC<span class="sc">&gt;</span>c_h] <span class="ot">&lt;-</span> <span class="st">&quot;Copiotroph&quot;</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>ioc_classifications<span class="sc">$</span>GrowthCluster <span class="ot">&lt;-</span> <span class="fu">factor</span>(ioc_classifications<span class="sc">$</span>GrowthCluster,</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;Oligotroph&quot;</span>,</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;Undefined&quot;</span>,</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;Copiotroph&quot;</span>))</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ioc_classifications,</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>IoC,<span class="at">y=</span>uncertainty,<span class="at">color=</span><span class="fu">factor</span>(GrowthCluster)))  <span class="sc">+</span></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>,<span class="at">direction=</span><span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept=</span><span class="fu">c</span>(c_l,c_h),<span class="at">lty=</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color=</span><span class="st">&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
