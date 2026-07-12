@@ -11,9 +11,7 @@ I will likely be recruiting for both PhD students and postdocs during Fall 2026 
 
 If you are interested in joining the lab, I would be more than happy to work with you to develop proposals for postdoc fellowships relevant to the work our lab does.
 
-[This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal. In particular, I'd be very happy to work with someone to put together a proposal to the NSF PRFB or the Simons Foundation Postdoctoral Fellowship in Marine Microbial Ecology. Prior to coming to SBU, I was the Director of Proposal Development at the City College of New York, where part of my job was training early career scientists how to submit successful grant and fellowship proposals. I see such training as an important part of your postdoctoral journey; grant-writing skills are essential within academia, and are also very transferable to non-academic career paths. In case it isn't clear - I am very supportive of trainees following the path of their choosing, whether that takes them to industry, government, non-profit, higher ed admin, or academia in its many forms. I'll work with you to build the skills and experience you need to be successful on that path.
-
-[Stony Brook's IRACDA Teaching Postdoc Fellowship](https://www.stonybrook.edu/commcms/iracda/) program will open applications in the spring. This is a great opportunity for trainees interested in working in teaching-focused roles long-term.
+[This](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/) is one good resource for finding fellowships. Please reach out if you are interested in developing such a proposal. In particular, I'd be very happy to work with someone to put together a proposal to the NSF PRFB (https://www.nsf.gov/funding/opportunities/prfb-postdoctoral-research-fellowships-biology).
 
 
 ## PhD Students
