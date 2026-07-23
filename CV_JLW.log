@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.22)  21 JUL 2026 16:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.22)  23 JUL 2026 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,50 +246,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 36.
 LaTeX Font Info:    Trying to load font information for TS1+pnc on input line 4
-2.
+6.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pnc.fd
 File: ts1pnc.fd 2001/06/04 font definitions for TS1/pnc.
 )
-Overfull \hbox (0.89357pt too wide) in paragraph at lines 68--70
+Overfull \hbox (5.93967pt too wide) in paragraph at lines 59--61
 []\OT1/pnc/b/n/9 Graduate Cer-tifi-cate, Com-pu-ta-tion and Math-e-mat-ics for 
 Bi-o-log-i-cal Net-works \OT1/pnc/m/n/9 (COM-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-
-Overfull \hbox (4.96309pt too wide) in paragraph at lines 86--87
-[]\OT1/pnc/b/n/9 Simons Foun-da-tion Post-doc-toral Fel-low-ship in Ma-rine Mi-
-cro-bial Ecol-ogy \OT1/pnc/m/n/9 ($\OT1/cmr/m/n/9 $246\OML/cmm/m/it/9 ; \OT1/cm
-r/m/n/9 100$\OT1/pnc/m/n/9 ), 
  []
 
 
@@ -298,31 +261,61 @@ r/m/n/9 100$\OT1/pnc/m/n/9 ),
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/
 texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (5.64177pt too wide) in paragraph at lines 109--110
-[]\OT1/pnc/m/n/9 Kong S., ... C.K. Lard-ner, $[]$. 2025. \OT1/pnc/b/n/9 Metagen
-omes and Metagenome-Assembled
+Overfull \hbox (3.98296pt too wide) in paragraph at lines 122--123
+\OT1/pnc/b/n/9 mi-cro-bial genomes by in-te-grat-ing phy-lo-ge-netic in-for-ma-
+tion. \OT1/pnc/m/it/9 Na-ture Com-mu-ni-ca-tions \OT1/pnc/m/n/9 16(1),
+ []
+
+
+Overfull \hbox (14.11418pt too wide) in paragraph at lines 129--130
+[]\OT1/pnc/m/n/9 Zakem E.J., J. McNichol$[]$, $[]$$[]$, Y. Raut, L. Xu, E.R. Ha
+le-wood, C.A. Carl-son, S. Dutkiewicz,
+ []
+
+
+Overfull \hbox (1.59811pt too wide) in paragraph at lines 131--132
+[]\OT1/pnc/m/n/9 Laperriere S. M., B. Minch, $[]$, S. Hou, Y.C. Yeh, J.C.L. Ign
+acio-Espinoza, N.A. Ahlgren,
  []
 
 
 
 [2]
+Overfull \hbox (19.11246pt too wide) in paragraph at lines 153--154
+\OT1/pnc/b/n/9 tional com-po-si-tion of the hu-man mi-cro-biome us-ing a hand-c
+urated mi-cro-bial trait database.
+ []
+
+
+Overfull \hbox (14.22389pt too wide) in paragraph at lines 155--156
+[]$[]$ \OT1/pnc/m/n/9 & P.L.F. John-son. 2020. \OT1/pnc/b/n/9 Network-Based Pre
+-dic-tion of Novel CRISPR-Associated
+ []
+
+
 
 [3]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-83.
+94.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (0.1311pt too wide) in paragraph at lines 245--246
-[]\OT1/pnc/b/n/9 Instructor, \OT1/pnc/m/n/9 Qlife Quan-ti-ta-tive Bi-ol-ogy Win
--ter School: Quan-ti-ta-tive Vi-ral Dy-nam-ics Across Scales,
+Overfull \hbox (13.43295pt too wide) in paragraph at lines 200--201
+\OT1/pnc/b/n/9 Ribosome-linked mRNA-rRNA chimeras re-veal ac-tive novel virus h
+ost as-so-ci-a-tions\OT1/pnc/m/n/9 . \OT1/pnc/m/it/9 bioRxiv 
+ []
+
+
+Overfull \hbox (7.33118pt too wide) in paragraph at lines 246--247
+[]\OT1/pnc/m/n/9 Instructor, Bioin-for-mat-ics Vir-tual Co-or-di-na-tion Net-wo
+rk ([][]\OT1/pcr/m/n/9 https://biovcnet.github.io/[]\OT1/pnc/m/n/9 ) 
  []
 
 
 
 [4]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 311.
+(Font)              <8> on input line 303.
 
 
 [5]
@@ -330,7 +323,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [6]
 
 [7]
-Overfull \hbox (6.50356pt too wide) in paragraph at lines 546--548
+Overfull \hbox (6.50356pt too wide) in paragraph at lines 526--528
 []\OT1/pnc/b/n/9 Predicting max-i-mal mi-cro-bial growth rates from genomes and
  metagenomes for prokary-
  []
@@ -344,13 +337,13 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8437 strings out of 473362
- 130588 string characters out of 5725050
- 538702 words of memory out of 5000000
+ 8438 strings out of 473362
+ 130595 string characters out of 5725050
+ 539702 words of memory out of 5000000
  31403 multiletter control sequences out of 15000+600000
  572576 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,561b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,561b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/f
@@ -359,10 +352,10 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1
 cb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb><c:/t
 exlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb><c:/texlive/2024/tex
 mf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on CV_JLW.pdf (8 pages, 142166 bytes).
+Output written on CV_JLW.pdf (8 pages, 141528 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 78 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
