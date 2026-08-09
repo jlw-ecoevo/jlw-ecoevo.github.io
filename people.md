@@ -25,9 +25,23 @@ title: People
 
 <summary>Click for more info</summary>
 
-JL develops new tools to infer what microbes are doing and can do from DNA sequences captured directly from the environment (“metagenomes”), aiming to improve the representation of microbially-mediated biogeochemical cycles in global climate models. She also has a special interest in using a combination of comparative genomics, population genetics, and mathematical models to understand the ancient and ongoing battle between microbes and their viruses. She believes all students, with supportive training and mentorship, can become highly-capable computational biologists, and loves to show students how a little coding can go a long way.
+<p>JL develops new tools to infer what microbes are doing and can do from DNA sequences 
+captured directly from the environment (“metagenomes”), aiming to improve the 
+representation of microbially-mediated biogeochemical cycles in global climate 
+models. She also has a special interest in using a combination of comparative 
+genomics, population genetics, and mathematical models to understand the ancient 
+and ongoing battle between microbes and their viruses. She believes all students, 
+with supportive training and mentorship, can become highly-capable computational 
+biologists, and loves to show students how a little coding can go a long way.</p>
 
-Previously, JL served as the inaugural Director for Proposal Development at the City College of New York, where they managed large, interdisciplinary efforts to bring center-level funding to the college and trained early-career researchers in grantmaking. They maintain research affiliations in biology at CCNY and the University of Southern California and have taught at The Cooper Union School of Art. Before returning to New York, they were faculty at Chapman University, where they ran a computational biology research lab, taught, and developed initiatives to improve mentorship at the college level. 
+<p>Previously, JL served as the inaugural Director for Proposal Development at the 
+City College of New York, where they managed large, interdisciplinary efforts to 
+bring center-level funding to the college and trained early-career researchers in 
+grantmaking. They maintain research affiliations in biology at CCNY and the University 
+of Southern California and have taught at The Cooper Union School of Art. Before 
+returning to New York, they were faculty at Chapman University, where they ran a 
+computational biology research lab, taught, and developed initiatives to improve 
+mentorship at the college level. </p>
 
 </details>
 
@@ -50,8 +64,9 @@ We will be recruiting multiple postdocs in the coming year. See the [join us](ht
 
 **[Google Scholar](https://scholar.google.com/citations?user=vtIcZAcAAAAJ&hl=en)** 
 
-**Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests include metagenomics,
-microbial community assembly, computational modeling, and microbial metabolism.
+**Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests 
+include metagenomics, microbial community assembly, computational modeling, 
+and microbial metabolism.
 
 &nbsp;
 
@@ -59,16 +74,16 @@ microbial community assembly, computational modeling, and microbial metabolism.
 
 <summary>Click for more info</summary>
 
-Salim earned his bachelor’s degree in Life Sciences with a focus on microbial biotechnology
+<p>Salim earned his bachelor’s degree in Life Sciences with a focus on microbial biotechnology
 in Morocco, then completed a master’s in Medical Biotechnologies in Italy. His thesis
 focused on identifying clade-specific microbial markers in shotgun metagenomic data
 from transgenic Alzheimer’s disease mouse models to profile and better understand
-shifts in gut microbiome composition linked to neurodegeneration.
+shifts in gut microbiome composition linked to neurodegeneration.</p>
 
-After graduating, Salim worked as a bioinformatics research fellow on a project to develop a
+<p>After graduating, Salim worked as a bioinformatics research fellow on a project to develop a
 computational pipeline for the de novo reconstruction and functional annotation of
 metagenome-assembled genomes from gut microbiome data, with a particular focus on
-previously uncharacterized bacteria. 
+previously uncharacterized bacteria.</p> 
 
 </details>
 
@@ -95,7 +110,7 @@ previously uncharacterized bacteria.
 
 <summary>Click for more info</summary>
 
-Lyra received their B.S. in Biology at Binghamton University before joining the mGamut Lab.
+<p>Lyra received their B.S. in Biology at Binghamton University before joining the mGamut Lab.</p>
 
 </details>
 
