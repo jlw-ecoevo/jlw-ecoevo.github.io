@@ -1,56 +1,81 @@
 
-We develop new tools to infer complex microbial traits from environmentally-derived DNA and apply these tools to large genomic and metagenomic datasets in order to assess the distribution of traits across species and environments. In doing so, we hope to answer questions about (1) what microbes are doing/can do in different habitats, (2) which microbes in a habitat perform particular functions, (3) how certain traits may lead to a fitness benefit/detriment in a particular environmental context, and (4) how complex traits evolve across the tree of life.
+We develop new tools to infer complex microbial traits from environmentally-derived 
+DNA and apply these tools to large genomic and metagenomic datasets in order to 
+assess the distribution of traits across species and environments. In doing so, 
+we hope to answer questions about (1) what microbes are doing/can do in different 
+habitats, (2) which microbes in a habitat perform particular functions and whether
+microbial communities can be represented as a simplified set of functional guilds, 
+(3) how to integrate our genomic trait-based understanding of microbial communities
+into ecological and biogeochemical models, and (4) how complex traits evolve across the tree of life.
 
-In order to accomplish these goals, in addition to developing **novel bioinformatics approaches** and **predictive models** to analyze genomic and metagenomic data, we develop **dynamical models** to construct precise hypotheses about trait evolution and collaborate with experimentalists and field biologists to test these hypotheses.
+In order to accomplish these goals, in addition to developing **novel bioinformatics approaches** 
+and **predictive models** to analyze genomic and metagenomic data, we develop **dynamical models** 
+to construct precise hypotheses about trait evolution and collaborate with experimentalists and 
+field biologists to test these hypotheses.
 
-Below is a sampling of major ongoing projects at the mGAMUT Lab:
+We have made considerable progress towards the above goals by building tools capable 
+of resolving a taxon’s multidimensional growth phenotype directly from genomic data. 
+Our lab develops and maintains the software [gRodon](https://github.com/jlw-ecoevo/gRodon2), 
+a bioinformatic trait-prediction tool that enables the accurate prediction of the maximum growth rate of an organism 
+or community directly from its genome or metagenome sequence.
 
-## Inferring Microbial Traits in Communities to Understand a Changing Climate
 
-**TL;DR - We develop computational tools to infer complex microbial traits (i.e., those that can't be reduced to gene presence/absence) directly from genomic and metagenomic data in order to better represent these microbes in biogeochemical models**
+# Below is a sampling of ongoing projects at the mGAMUT Lab:
 
-Our research leverages environmental genomic data ("metagenomes") to untangle the dense networks of interactions by which microbes produce community-level outputs relevant to ecosystem health. Microbes play a critical role in regulating global biogeochemical cycles (i.e., how biologically-relevant elements like carbon move through living and non-living systems) – and a deep understanding of microbial growth at the community scale is essential in order to build accurate models to predict future conditions and design appropriate global mitigation strategies in the face of rapid climate change. While microbial ‘omic datasets are increasingly rich in detail, we lack the tools to link these fine-scale descriptions of community composition to community behavior and outputs. We develop open-source, trait-based frameworks that bridge that gap. For example, we maintain an open-source and user-friendly R package, [gRodon](https://github.com/jlw-ecoevo/gRodon2), to estimate the maximum growth rates of mixed-species communities directly from environmental metagenomes (see details below). While our research in this area is primarily computational, we work closely with wet-lab collaborators.
+## Inferring Microbial Traits to Understand a Changing Climate
 
-![Maximum Growth Rate Marine](/img/BIOGEOTRACES_panels.png)
+**TL;DR - We develop computational tools to infer complex microbial traits (i.e., those** 
+**that can't be reduced to gene presence/absence) directly from genomic and metagenomic** 
+**data in order to better represent these microbes in global biogeochemical models**
 
-## The Maximum Growth Rates of Bacteria, Archaea, and Eukaryotes
+![gRodon concept](/img/biogeo_concept.png)
 
-**TL;DR - We develop computational tools to predict microbial growth phenotypes directly from genomes and metagenomes.**
+<details>
 
-*Hey! Does this all seem a bit technical? Check out our article in [Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2022.714713) for an explanation of how we use DNA to predict how fast bacteria grow that should be accessible to all ages*
+<summary>Click here for more info</summary>
 
-To-date efforts to functionally annotate metagenomes have largely been concerned with reconstructing 
-the metabolic potential of communities. While microbial metabolism is incredibly diverse and
-an important aspect of functional ecology, microbes are more than just the metabolic pathways
-they encode. We have built both genomic predictors and curated trait
-databases to help characterize the distribution of
-traits like maximal growth rate in natural communities. For example, we built a novel [genomic
-estimator of maximal growth rate](https://doi.org/10.1073/pnas.2016810118) based on codon usage statistics that outperforms previous methods. 
+*Hey! Does this all seem a bit technical? Check out our article in*
+*[Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2022.714713)*
+*for an explanation of how we use DNA to predict how fast bacteria grow that should be accessible to all ages*
 
-In turn, we used this estimator to
-build a comprehensive database of over 200,000 growth rate estimates from genomes,
-metagenomes, and single-cell amplified genomes to survey growth potential across the
-range of prokaryotic diversity. The distribution of growth potentials suggested a natural divide
-between oligotrophs and coptiotrophs, and led us to propose a redefinition of these broad classes of
-microbes in terms of their selective environment. Additionally, our database revealed how culture
-collections, particularly of marine microbes, are strongly biased towards fast-growing organisms,
-with most environmentally-derived genomes on average having much slower predicted maximal
-growth rates than cultured isolates, illustrating that the current picture of microbial diversity is
-not only incomplete, but also highly skewed. 
+DNA sequencing costs have dropped precipitously 
+over the last two decades and it has become routine to collect, sequence, and analyze 
+environmental metagenomes – even from highly complex environments like soils. Yet, 
+we currently lack the ability to turn these rich datasets into ecologically relevant 
+insights on microbial traits and environmental preferences and to capture how the behaviors 
+of environmental microbiomes will feed back into the broader earth system. Our ability 
+to genomically survey microbial traits in situ is limited at best and is largely 
+restricted to analyzing the presence or absence of particular metabolic pathways 
+across metagenomes.  The next generation of bioinformatic software for probing 
+microbiome dynamics will need to resolve complex microbial traits, beyond gene 
+presence or absence, to build a comprehensive understanding of how microbiomes 
+modulate global biogeochemical cycles. The long-term goal of my group’s work is 
+to reliably link genomic information to emergent community properties via ‘omics-based 
+inference of complex traits and life-history strategies. 
 
-We have implemented our growth-rate estimator in a user-friendly R package called [gRodon](https://github.com/jlw-
-ecoevo/gRodon2). More recent developments have allowed us to apply gRodon to both
-[microbial eukaryotes](https://doi.org/10.1101/2021.10.15.464604), as well as [mixed-species communities of organsisms using metagenomics](https://doi.org/10.1101/2022.04.12.488109).
+A specific area of emphasis for us is understanding the dynamics of microbial communities
+in thawing permafrost soils. Permafrost soils 
+worldwide store approximately 50% of global soil carbon, and the microbes that consume this carbon
+when permafrost thaws have the potential to reshape carbon dynamics across our planet. Yet, the specifics of how 
+communities of permafrost microbes respond to thaw and the factors that contribute 
+to an organism’s success during this process remain largely undetermined. This ongoing work is funded by the 
+[National Science Foundation](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2546537).
 
-Moving forward, we hope to leverage large phenotypic datasets to build improved
-genomic predictors for a variety of microbial traits - ultimately building an unbiased picture of
-microbial form and function in natural environments. Most recently, we have [improved our tool's performance by leveraging phylogenetic information]().
+We also are working to leverage our trait-inference approaches for data integration with ocean biogeochemical
+models. This ongoing work is supported in part by our collaboration
+with the [Chemical Currencies of a Microbial Planet (C-CoMP)](https://ccomp-stc.org/) NSF Center.
 
-![gRodon](/img/gRodon_concept.png)
+</details>
 
 ## Microbial Antiviral Defense Systems
 
 **TL;DR - We combine mathematical models with comparative genomics to better understand the forces shaping the evolution of anti-viral defenses in microbes**
+
+![Defense](/img/immune_approaches.png)
+
+<details>
+
+<summary>Click here for more info</summary>
 
 *Hey! Does this all seem a bit technical? Check out our article in [Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2019.00102) for an explanation of CRISPR immunity that should be accessible to all ages*
 
@@ -71,10 +96,36 @@ work is the application of tools from the fields of machine learning and complex
 more traditional approaches from population genetics and theoretical ecology, to understand the ecology and
 evolution of antiviral defense strategies.
 
-![Defense](/img/immune_approaches.png)
 
-## Metagenomics with Community Biologists in an NYC Waterfront Park
+## Metagenomics with Community Biologists in NYC 
 
-Over the past year, we been collaborating with the Billion Oyster Project and GenSpace, a community biology laboratory also based in Sunset Park, to coordinate volunteer-led sampling and processing of a microbial metagenomic time series from waters in and around the Bush Terminal Piers Park. Bush Terminal Park is a quiet community park nestled in an industrial area of Sunset Park, Brooklyn, a historically working-class immigrant neighborhood. This waterfront park, developed on a former brownfield, is subject to storm- and sea level rise-related flooding, is a social and environmental amenity for area residents, and, in combination with efforts to rezone nearby industrial areas for mixed-use development, is impacted by the contested forces of gentrification. Notably, this park is already an active site of ecological research. The Billion Oyster Project, a community organization building artificial oyster reefs across the New York Harbor, has an active community-maintained reef in a lagoon at this site and plans to build another. Our project has been funded by Con Edison and Experiment.com to coordinate sampling of microbial communities living near these reefs (read more [here](https://experiment.com/projects/predicting-the-impact-of-billion-oysters-on-microbially-driven-biogeochemical-cycling-in-new-york-city-waterways)).
+**TL;DR - Our lab frequently collaborates with Genspace, a community biology laboratory in Brooklyn, NY to study microbial communities around the city.**
 
 ![Oysters](/img/bush_terminal.png)
+
+<details>
+
+<summary>Click here for more info</summary>
+
+In one recent project, we collaborated with the Billion Oyster Project and GenSpace, 
+a community biology laboratory also based in Sunset Park, to coordinate volunteer-led 
+sampling and processing of a microbial metagenomic time series from waters in and 
+around the Bush Terminal Piers Park. Bush Terminal Park is a quiet community park 
+nestled in an industrial area of Sunset Park, Brooklyn, a historically working-class 
+immigrant neighborhood. This waterfront park, developed on a former brownfield, 
+is subject to storm- and sea level rise-related flooding, is a social and environmental 
+amenity for area residents, and, in combination with efforts to rezone nearby industrial 
+areas for mixed-use development, is impacted by the contested forces of gentrification. 
+Notably, this park is already an active site of ecological research. The Billion Oyster 
+Project, a community organization building artificial oyster reefs across the New York Harbor, 
+has an active community-maintained reef in a lagoon at this site and plans to build another. 
+
+Our project was funded by Con Edison and 
+[Experiment.com](https://experiment.com/projects/predicting-the-impact-of-billion-oysters-on-microbially-driven-biogeochemical-cycling-in-new-york-city-waterways) 
+to coordinate sampling of microbial communities living near these reefs.
+
+Our work with Genspace continues to be funded by Con Edison, specifically a project
+working with urban seaweed and their microbiomes. Our recent permafrost NSF grant also funds
+community science-art programming at Genspace.
+
+</details>

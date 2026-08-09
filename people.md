@@ -9,7 +9,7 @@ title: People
 
 *Assistant Professor, Department of Ecology & Evolution and the Institute for Advanced Computational Science (IACS)*
 
-<img align="left" src="/img/headshot1c.png" width="200px" style="padding-right: 15px">
+<img align="left" src="/img/Weissman-circle.png" width="200px" style="padding-right: 15px">
 
 **Email:** <jackie.weissman@stonybrook.edu>
 
@@ -38,32 +38,7 @@ Previously, JL served as the inaugural Director for Proposal Development at the 
 
 # Postdoctoral Researchers
 
-## Alexandra Walling (they/them)
-
-<img align="left" src="/img/walling.png" width="200px" style="padding-right: 15px">
-
-**Email:** <alexandra.walling@stonybrook.edu>
-
-**[CV](https://jlw-ecoevo.github.io/cv_academia_walling-jan-2025.pdf)**
-
-**Bio:** Alexandra (they/them) is a postdoctoral researcher in the mGAMUT lab. Their research currently focuses on analyzing the distribution of different forms of anoxygenic photosynthesis across diverse habitats.
-
-&nbsp;
-
-<details>
-
-<summary>Click for more info</summary>
-
-They earned their B.S. in Biology at California State University, Monterey Bay before joining the American Museum of Natural History first as a Helen Fellow and then as a PhD student through the Richard Gilder Graduate School. Their research at AMNH has included comparative questions in prokaryotic and viral evolution. Their PhD work used comparative genomic and phylogenetic techniques to untangle how horizontal gene transfer and secondary loss shaped the evolution of photosynthesis in Erythrobacteraceae, a family of Alphaproteobacteria which show a scattered distribution of a gene cluster encoding photosynthesis. Alexandra's first postdoc at the University of Rhode Island was spent focusing on the problem of how we can filter large genomic datasets to increase signal and reduce noise by developing tools to predict which genomic loci have the most utility for downstream phylogenetic analysis. They used extensive simulations and compared machine learning models for phylogenetic utility determination. 
-
-Alexandra is broadly interested in using a wide range of computational tools to answer questions related to microbial evolution and ecology, particularly how horizontal gene transfer among populations of bacteria may drive bacterial evolution in response to biogeochemical cycling. Alexandra also enjoys teaching and mentoring undergraduate and graduate students just starting out in evolutionary and computational biology. When not working, Alexandra enjoys exploring the great outdoors with their former laboratory beagle, Darwin.
-
-</details>
-
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+We will be recruiting multiple postdocs in the coming year. See the [join us](https://www.microbialgamut.com/join.html) page for details.
 
 # Graduate Students
 
@@ -72,6 +47,8 @@ Alexandra is broadly interested in using a wide range of computational tools to 
 <img align="left" src="/img/salim.png" width="200px" style="padding-right: 15px">
 
 **Email:** <mohammedsalim.dason@stonybrook.edu>
+
+**[Google Scholar](https://scholar.google.com/citations?user=vtIcZAcAAAAJ&hl=en)** 
 
 **Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests include metagenomics,
 microbial community assembly, computational modeling, and microbial metabolism.
@@ -131,40 +108,46 @@ Lyra received their B.S. in Biology at Binghamton University before joining the 
 
 ### Naqiya Moore
 
-**Bio:** Naqiya is an undergraduate Applied Mathematics and Statistics major at Stony Brook University. 
-She is interested in using statistical models to analyze viruses and genomics
+**Bio:** Naqiya is an undergraduate Applied Mathematics and Statistics major at Stony Brook University and a [Simons STEM Scholar](https://www.stonybrook.edu/simonsscholars/). 
+She is interested in using statistical models to analyze viral genomes.
 
-# Past Mentees
+# Lab Alumni
 
-## Stony Brook University
+### Postdoctoral Researchers
 
-### Jesse Natarajan (she/her)
+- Alexandra Walling (2025-2026), [IRACDA Postdoctoral Fellow](https://www.stonybrook.edu/commcms/iracda/), Now at Hunter College HS
 
-<img align="left" src="/img/jesse.png" width="200px" style="padding-right: 15px">
+### Undergraduate Students
 
-**Bio:** Jesse graduated with a Computer Science major and Biology/Chemistry minor from Stony Brook University. She completed her undergraduate honors thesis in the mGAMUT lab on predicting microbial growth rates using short genomic sequences.
+- Jesse Natarajan (2024-2025), [Honors Thesis](https://www.stonybrook.edu/commcms/university-honors-programs/honors/thesis.php), Now at Weill Cornell Comp. Bio MS
 
-<br clear="left"/>
+### High School Students
+
+- Kālena Cardillo (2026), [Simons Summer Research Program](https://www.stonybrook.edu/simons/)
+- Iris Pascual  (2026), [Simons Summer Research Program](https://www.stonybrook.edu/simons/)
+- Jordyn Szczesniak  (2026), [Simons Summer Research Program](https://www.stonybrook.edu/simons/)
 
 
-## Chapman University
+## Other Past Mentees
+
+### Chapman University
 
 - Athenna Gonzalez (Spring 2023)
 
-## University of Southern California
+### University of Southern California
 
-- Edward-Robert Dimbo (Spring 2021 - Present; [Genomics and Geobiology Undergraduate Research Experience](https://www.darkenergybiosphere.org/education-diversity/for-undergraduates/ggure/), Senior Thesis, Postbac; coauthor on Weissman et al. 2022, bioRxiv and Dimbo et al. *in prep*)
-- James Rosas  (Summer 2021, [National Summer Undergraduate Research Project](https://nsurp.org/))
-- Yuniba Yagües (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/), coauthor on Weissman et al. 2022, bioRxiv)
-- Oscar Escobedo (Summer 2020, [National Summer Undergraduate Research Project](https://nsurp.org/))
+- Edward-Robert Dimbo (2021 - 2022), [Genomics and Geobiology Undergraduate Research Experience](https://www.darkenergybiosphere.org/education-diversity/for-undergraduates/ggure/), Senior Thesis and Postbac
+- James Rosas  (2021), [National Summer Undergraduate Research Project](https://nsurp.org/)
+- Yuniba Yagües (2020), [National Summer Undergraduate Research Project](https://nsurp.org/)
+- Oscar Escobedo (2020), [National Summer Undergraduate Research Project](https://nsurp.org/)
 
-## University of Maryland College Park
+### University of Maryland College Park
 
-- Rohan Laljani (Fall 2017 - Summer 2019; co-author on Weissman et al. 2019, *ISME J* and poster at UMD Biosciences Research Day)
-- Vinay Veluvolu (Summer 2018 - Summer 2019; poster at UMD Biosciences Research Day)
-- Julia Gall (Fall 2018 - Spring 2019; College Park Scholars project & poster presentation)
-- Cori Butkiewicz (Summer 2017 - Spring 2018; now in grad. program at UW-Madison)
-- Nicholas Penn (Spring 2017 - Summer 2017)
+- Rohan Laljani (2017-2019)
+- Vinay Veluvolu (2018-2019)
+- Julia Gall (2018-2019), College Park Scholars
+- Cori Butkiewicz (2017-2018)
+- Nicholas Penn (2017)
 
 # Lab Photos
 
