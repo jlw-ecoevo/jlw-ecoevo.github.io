@@ -86,6 +86,10 @@ previously uncharacterized bacteria.
 **Bio:** Lyra is a PhD Student in Ecology & Evolution. She is interested in using comparative genomics and mathematical models on microbial systems.
 
 &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 <details>
 

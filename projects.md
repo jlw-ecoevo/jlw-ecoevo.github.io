@@ -34,9 +34,11 @@ or community directly from its genome or metagenome sequence.
 
 <summary>Click here for more info</summary>
 
-*Hey! Does this all seem a bit technical? Check out our article in*
-*[Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2022.714713)*
-*for an explanation of how we use DNA to predict how fast bacteria grow that should be accessible to all ages*
+<i>
+Hey! Does this all seem a bit technical? Check out our article in
+<a href="https://kids.frontiersin.org/article/10.3389/frym.2022.714713">Frontiers Young Minds</a>
+for an explanation of how we use DNA to predict how fast bacteria grow that should be accessible to all ages
+</i>
 
 DNA sequencing costs have dropped precipitously 
 over the last two decades and it has become routine to collect, sequence, and analyze 
@@ -59,13 +61,29 @@ worldwide store approximately 50% of global soil carbon, and the microbes that c
 when permafrost thaws have the potential to reshape carbon dynamics across our planet. Yet, the specifics of how 
 communities of permafrost microbes respond to thaw and the factors that contribute 
 to an organism’s success during this process remain largely undetermined. This ongoing work is funded by the 
-[National Science Foundation](https://www.nsf.gov/awardsearch/show-award?AWD_ID=2546537).
+<a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2546537">National Science Foundation</a>.
+
 
 We also are working to leverage our trait-inference approaches for data integration with ocean biogeochemical
 models. This ongoing work is supported in part by our collaboration
-with the [Chemical Currencies of a Microbial Planet (C-CoMP)](https://ccomp-stc.org/) NSF Center.
+with the <a href="https://ccomp-stc.org/">Chemical Currencies of a Microbial Planet (C-CoMP)</a> NSF Center.
 
 </details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## Microbial Antiviral Defense Systems
 
@@ -77,7 +95,11 @@ with the [Chemical Currencies of a Microbial Planet (C-CoMP)](https://ccomp-stc.
 
 <summary>Click here for more info</summary>
 
-*Hey! Does this all seem a bit technical? Check out our article in [Frontiers Young Minds](https://kids.frontiersin.org/article/10.3389/frym.2019.00102) for an explanation of CRISPR immunity that should be accessible to all ages*
+<i>
+Hey! Does this all seem a bit technical? Check out our article in 
+<a href="https://kids.frontiersin.org/article/10.3389/frym.2019.00102">Frontiers Young Minds</a>
+for an explanation of CRISPR immunity that should be accessible to all ages
+</i>
 
 Viruses that infect microbes severely impact their hosts’ population and evolutionary dynamics. In an
 ecological context, these viruses lead to the release of important nutrients back into the environment and
@@ -96,6 +118,22 @@ work is the application of tools from the fields of machine learning and complex
 more traditional approaches from population genetics and theoretical ecology, to understand the ecology and
 evolution of antiviral defense strategies.
 
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## Metagenomics with Community Biologists in NYC 
 
@@ -121,7 +159,7 @@ Project, a community organization building artificial oyster reefs across the Ne
 has an active community-maintained reef in a lagoon at this site and plans to build another. 
 
 Our project was funded by Con Edison and 
-[Experiment.com](https://experiment.com/projects/predicting-the-impact-of-billion-oysters-on-microbially-driven-biogeochemical-cycling-in-new-york-city-waterways) 
+<a href="https://experiment.com/projects/predicting-the-impact-of-billion-oysters-on-microbially-driven-biogeochemical-cycling-in-new-york-city-waterways">Experiment.com</a>
 to coordinate sampling of microbial communities living near these reefs.
 
 Our work with Genspace continues to be funded by Con Edison, specifically a project
@@ -129,3 +167,18 @@ working with urban seaweed and their microbiomes. Our recent permafrost NSF gran
 community science-art programming at Genspace.
 
 </details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
