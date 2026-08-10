@@ -72,7 +72,6 @@ We will be recruiting multiple postdocs in the coming year. See the [join us](ht
 include metagenomics, microbial community assembly, computational modeling, 
 and microbial metabolism.
 
-&nbsp;
 
 <details>
 
