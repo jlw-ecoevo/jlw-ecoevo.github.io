@@ -131,7 +131,7 @@ previously uncharacterized bacteria.</p>
 
 <img align="left" src="/img/vivian.png" width="200px" style="padding-right: 15px">
 
-**Bio:**  Vivian is a C-CoMP Bridge-to-PhD fellow based in the mGAMUT Lab. Her research interests involve marine phytoplankton and their influence on the oceanic carbon cycle.
+**Bio:**  Vivian is a [C-CoMP Bridge-to-PhD](https://ccomp-stc.org/b2p/) fellow based in the mGAMUT Lab. Her research interests involve marine phytoplankton and their influence on the oceanic carbon cycle.
 
 &nbsp;
 &nbsp;
