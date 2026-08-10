@@ -85,6 +85,53 @@ with the <a href="https://ccomp-stc.org/">Chemical Currencies of a Microbial Pla
 &nbsp;
 &nbsp;
 
+## Inferring Microbial Traits to Predict the Dynamics of the Human Microbiome
+
+**TL;DR - We develop new AI/ML-based methods for trait inference in human microbiomes.** 
+**We will leverage these trait inference methods to subsequently build and parameterize mathematic models** 
+**of microbiome dynamics to predict how the composition of individual microbiomes will change in response to perturbation.** 
+
+![growth signatures](/img/growth_signatures.png)
+
+<details>
+
+<summary>Click here for more info</summary>
+
+<p>
+The long-term goal of our group’s work is to reliably link genomic information to 
+emergent microbial community properties via inference of complex traits and life-history 
+strategies at the community level. In doing so, we aim to address a major challenge in microbiome sciences, 
+that of developing a mechanistic understanding of the dynamics of host-associated microbiomes. 
+Increasingly, researchers studying the human microbiome are generating high-resolution time-series 
+data to capture community turnover in response to environmental perturbations (e.g., antibiotic use, 
+infection, cancer treatment). Yet, the high-dimensional nature of the microbiome, which comprises 
+hundreds or thousands of taxa, resists easy description by existing ecological modeling frameworks. 
+To bridge this gap, we propose to develop a mechanistic, trait-based understanding of microbial dynamics, 
+asking whether differences in the predicted growth strategies and environmental preferences of individual 
+organisms in a community can be used to inform ecological models of bacterial community dynamics 
+in response to perturbation. 
+</p>
+
+<p>This ongoing work is funded by the National Institutes of Health (NIGMS R35).</p>
+
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
 ## Microbial Antiviral Defense Systems
 
 **TL;DR - We combine mathematical models with comparative genomics to better understand the forces shaping the evolution of anti-viral defenses in microbes**
