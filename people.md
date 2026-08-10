@@ -64,9 +64,9 @@ We will be recruiting multiple postdocs in the coming year. See the [join us](ht
 
 **[Google Scholar](https://scholar.google.com/citations?user=vtIcZAcAAAAJ&hl=en)**  
 
-**[ORCID](https://orcid.org/0009-0000-2570-3843**
+**[ORCID](https://orcid.org/0009-0000-2570-3843)**
 
-**[GitHub](https://github.com/salimdason**
+**[GitHub](https://github.com/salimdason)**
 
 **Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests 
 include metagenomics, microbial community assembly, computational modeling, 
