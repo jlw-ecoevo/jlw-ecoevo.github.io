@@ -5,7 +5,7 @@ title: People
 
 # Principal Investigator
 
-## JL Weissman (they/she)
+### Jackie Lee "JL" Weissman (they/she)
 
 *Assistant Professor, Department of Ecology & Evolution and the Institute for Advanced Computational Science (IACS)*
 
@@ -56,13 +56,17 @@ We will be recruiting multiple postdocs in the coming year. See the [join us](ht
 
 # Graduate Students
 
-## M. Salim Dason
+### M. Salim Dason
 
 <img align="left" src="/img/salim.png" width="200px" style="padding-right: 15px">
 
 **Email:** <mohammedsalim.dason@stonybrook.edu>
 
-**[Google Scholar](https://scholar.google.com/citations?user=vtIcZAcAAAAJ&hl=en)** 
+**[Google Scholar](https://scholar.google.com/citations?user=vtIcZAcAAAAJ&hl=en)**  
+
+**[ORCID](https://orcid.org/0009-0000-2570-3843**
+
+**[GitHub](https://github.com/salimdason**
 
 **Bio:** Salim is a PhD Student in Ecology & Evolution. His research interests 
 include metagenomics, microbial community assembly, computational modeling, 
@@ -92,13 +96,13 @@ previously uncharacterized bacteria.</p>
 &nbsp;
 &nbsp;
 
-## Lyra Lu
+### Lyra Lu
 
 <img align="left" src="/img/lyra.png" width="200px" style="padding-right: 15px">
 
 **Email:** <lyra.lu@stonybrook.edu>
 
-**Bio:** Lyra is a PhD Student in Ecology & Evolution. She is interested in using comparative genomics and mathematical models on microbial systems.
+**Bio:** Lyra is a PhD Student in Ecology & Evolution. She is interested in using comparative genomics and mathematical models to understand microbial systems.
 
 &nbsp;
 &nbsp;
@@ -122,6 +126,35 @@ previously uncharacterized bacteria.</p>
 &nbsp;
 &nbsp;
 
+# Postbac Researchers
+
+### Vivian Chavez (she/they)
+
+<img align="left" src="/img/vivian.png" width="200px" style="padding-right: 15px">
+
+**Bio:**  Vivian is a C-CoMP Bridge-to-PhD fellow based in the mGAMUT Lab. Her research interests involve marine phytoplankton and their influence on the oceanic carbon cycle.
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<details>
+
+<summary>Click for more info</summary>
+
+<p>Vivian received her B.S. in Interdisciplinary Environmental Science at Lehman College, with a focus on environmental biology and a minor in Studio Art. She is excited to translate her background in bacteria culturing into a computational research setting.</p>
+
+</details>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 # Undergraduates
 
