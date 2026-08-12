@@ -202,6 +202,12 @@ She is interested in using statistical models to analyze viral genomes.
 
 # Lab Photos
 
+<img align="center" src="/img/lablunch_f26.jpg" width="500px">
+The lab eats lunch (Summer 2026)
+
+&nbsp;
+&nbsp;
+
 <img align="center" src="/img/lab.png" width="500px">
 The lab visits the Brooklyn Museum (Fall 2025)
 
