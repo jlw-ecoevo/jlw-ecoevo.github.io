@@ -19,7 +19,7 @@ title: People
 
 **[CV](https://jlw-ecoevo.github.io/CV_JLW.pdf)**
 
-**Bio:**  Jackie Lee “JL” Ahn Weissman (they/she) is an Assistant Professor at Stony Brook University in the Department of Ecology and Evolution and at the Institute for Advanced Computational Science. Her research examines how microbes survive and thrive across diverse environments. 
+**Bio:**  JL Ahn Weissman (they/she) is an Assistant Professor at Stony Brook University in the Department of Ecology and Evolution and at the Institute for Advanced Computational Science. Her research examines how microbes survive and thrive across diverse environments. 
 
 <details>
 
