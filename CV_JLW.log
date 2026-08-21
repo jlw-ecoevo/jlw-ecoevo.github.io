@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  10 AUG 2026 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.9)  21 AUG 2026 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,15 +306,15 @@ rk ([][]\OT1/pcr/m/n/9 https://biovcnet.github.io/[]\OT1/pnc/m/n/9 )
 
 [4]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 305.
+(Font)              <8> on input line 309.
  [5]
-Overfull \hbox (0.1842pt too wide) in paragraph at lines 364--365
+Overfull \hbox (0.1842pt too wide) in paragraph at lines 370--371
 []\OT1/pnc/m/n/9 Co-Founder, Work-ing Group on Trans- and Queer-Inclusive Con-f
 er-ences in Mi-cro-bi-ol-ogy, 2022-
  []
 
 [6] [7]
-Overfull \hbox (6.50356pt too wide) in paragraph at lines 485--486
+Overfull \hbox (6.50356pt too wide) in paragraph at lines 492--493
 []\OT1/pnc/b/n/9 Predicting max-i-mal mi-cro-bial growth rates from genomes and
  metagenomes for prokary-
  []
@@ -341,7 +341,7 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1
 cb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb><c:/t
 exlive/2024/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb><c:/texlive/2024/tex
 mf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on CV_JLW.pdf (8 pages, 141139 bytes).
+Output written on CV_JLW.pdf (8 pages, 141304 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
