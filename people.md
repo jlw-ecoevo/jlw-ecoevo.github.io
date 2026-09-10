@@ -52,7 +52,7 @@ mentorship at the college level. </p>
 
 # Postdoctoral Researchers
 
-We will be recruiting multiple postdocs in the coming year. See the [join us](https://www.microbialgamut.com/join.html) page for details.
+*We are currently hiring two postdocs to work on on projects around microbial trait prediction and dynamical modeling of the human microbiome. You can find out more about the positions [here](https://jlw-ecoevo.github.io/mGAMUT_postdoc_ad_F26.pdf)* 
 
 # Graduate Students
 

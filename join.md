@@ -7,7 +7,7 @@ I will likely be recruiting for both PhD students and postdocs during Fall 2026 
  
 ## Postdocs
 
-*I will likely be recruiting at least one postdoc this fall (Fall of 2026) to start January 2027 to work on projects around microbial trait prediction and dynamical modeling of the human microbiome.* Please feel free to reach out if you would be interested in discussing further and keep an eye out for an ad in the fall.
+*We are currently hiring two postdocs to work on on projects around microbial trait prediction and dynamical modeling of the human microbiome. You can find out more about the positions [here](https://jlw-ecoevo.github.io/mGAMUT_postdoc_ad_F26.pdf)* 
 
 If you are interested in joining the lab, I would be more than happy to work with you to develop proposals for postdoc fellowships relevant to the work our lab does.
 
