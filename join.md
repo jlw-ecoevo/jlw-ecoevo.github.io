@@ -33,7 +33,11 @@ I know it can be a little intimidating to cold-email a prospective PhD mentor. P
 
 Please note that AI-generated emails are often easy to spot (because I receive many and they all have similar wording) and are not viewed positively. I would rather you send me a less polished but honest set of answers to these questions than a low-effort and/or generic one that reads like spam. I would also advise against simply rephrasing lines from this website and calling them a passion for yourself. The most successful applicants show a real engagement with the work we do and a familiarity with at least some of our published science. 
 
+
+
 ## Undergraduate Students
+
+*As of Fall 2026 we do not have space for additional undergraduate students beyond those already in the lab*
 
 Are you a Stony Brook undergraduate student? Did you think some of the stuff on this website was interesting? Consider joining the lab! We are a computational biology lab but no experience in computational biology or coding is required to join the lab at the undergraduate level. If you are enthusiastic about learning about these topics, we can train you. I firmly believe anyone can be a great computational biologist. Most of the undergraduate students I have worked with in the past started out with absolutely zero coding experience, but quickly learned with hands-on training and a cool question in front of them. I am happy to have biologists, environmental scientists, computer scientists, and mathematicians join the lab (and even people from totally different fields if computational biology has caught your eye).
 
