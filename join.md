@@ -3,11 +3,9 @@ layout: default
 title: Join Us
 ---
 
-I will likely be recruiting for both PhD students and postdocs during Fall 2026 (ads forthcoming). If you have any questions, please reach out directly (<jackie.weissman@stonybrook.edu>).
+I am currently recruiting one PhD student to start Fall 2027 (see below for details). If you have any questions, please reach out directly (<jackie.weissman@stonybrook.edu>).
  
 ## Postdocs
-
-*We are currently hiring two postdocs to work on on projects around microbial trait prediction and dynamical modeling of the human microbiome. You can find out more about the positions [here](https://jlw-ecoevo.github.io/mGAMUT_postdoc_ad_F26.pdf)* 
 
 If you are interested in joining the lab, I would be more than happy to work with you to develop proposals for postdoc fellowships relevant to the work our lab does.
 
@@ -16,7 +14,7 @@ If you are interested in joining the lab, I would be more than happy to work wit
 
 ## PhD Students
 
-*I will likely be recruiting at least one PhD student this fall (Fall of 2026) to start their graduate degree in the fall of 2027 to work on computational projects in either permafrost microbiome or human microbiome systems.* Please feel free to reach out if you would be interested in discussing further.
+*I will be recruiting at least one PhD student this fall (Fall of 2026) to start their graduate degree in the Fall of 2027 to work on computational projects in either permafrost microbiome or human microbiome systems.* Please feel free to reach out if you would be interested in discussing further.
 
 I primarily recruit through the [Ecology & Evolution program](https://www.stonybrook.edu/commcms/ecoevo/_program/index.php), though could potentially arrange to take students from other programs at SBU (I am currently also affiliated with the [Genetics](https://www.stonybrook.edu/commcms/gradgenetics/) PhD program). 
 
